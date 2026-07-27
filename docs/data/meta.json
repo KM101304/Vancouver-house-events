@@ -1,6 +1,6 @@
 {
  "schemaVersion": 2,
- "updated": "2026-07-27T08:16:25.803546-07:00",
+ "updated": "2026-07-27T12:57:15.544712-07:00",
  "eventCount": 72,
  "venueCount": 38,
  "windowDays": 120,
@@ -16,7 +16,7 @@
    "source": "residentadvisor",
    "label": "Resident Advisor",
    "status": "ok",
-   "count": 77,
+   "count": 76,
    "detail": ""
   },
   {

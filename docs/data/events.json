@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-27T08:16:25.803546-07:00",
+  "updated": "2026-07-27T12:57:15.544712-07:00",
   "eventCount": 72,
   "venueCount": 38,
   "windowDays": 120,
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 77,
+    "count": 76,
     "detail": ""
    },
    {
@@ -144,7 +144,7 @@
    "venue": "Hollywood Theatre",
    "address": "Vancouver",
    "start": "2026-07-31T19:00:00-07:00",
-   "end": "2026-08-01T23:59:00-07:00",
+   "end": "2026-07-31T23:59:00-07:00",
    "date": "2026-07-31",
    "night": "2026-07-31",
    "genres": [
@@ -156,10 +156,7 @@
    "promoter": "",
    "price": null,
    "afterhours": false,
-   "source": "residentadvisor",
-   "alsoOn": [
-    "residentadvisor"
-   ]
+   "source": "residentadvisor"
   },
   {
    "id": "422f16f9919df574",
@@ -510,7 +507,7 @@
   },
   {
    "id": "be2ffe11f6b9feae",
-   "title": "FOG: Forest Edition",
+   "title": "FOG: Outdoor Edition",
    "artists": [
     "Behrad Tehrani",
     "C-Star",
@@ -1289,7 +1286,7 @@
    ],
    "url": "https://ra.co/events/2477947",
    "ticketUrl": "https://ra.co/events/2477947",
-   "image": "https://images.ra.co/1883b0b040deffe996f71baf9929b99088fc8721.jpg",
+   "image": "https://images.ra.co/7190bd8801df0dbf0dead5105dd854f7eb433195.jpg",
    "promoter": "CINEMAGIC",
    "price": null,
    "afterhours": false,
