@@ -32,6 +32,9 @@ QUERY = (
     "      id listingDate"
     "      event {"
     "        id date startTime endTime title contentUrl flyerFront isTicketed"
+    # flyerFront comes back empty on listing queries; the artwork actually
+    # lives here, and without it an image-led layout has nothing to show.
+    "        images { id filename alt type }"
     "        venue { id name contentUrl area { name } }"
     "        promoters { id name }"
     "        artists { id name }"
@@ -68,6 +71,28 @@ def _payload(area_id: int, gte: str, lte: str, page: int, page_size: int = 100, 
 # Enrichment is capped: Vancouver never surfaces more than a handful of genre
 # facets, and each one costs a round trip.
 MAX_GENRES = 12
+
+IMAGE_HOST = "https://images.ra.co/"
+
+
+def _artwork(raw: dict) -> str:
+    """Best available flyer for a listing.
+
+    RA returns `flyerFront` empty on listing queries, so fall back to the
+    `images` array. Entries carry either a bare filename or a full URL.
+    """
+    candidates = [raw.get("flyerFront") or ""]
+    for image in raw.get("images") or []:
+        candidates.append((image or {}).get("filename") or "")
+
+    for candidate in candidates:
+        candidate = (candidate or "").strip()
+        if not candidate:
+            continue
+        if candidate.startswith("http://") or candidate.startswith("https://"):
+            return candidate
+        return IMAGE_HOST + candidate.lstrip("/")
+    return ""
 
 
 def _genre_map(area_id: int, gte: str, lte: str, options: list, headers: dict) -> dict:
@@ -180,7 +205,7 @@ def fetch(days_ahead: int = 120, area_id: int = DEFAULT_AREA_ID) -> list[dict]:
             ticket_url=url if raw.get("isTicketed") else "",
             artists=[a.get("name") for a in (raw.get("artists") or [])],
             genres=tagged,
-            image=raw.get("flyerFront") or "",
+            image=_artwork(raw),
             promoter=promoters,
             description=f"{promoters} {raw.get('title') or ''}",
             # Few RA titles literally say "house"; without a fallback the best

@@ -131,6 +131,14 @@ def test_residentadvisor() -> None:
     check("ra artists", event["artists"], ["Nocturne", "Low Tide"])
     check("ra promoter", event["promoter"], "Pacific Rhythm")
     check("ra image", event["image"], "https://images.ra.co/flyer.jpg")
+
+    # flyerFront is empty on real listing responses; artwork must come from
+    # the images array, whether it holds a bare filename or a full URL.
+    from_array = residentadvisor._artwork({"flyerFront": "", "images": [{"filename": "abc123.jpg"}]})
+    check("artwork from bare filename", from_array, "https://images.ra.co/abc123.jpg")
+    absolute = residentadvisor._artwork({"flyerFront": "", "images": [{"filename": "https://cdn/x.jpg"}]})
+    check("artwork keeps absolute url", absolute, "https://cdn/x.jpg")
+    check("artwork absent is empty", residentadvisor._artwork({"images": []}), "")
     check("ra source", event["source"], "residentadvisor")
     # startTime carries the real clock time; date alone would give 22:00.
     check("ra uses startTime", event["start"][11:16], "23:00")
