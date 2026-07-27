@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-26T18:50:02.510042-07:00",
-  "eventCount": 73,
-  "venueCount": 39,
+  "updated": "2026-07-27T03:11:42.344354-07:00",
+  "eventCount": 72,
+  "venueCount": 38,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 78,
+    "count": 77,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 61,
+   "electronic": 60,
    "house": 11,
    "afro": 3,
    "disco": 2,
@@ -45,30 +45,6 @@
   }
  },
  "events": [
-  {
-   "id": "bb3a0c2e69b4e709",
-   "title": "Gorg-O-Mish presents: PRIDE // Hera, G-Luve & TASHI",
-   "artists": [
-    "Hera (IE)",
-    "TASHI"
-   ],
-   "venue": "Gorg-O-Mish",
-   "address": "Vancouver",
-   "start": "2026-07-26T23:00:00-07:00",
-   "end": "2026-07-27T08:00:00-07:00",
-   "date": "2026-07-26",
-   "night": "2026-07-26",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2492853",
-   "ticketUrl": "https://ra.co/events/2492853",
-   "image": "https://images.ra.co/066c50709e426a11d1b0809c04840af9babbdf16.png",
-   "promoter": "Gorg-O-Mish",
-   "price": null,
-   "afterhours": true,
-   "source": "residentadvisor"
-  },
   {
    "id": "bda32da6af924369",
    "title": "underscores",
