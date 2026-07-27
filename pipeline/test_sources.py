@@ -142,6 +142,71 @@ def test_residentadvisor() -> None:
     check("ra stopped after empty page", fake.calls["n"], 2)
 
 
+def _ra_page(events, genre_options=None):
+    block = {"data": events, "totalResults": len(events)}
+    if genre_options is not None:
+        block["filterOptions"] = {"genre": genre_options}
+    return {"data": {"eventListings": block}}
+
+
+def _ra_jazz():
+    raw = {"id": "7", "listingDate": "2026-08-16T00:00:00.000", "event": dict(RA_EVENT["event"])}
+    raw["event"] = dict(RA_EVENT["event"], id="99", title="Some Jazz Trio Live")
+    return raw
+
+
+def test_residentadvisor_genre_enrichment() -> None:
+    """Real genres replace the fallback, and untagged listings are dropped."""
+    options = [{"label": "House", "value": "8"}, {"label": "Techno", "value": "13"}]
+    empty = _ra_page([])
+    pages = [
+        _ra_page([RA_EVENT, _ra_jazz()], options),  # base page 1
+        empty,                                      # base page 2 -> stop
+        _ra_page([RA_EVENT]),                       # genre "House" matches the techno fixture id
+        _ra_page([]),                               # genre "Techno" matches nothing
+    ]
+    with Patch(residentadvisor, "request_json", _paged(*pages)), \
+            Patch(residentadvisor.time, "sleep", lambda s: None):
+        events = residentadvisor.fetch(days_ahead=30)
+
+    check("enriched genre applied", events[0]["genres"] if events else None, ["house"])
+    # The jazz listing carried no facet, so with genres available it isn't a
+    # dance night and must not reach the site.
+    check("untagged listing dropped", len(events), 1)
+
+
+def test_residentadvisor_survives_rejected_genre_filter() -> None:
+    """If RA won't accept a genre filter, listings must still come through."""
+    options = [{"label": "House", "value": "8"}]
+    pages = [
+        _ra_page([RA_EVENT], options),
+        _ra_page([]),
+        {"errors": [{"message": "Unknown argument 'genre'"}]},
+    ]
+    with Patch(residentadvisor, "request_json", _paged(*pages)), \
+            Patch(residentadvisor.time, "sleep", lambda s: None):
+        events = residentadvisor.fetch(days_ahead=30)
+
+    check("listings survive a rejected genre filter", len(events), 1)
+    check("falls back to catch-all", events[0]["genres"] if events else None, ["electronic"])
+
+
+def test_residentadvisor_ignores_thin_genre_coverage() -> None:
+    """Partial enrichment must not be read as 'these events aren't dance'."""
+    options = [{"label": "House", "value": "8"}]
+    many = [dict(RA_EVENT, event=dict(RA_EVENT["event"], id=str(i))) for i in range(10)]
+    pages = [
+        _ra_page(many, options),
+        _ra_page([]),
+        _ra_page(many[:1]),   # only 1 of 10 tagged -> 10% coverage
+    ]
+    with Patch(residentadvisor, "request_json", _paged(*pages)), \
+            Patch(residentadvisor.time, "sleep", lambda s: None):
+        events = residentadvisor.fetch(days_ahead=30)
+
+    check("thin coverage keeps every listing", len(events), 10)
+
+
 def test_residentadvisor_surfaces_graphql_errors() -> None:
     bad = {"errors": [{"message": "Cannot query field 'promoters'"}]}
     with Patch(residentadvisor, "request_json", _paged(bad)), Patch(residentadvisor.time, "sleep", lambda s: None):
@@ -208,10 +273,17 @@ def test_ticketmaster_prefers_specific_genre_over_catchall() -> None:
     check("catchall dropped when specific genre present", events[0]["genres"], ["techno"])
 
 
+def test_showpass_disabled_by_default() -> None:
+    with Patch(showpass.os, "environ", {}):
+        check("showpass off unless opted in", showpass.available(), False)
+    with Patch(showpass.os, "environ", {"ENABLE_SHOWPASS": "1"}):
+        check("showpass on when enabled", showpass.available(), True)
+
+
 def test_showpass() -> None:
     page = {"results": [SHOWPASS_EVENT]}
     empty = {"results": []}
-    with Patch(showpass, "request_json", _paged(page, empty)), Patch(showpass.time, "sleep", lambda s: None):
+    with Patch(showpass.os, "environ", {"ENABLE_SHOWPASS": "1"}), Patch(showpass, "request_json", _paged(page, empty)), Patch(showpass.time, "sleep", lambda s: None):
         events = showpass.fetch(days_ahead=30)
 
     check("showpass returns one event", len(events), 1)
@@ -228,7 +300,7 @@ def test_showpass() -> None:
 
 def test_showpass_bare_list_envelope() -> None:
     # Showpass has shipped both a bare list and a {"results": [...]} envelope.
-    with Patch(showpass, "request_json", _paged([SHOWPASS_EVENT], [])), Patch(showpass.time, "sleep", lambda s: None):
+    with Patch(showpass.os, "environ", {"ENABLE_SHOWPASS": "1"}), Patch(showpass, "request_json", _paged([SHOWPASS_EVENT], [])), Patch(showpass.time, "sleep", lambda s: None):
         events = showpass.fetch(days_ahead=30)
     check("showpass handles bare list", len(events), 1)
 
@@ -238,7 +310,7 @@ def test_showpass_filters_non_electronic() -> None:
     raw["name"] = "Saturday Karaoke Party"
     raw["tags"] = []
     raw["description"] = "Sing your heart out."
-    with Patch(showpass, "request_json", _paged({"results": [raw]}, {"results": []})), \
+    with Patch(showpass.os, "environ", {"ENABLE_SHOWPASS": "1"}), Patch(showpass, "request_json", _paged({"results": [raw]}, {"results": []})), \
             Patch(showpass.time, "sleep", lambda s: None):
         events = showpass.fetch(days_ahead=30)
     # Showpass carries every kind of event, so it gets no fallback genre.
@@ -249,7 +321,7 @@ def test_showpass_raises_when_all_endpoints_fail() -> None:
     def boom(*args, **kwargs):
         raise RuntimeError("503")
 
-    with Patch(showpass, "request_json", boom), Patch(showpass.time, "sleep", lambda s: None):
+    with Patch(showpass.os, "environ", {"ENABLE_SHOWPASS": "1"}), Patch(showpass, "request_json", boom), Patch(showpass.time, "sleep", lambda s: None):
         try:
             showpass.fetch(days_ahead=30)
             FAILURES.append("showpass should raise when every endpoint fails")

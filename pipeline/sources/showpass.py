@@ -1,13 +1,15 @@
 """Showpass -- the ticketing platform most independent Vancouver promoters use.
 
-NOTE: this adapter targets Showpass's public discovery endpoint, which is not
-formally versioned. It is written defensively and tries a couple of known path
-shapes; if the response doesn't parse, the source reports itself unhealthy in
-data/meta.json and the rest of the pipeline carries on untouched.
+DISABLED BY DEFAULT. Showpass has no published public listings endpoint, and
+the paths tried below returned nothing usable in production, so leaving it on
+only decorates the footer with a permanent failure. The adapter is kept because
+the platform genuinely matters for this city: set ENABLE_SHOWPASS=1 to run it,
+and fix ENDPOINTS below once the real path is known.
 """
 
 from __future__ import annotations
 
+import os
 import time
 from datetime import datetime, timedelta
 
@@ -24,6 +26,12 @@ ENDPOINTS = [
 ]
 
 PAGE_SIZE = 100
+
+SKIP_REASON = "disabled — set ENABLE_SHOWPASS=1"
+
+
+def available() -> bool:
+    return os.environ.get("ENABLE_SHOWPASS", "").strip() not in ("", "0", "false")
 
 
 def _extract(payload) -> list[dict]:

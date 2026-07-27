@@ -56,7 +56,22 @@ evening before, because that's the night you went out.
 | **Curated** (`data/manual-events.json`) | — | Hand-added nights. Wins every dedupe tie. |
 | **Resident Advisor** | — | Public GraphQL endpoint. Best lineup and promoter data. |
 | **Ticketmaster** | `TICKETMASTER_API_KEY` | Skips itself cleanly if unset. Bigger rooms, touring acts. |
-| **Showpass** | — | Where a lot of independent Vancouver promoters sell. |
+| **Showpass** | `ENABLE_SHOWPASS=1` | Off by default — see below. |
+
+**Resident Advisor genres.** RA's listing payload carries no per-event genre,
+so the pipeline re-runs the query once per genre facet RA offers and records
+what comes back. This is purely additive: if RA rejects the genre filter the
+plain listings are kept, and enrichment is only trusted when it covers at least
+half the listings — a partial map would otherwise look like "these aren't dance
+events". When genres *are* available, a listing matching no facet is dropped,
+which is what keeps the jazz and rock that RA also lists at these rooms off the
+site.
+
+**Showpass is disabled by default.** It has no published listings endpoint and
+the paths tried returned nothing usable in production, so leaving it on only
+decorates the footer with a permanent failure. The adapter is kept because the
+platform genuinely matters here — set `ENABLE_SHOWPASS=1` once the real path is
+known, and fix `ENDPOINTS` in `pipeline/sources/showpass.py`.
 
 A source that breaks **cannot empty the site.** Each adapter runs isolated; if
 one fails, its still-upcoming events from the previous run are carried forward,

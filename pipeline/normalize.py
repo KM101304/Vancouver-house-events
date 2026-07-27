@@ -46,12 +46,15 @@ ADJACENT = {
     "ambient": ["ambient", "downtempo", "experimental", "leftfield", "idm"],
 }
 
-# Words that mean "this is not a house night" even if a primary word appears
-# somewhere in the blurb.
+# Terms that mean "this is not a house night" even if a primary word appears
+# somewhere in the blurb. RA lists everything programmed at the venues it
+# covers, so a jazz trio at an electronic-adjacent room turns up in the feed.
 EXCLUDE = [
     "karaoke", "trivia", "comedy", "open mic", "tribute band", "cover band",
     "country night", "metal", "hardcore punk", "singer-songwriter", "orchestra",
     "musical theatre", "wrestling", "burlesque bingo",
+    # Acoustic-ensemble billing: "<Name> Quartet", "<Name> Trio".
+    "quartet", "quintet", "sextet", "big band", "jazz trio", "string trio",
 ]
 
 _ALL_GENRE_TERMS = [
@@ -110,7 +113,12 @@ def classify(*texts: str) -> list[str]:
 
 def is_excluded(*texts: str) -> bool:
     haystack = " ".join(_clean(t).lower() for t in texts if t)
-    return any(word in haystack for word in EXCLUDE)
+    # Word-boundary matched: a substring test would kill "Jazzanova" on "jazz"
+    # and "Metallic Sunset" on "metal".
+    return any(
+        re.search(r"(?<![a-z])" + re.escape(term) + r"(?![a-z])", haystack)
+        for term in EXCLUDE
+    )
 
 
 def parse_dt(value, fallback_time: str = "22:00") -> datetime | None:

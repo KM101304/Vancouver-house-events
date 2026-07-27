@@ -66,6 +66,18 @@ def run(days_ahead: int = 120, only: list[str] | None = None) -> dict:
     for module in SOURCES:
         name = module.NAME
         if only and name not in only:
+            # --only narrows what gets *refreshed*, not what gets published.
+            # Dropping the others here would rewrite the feed with a fraction
+            # of the listings and silently discard the rest.
+            carried = _upcoming(previous_by_source.get(name, []), now)
+            collected.extend(carried)
+            health.append({
+                "source": name,
+                "label": module.LABEL,
+                "status": "skipped",
+                "count": len(carried),
+                "detail": "not selected by --only; previous listings kept",
+            })
             continue
 
         # A source can opt out cleanly (e.g. Ticketmaster with no API key).
@@ -75,7 +87,7 @@ def run(days_ahead: int = 120, only: list[str] | None = None) -> dict:
                 "label": module.LABEL,
                 "status": "skipped",
                 "count": 0,
-                "detail": "no API key configured",
+                "detail": module.SKIP_REASON if hasattr(module, "SKIP_REASON") else "not configured",
             })
             continue
 

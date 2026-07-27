@@ -20,6 +20,8 @@ LABEL = "Ticketmaster"
 
 PAGE_SIZE = 100
 
+SKIP_REASON = "no API key configured"
+
 
 def available() -> bool:
     return bool(os.environ.get("TICKETMASTER_API_KEY"))
