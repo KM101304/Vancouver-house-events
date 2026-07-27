@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-26T17:55:31.888966-07:00",
-  "eventCount": 88,
-  "venueCount": 47,
+  "updated": "2026-07-26T17:57:32.908237-07:00",
+  "eventCount": 87,
+  "venueCount": 46,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 93,
+    "count": 92,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 72,
+   "electronic": 71,
    "house": 11,
    "breaks": 4,
    "disco": 2,
@@ -128,27 +128,6 @@
    "ticketUrl": "https://ra.co/events/2441529",
    "image": "",
    "promoter": "Blueprint, Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "4ee6804b45ecd3af",
-   "title": "Gordon Grdina Trio",
-   "artists": [],
-   "venue": "Hero's Welcome",
-   "address": "Vancouver",
-   "start": "2026-07-30T19:00:00-07:00",
-   "end": "2026-07-30T21:00:00-07:00",
-   "date": "2026-07-30",
-   "night": "2026-07-30",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494257",
-   "ticketUrl": "https://ra.co/events/2494257",
-   "image": "",
-   "promoter": "",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"

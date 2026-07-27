@@ -1,8 +1,8 @@
 {
  "schemaVersion": 2,
- "updated": "2026-07-26T17:55:31.888966-07:00",
- "eventCount": 88,
- "venueCount": 47,
+ "updated": "2026-07-26T17:57:32.908237-07:00",
+ "eventCount": 87,
+ "venueCount": 46,
  "windowDays": 120,
  "sources": [
   {
@@ -16,7 +16,7 @@
    "source": "residentadvisor",
    "label": "Resident Advisor",
    "status": "ok",
-   "count": 93,
+   "count": 92,
    "detail": ""
   },
   {
@@ -35,7 +35,7 @@
   }
  ],
  "genres": {
-  "electronic": 72,
+  "electronic": 71,
   "house": 11,
   "breaks": 4,
   "disco": 2,
