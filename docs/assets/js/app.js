@@ -8,20 +8,31 @@
   "use strict";
 
   var DATA_URL = "data/events.json";
-  var VANCOUVER = "America/Vancouver";
+  var TZ = "America/Vancouver";
 
-  var state = {
-    events: [],
-    meta: null,
-    when: "all",
-    genres: new Set(),
-    venue: "",
-    afterhours: false,
-    query: ""
+  // The night axis. Fixed rather than fitted to the data, so every night is
+  // directly comparable and the 03:00 line always sits in the same place.
+  var AXIS_START = 19 * 60;          // 19:00
+  var AXIS_END = 32 * 60;            // 08:00 next day
+  var AXIS_SPAN = AXIS_END - AXIS_START;
+  var LAST_CALL = 27 * 60;           // 03:00 — BC last call
+  var DEFAULT_RUN = 5 * 60;          // assumed length when a feed omits the end
+  var PLOT_NIGHTS = 14;              // nights drawn before the plot stops being scannable
+
+  // Fixed hue order, assigned to the entity. Never cycled, never re-assigned
+  // when a filter changes the visible set.
+  var HUES = {
+    techno: "--g-techno", house: "--g-house", garage: "--g-garage",
+    disco: "--g-disco", dnb: "--g-dnb", trance: "--g-trance", breaks: "--g-breaks"
   };
 
-  var $ = function (sel) { return document.querySelector(sel); };
-  var role = function (name) { return document.querySelector('[data-role="' + name + '"]'); };
+  var state = {
+    events: [], meta: null,
+    when: "all", genres: new Set(), venue: "", afterhours: false, query: ""
+  };
+
+  var $ = function (s) { return document.querySelector(s); };
+  var role = function (n) { return document.querySelector('[data-role="' + n + '"]'); };
 
   /* ---------------------------------------------------------------- utils */
 
@@ -39,9 +50,7 @@
     try {
       var parsed = new URL(value, window.location.href);
       return (parsed.protocol === "http:" || parsed.protocol === "https:") ? parsed.href : null;
-    } catch (err) {
-      return null;
-    }
+    } catch (err) { return null; }
   }
 
   function parseDate(iso) {
@@ -49,58 +58,64 @@
     return isNaN(d.getTime()) ? null : d;
   }
 
-  // "The night of" — anything before 6am belongs to the previous evening.
-  function nightKey(date) {
-    var shifted = new Date(date.getTime() - 6 * 3600 * 1000);
-    return ymd(shifted);
-  }
-
-  function ymd(date) {
-    var parts = new Intl.DateTimeFormat("en-CA", {
-      timeZone: VANCOUVER, year: "numeric", month: "2-digit", day: "2-digit"
-    }).formatToParts(date).reduce(function (acc, p) { acc[p.type] = p.value; return acc; }, {});
-    return parts.year + "-" + parts.month + "-" + parts.day;
-  }
-
   function fmt(date, options) {
-    options.timeZone = VANCOUVER;
+    options.timeZone = TZ;
     return new Intl.DateTimeFormat("en-CA", options).format(date);
   }
 
-  function nowInVancouver() {
-    return new Date();
+  function ymd(date) {
+    var p = new Intl.DateTimeFormat("en-CA", {
+      timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit"
+    }).formatToParts(date).reduce(function (a, x) { a[x.type] = x.value; return a; }, {});
+    return p.year + "-" + p.month + "-" + p.day;
   }
 
-  function currentNight() {
-    return nightKey(nowInVancouver());
+  // Anything before 6am belongs to the night before.
+  function nightKey(date) { return ymd(new Date(date.getTime() - 6 * 3600 * 1000)); }
+  function currentNight() { return nightKey(new Date()); }
+
+  function clock(date) { return fmt(date, { hour: "2-digit", minute: "2-digit", hour12: false }); }
+
+  function hueVar(genres) {
+    for (var i = 0; i < (genres || []).length; i++) {
+      if (HUES[genres[i]]) return "var(" + HUES[genres[i]] + ")";
+    }
+    return "var(--g-other)";
+  }
+
+  // Minutes from the start of the night's axis. An event's own clock time is
+  // relative to its night, so a 02:00 set sits at 26*60, not 2*60.
+  function axisMinutes(date, night) {
+    var minutes = date.getHours() * 60 + date.getMinutes();
+    // Recompute in Vancouver time rather than the viewer's locale.
+    var parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: TZ, hour: "2-digit", minute: "2-digit", hour12: false
+    }).formatToParts(date).reduce(function (a, x) { a[x.type] = x.value; return a; }, {});
+    minutes = parseInt(parts.hour, 10) * 60 + parseInt(parts.minute, 10);
+    if (ymd(date) !== night) minutes += 24 * 60;   // rolled past midnight
+    return minutes;
   }
 
   /* ------------------------------------------------------------ filtering */
 
   function matchesQuery(event, query) {
     if (!query) return true;
-    var haystack = [
-      event.title, event.venue, event.promoter,
-      (event.artists || []).join(" "), (event.genres || []).join(" ")
-    ].join(" ").toLowerCase();
-    // Every whitespace-separated term must appear somewhere.
-    return query.split(/\s+/).every(function (term) { return haystack.indexOf(term) !== -1; });
+    var hay = [event.title, event.venue, event.promoter,
+      (event.artists || []).join(" "), (event.genres || []).join(" ")].join(" ").toLowerCase();
+    return query.split(/\s+/).every(function (t) { return hay.indexOf(t) !== -1; });
   }
 
   function withinWhen(event, when) {
     if (when === "all") return true;
-
     var tonight = currentNight();
     if (when === "tonight") return event.night === tonight;
 
-    var start = parseDate(event.start);
-    if (!start) return false;
-    var days = Math.floor((new Date(event.night + "T12:00:00") - new Date(tonight + "T12:00:00")) / 86400000);
+    var days = Math.round(
+      (new Date(event.night + "T12:00:00") - new Date(tonight + "T12:00:00")) / 86400000
+    );
     if (days < 0) return false;
-
     if (when === "week") return days <= 6;
     if (when === "weekend") {
-      // Friday or Saturday night, within the coming week.
       var dow = fmt(new Date(event.night + "T12:00:00"), { weekday: "short" });
       return days <= 7 && (dow === "Fri" || dow === "Sat");
     }
@@ -113,34 +128,238 @@
       if (!withinWhen(event, state.when)) return false;
       if (state.venue && event.venue !== state.venue) return false;
       if (state.afterhours && !event.afterhours) return false;
-      if (state.genres.size) {
-        var hit = (event.genres || []).some(function (g) { return state.genres.has(g); });
-        if (!hit) return false;
-      }
+      if (state.genres.size && !(event.genres || []).some(function (g) { return state.genres.has(g); })) return false;
       return matchesQuery(event, query);
     });
   }
 
-  /* ------------------------------------------------------------- calendar */
+  function groupByNight(events) {
+    var groups = [], index = {};
+    events.forEach(function (event) {
+      if (!index[event.night]) {
+        index[event.night] = { night: event.night, events: [] };
+        groups.push(index[event.night]);
+      }
+      index[event.night].events.push(event);
+    });
+    return groups;
+  }
+
+  /* ----------------------------------------------------------------- plot */
+
+  // Place each bar in the first lane where it doesn't overlap something
+  // already there, so a busy Saturday stacks instead of colliding.
+  function packLanes(items) {
+    var lanes = [];
+    items.forEach(function (item) {
+      for (var i = 0; i < lanes.length; i++) {
+        if (item.from >= lanes[i]) { item.lane = i; lanes[i] = item.to; return; }
+      }
+      item.lane = lanes.length;
+      lanes.push(item.to);
+    });
+    return lanes.length;
+  }
+
+  function geometry(event) {
+    var start = parseDate(event.start);
+    if (!start) return null;
+    var from = axisMinutes(start, event.night);
+
+    var end = parseDate(event.end);
+    var open = !end;
+    var to = end ? axisMinutes(end, event.night) : from + DEFAULT_RUN;
+    if (to <= from) to = from + DEFAULT_RUN;
+
+    var clipped = from < AXIS_START;
+    from = Math.max(from, AXIS_START);
+    to = Math.min(to, AXIS_END);
+    if (to <= from) return null;
+
+    return { event: event, from: from, to: to, open: open, clipped: clipped };
+  }
+
+  function pct(minutes) { return ((minutes - AXIS_START) / AXIS_SPAN) * 100; }
+
+  function renderAxis() {
+    var axis = el("div", "axis");
+    axis.appendChild(el("div", "axis__corner", "Night"));
+    var track = el("div", "axis__track");
+    for (var m = AXIS_START + 60; m < AXIS_END; m += 120) {
+      var tick = el("div", "axis__tick", String((m / 60) % 24).padStart(2, "0"));
+      tick.style.left = pct(m) + "%";
+      track.appendChild(tick);
+    }
+    // Last call is stated once, on the axis. Repeating it down every row
+    // buried the bars it was meant to give context to.
+    var call = el("div", "axis__call", "last call");
+    call.style.left = pct(LAST_CALL) + "%";
+    track.appendChild(call);
+    axis.appendChild(track);
+    return axis;
+  }
+
+  function renderPlot(events) {
+    var host = role("plot");
+    host.textContent = "";
+
+    if (!events.length) {
+      host.appendChild(el("p", "plot__empty", "Nothing to plot for these filters."));
+      role("plot-hint").hidden = true;
+      return;
+    }
+    role("plot-hint").hidden = false;
+    host.appendChild(renderAxis());
+
+    var tonight = currentNight();
+    var nowMinutes = axisMinutes(new Date(), tonight);
+
+    // The plot is for reading a stretch of nights at a glance; past a couple of
+    // weeks it stops being scannable. The full set always stays in the list.
+    var all = groupByNight(events);
+    var shown = all.slice(0, PLOT_NIGHTS);
+
+    shown.forEach(function (group) {
+      var isTonight = group.night === tonight;
+      var row = el("div", "night" + (isTonight ? " night--tonight" : ""));
+
+      var date = new Date(group.night + "T12:00:00");
+      var label = el("div", "night__label");
+      label.appendChild(el("span", "night__day", isTonight ? "Tonight" : fmt(date, { weekday: "short" })));
+      label.appendChild(el("span", "night__date", fmt(date, { month: "short", day: "numeric" })));
+      row.appendChild(label);
+
+      var track = el("div", "night__track");
+      // One gridline every two hours, matching the axis ticks.
+      track.style.setProperty("--hour-step", (120 / AXIS_SPAN) * 100 + "%");
+
+      var last = el("div", "marker");
+      last.style.left = pct(LAST_CALL) + "%";
+      track.appendChild(last);
+
+      if (isTonight && nowMinutes > AXIS_START && nowMinutes < AXIS_END) {
+        var now = el("div", "marker marker--now");
+        now.style.left = pct(nowMinutes) + "%";
+        now.appendChild(el("span", "marker__flag", "now"));
+        track.appendChild(now);
+      }
+
+      var bars = group.events.map(geometry).filter(Boolean);
+      bars.sort(function (a, b) { return a.from - b.from || a.to - b.to; });
+      var lanes = packLanes(bars);
+
+      bars.forEach(function (item) {
+        var bar = el("button", "bar" + (item.open ? " bar--open" : "") + (item.clipped ? " bar--clipped" : ""));
+        bar.type = "button";
+        bar.style.setProperty("--from", pct(item.from) + "%");
+        bar.style.setProperty("--span", ((item.to - item.from) / AXIS_SPAN) * 100 + "%");
+        bar.style.setProperty("--lane", item.lane);
+        bar.style.setProperty("--hue", hueVar(item.event.genres));
+        bar.dataset.id = item.event.id;
+
+        // Label only when the bar can hold one; the tooltip covers the rest.
+        if ((item.to - item.from) / AXIS_SPAN > 0.14) bar.textContent = item.event.title;
+        bar.setAttribute("aria-label",
+          item.event.title + ", " + item.event.venue + ", from " +
+          clock(parseDate(item.event.start)) + ", " + (item.event.genres || []).join(" ") );
+
+        bar.addEventListener("mouseenter", function (e) { showTip(item, e); });
+        bar.addEventListener("mousemove", function (e) { positionTip(e); });
+        bar.addEventListener("mouseleave", hideTip);
+        bar.addEventListener("focus", function (e) { showTip(item, e); });
+        bar.addEventListener("blur", hideTip);
+        bar.addEventListener("click", function () { jumpToGig(item.event.id); });
+
+        track.appendChild(bar);
+      });
+
+      track.style.minHeight = (lanes * 1.75 + 0.8) + "rem";
+      row.appendChild(track);
+      host.appendChild(row);
+    });
+
+    // Never truncate silently — say what was left off and where it went.
+    if (all.length > shown.length) {
+      var rest = all.length - shown.length;
+      host.appendChild(el("p", "plot__more",
+        "+ " + rest + (rest === 1 ? " more night" : " more nights") + " further out — listed in full below."));
+    }
+  }
+
+  /* -------------------------------------------------------------- tooltip */
+
+  function showTip(item, event) {
+    var tip = role("tip");
+    tip.textContent = "";
+    var e = item.event;
+
+    tip.appendChild(el("div", "tip__title", e.title));
+
+    var when = clock(parseDate(e.start));
+    when += e.end ? "–" + clock(parseDate(e.end)) : " · end time not published";
+    tip.appendChild(el("div", "tip__meta", when));
+    if (e.venue) tip.appendChild(el("div", "tip__meta", e.venue));
+
+    var genres = (e.genres || []);
+    if (genres.length) {
+      var line = el("div", "tip__genre");
+      var swatch = el("span", "tip__swatch");
+      swatch.style.background = hueVar(genres);
+      line.appendChild(swatch);
+      line.appendChild(el("span", "tip__meta", genres.join(" · ")));
+      tip.appendChild(line);
+    }
+
+    tip.hidden = false;
+    positionTip(event);
+    highlight(e.id, true);
+  }
+
+  function positionTip(event) {
+    var tip = role("tip");
+    if (tip.hidden) return;
+    var box = tip.getBoundingClientRect();
+    var x = (event.clientX || 0) + 14;
+    var y = (event.clientY || 0) + 16;
+    // Keep it on screen near the right and bottom edges.
+    if (x + box.width > window.innerWidth - 8) x = window.innerWidth - box.width - 8;
+    if (y + box.height > window.innerHeight - 8) y = (event.clientY || 0) - box.height - 12;
+    tip.style.left = Math.max(8, x) + "px";
+    tip.style.top = Math.max(8, y) + "px";
+  }
+
+  function hideTip() {
+    role("tip").hidden = true;
+    document.querySelectorAll(".is-lit").forEach(function (n) { n.classList.remove("is-lit"); });
+  }
+
+  function highlight(id, on) {
+    var row = document.querySelector('.gig[data-id="' + CSS.escape(id) + '"]');
+    if (row) row.classList.toggle("is-lit", on);
+  }
+
+  function jumpToGig(id) {
+    var row = document.querySelector('.gig[data-id="' + CSS.escape(id) + '"]');
+    if (!row) return;
+    row.scrollIntoView({ behavior: "smooth", block: "center" });
+    row.classList.add("is-lit");
+    setTimeout(function () { row.classList.remove("is-lit"); }, 1600);
+  }
+
+  /* -------------------------------------------------------------- listing */
 
   function icsFor(event) {
     var start = parseDate(event.start);
-    var end = parseDate(event.end) || new Date(start.getTime() + 5 * 3600 * 1000);
-    var stamp = function (d) { return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z"; };
+    var end = parseDate(event.end) || new Date(start.getTime() + DEFAULT_RUN * 60000);
+    var st = function (d) { return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z"; };
     var esc = function (s) { return String(s || "").replace(/([,;\\])/g, "\\$1").replace(/\n/g, "\\n"); };
-
     var summary = event.title;
     if (event.artists && event.artists.length) summary += " — " + event.artists.slice(0, 4).join(", ");
-
     return [
-      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//after-dark//EN",
-      "BEGIN:VEVENT",
+      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//after-dark//EN", "BEGIN:VEVENT",
       "UID:" + event.id + "@vancouver-house-events",
-      "DTSTAMP:" + stamp(new Date()),
-      "DTSTART:" + stamp(start),
-      "DTEND:" + stamp(end),
-      "SUMMARY:" + esc(summary),
-      "LOCATION:" + esc(event.venue),
+      "DTSTAMP:" + st(new Date()), "DTSTART:" + st(start), "DTEND:" + st(end),
+      "SUMMARY:" + esc(summary), "LOCATION:" + esc(event.venue),
       "DESCRIPTION:" + esc(event.ticketUrl ? "Tickets: " + event.ticketUrl : ""),
       "END:VEVENT", "END:VCALENDAR"
     ].join("\r\n");
@@ -158,37 +377,29 @@
     setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
   }
 
-  /* -------------------------------------------------------------- render */
-
   function renderGig(event) {
     var row = el("article", "gig");
+    row.dataset.id = event.id;
 
     var start = parseDate(event.start);
     var time = el("div", "gig__time");
-    time.appendChild(el("span", null, start ? fmt(start, { hour: "2-digit", minute: "2-digit", hour12: false }) : "--:--"));
-
-    // A 02:30 set listed under Thursday actually happens on Friday morning.
-    // Without this the clock time reads as an hour that already passed.
+    time.appendChild(el("span", null, start ? clock(start) : "--:--"));
     var notes = [];
-    if (start && ymd(start) !== event.night) {
-      notes.push(fmt(start, { weekday: "short" }) + " am");
-    }
+    // A 02:30 set listed under Thursday actually happens on Friday morning.
+    if (start && ymd(start) !== event.night) notes.push(fmt(start, { weekday: "short" }) + " am");
     if (event.end) {
       var end = parseDate(event.end);
-      if (end) notes.push("til " + fmt(end, { hour: "2-digit", minute: "2-digit", hour12: false }));
+      if (end) notes.push("til " + clock(end));
     }
     if (notes.length) time.appendChild(el("small", null, notes.join(" · ")));
     row.appendChild(time);
 
     var main = el("div", "gig__main");
-
     var title = el("h3", "gig__title");
     var href = safeUrl(event.url) || safeUrl(event.ticketUrl);
     if (href) {
       var link = el("a", null, event.title);
-      link.href = href;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
+      link.href = href; link.target = "_blank"; link.rel = "noopener noreferrer";
       title.appendChild(link);
     } else {
       title.textContent = event.title;
@@ -204,11 +415,16 @@
     var facts = el("p", "gig__facts");
     if (event.venue) facts.appendChild(el("span", "gig__venue", event.venue));
     (event.genres || []).slice(0, 3).forEach(function (genre) {
-      facts.appendChild(el("span", "tag", genre));
+      var chip = el("span", "chip");
+      var swatch = el("span", "chip__swatch");
+      swatch.style.background = hueVar([genre]);
+      chip.appendChild(swatch);
+      chip.appendChild(el("span", null, genre));
+      facts.appendChild(chip);
     });
-    if (event.afterhours) facts.appendChild(el("span", "tag tag--afterhours", "afterhours"));
+    if (event.afterhours) facts.appendChild(el("span", "flag flag--afterhours", "afterhours"));
     if (event.stale) {
-      var stale = el("span", "tag tag--stale", "unconfirmed");
+      var stale = el("span", "flag flag--stale", "unconfirmed");
       stale.title = "This source was unreachable on the last refresh — check with the venue.";
       facts.appendChild(stale);
     }
@@ -221,199 +437,147 @@
       if (event.price.max != null && event.price.max > event.price.min) price += "–" + Math.round(event.price.max);
       aside.appendChild(el("span", "gig__price", price));
     }
-
-    var ticketHref = safeUrl(event.ticketUrl);
-    if (ticketHref) {
-      var buy = el("a", "btn btn--solid btn--mini", "Tickets");
-      buy.href = ticketHref;
-      buy.target = "_blank";
-      buy.rel = "noopener noreferrer";
+    var ticket = safeUrl(event.ticketUrl);
+    if (ticket) {
+      var buy = el("a", "btn", "Tickets");
+      buy.href = ticket; buy.target = "_blank"; buy.rel = "noopener noreferrer";
       aside.appendChild(buy);
     }
-
-    var add = el("button", "btn btn--ghost btn--mini", "+ Calendar");
+    var add = el("button", "ghost", "Calendar");
     add.type = "button";
     add.setAttribute("aria-label", "Add " + event.title + " to calendar");
     add.addEventListener("click", function () { downloadIcs(event); });
     aside.appendChild(add);
-
     row.appendChild(aside);
+
     return row;
   }
 
-  function renderListings() {
-    var container = role("listings");
-    var events = visibleEvents();
-    container.textContent = "";
+  function renderListing(events) {
+    var host = role("listings");
+    host.textContent = "";
 
     if (!events.length) {
-      container.appendChild(emptyState());
-      $(".listings").setAttribute("aria-busy", "false");
-      updateResetVisibility();
+      host.appendChild(emptyState());
+      $(".listing").setAttribute("aria-busy", "false");
       return;
     }
 
     var tonight = currentNight();
-    var groups = [];
-    var index = {};
-    events.forEach(function (event) {
-      if (!index[event.night]) {
-        index[event.night] = { night: event.night, events: [] };
-        groups.push(index[event.night]);
-      }
-      index[event.night].events.push(event);
-    });
-
-    groups.forEach(function (group) {
+    groupByNight(events).forEach(function (group) {
       var date = new Date(group.night + "T12:00:00");
       var isTonight = group.night === tonight;
-
-      var head = el("div", "nightbreak" + (isTonight ? " nightbreak--tonight" : ""));
-      head.appendChild(el("h2", "nightbreak__day", isTonight ? "Tonight" : fmt(date, { weekday: "long" })));
-      head.appendChild(el("span", "nightbreak__date", fmt(date, { month: "short", day: "numeric" })));
-      head.appendChild(el("span", "nightbreak__count", group.events.length + (group.events.length === 1 ? " party" : " parties")));
-      container.appendChild(head);
-
-      group.events.forEach(function (event) { container.appendChild(renderGig(event)); });
+      var head = el("div", "daybreak" + (isTonight ? " daybreak--tonight" : ""));
+      head.appendChild(el("h2", "daybreak__day",
+        (isTonight ? "Tonight" : fmt(date, { weekday: "long" })) + " · " + fmt(date, { month: "short", day: "numeric" })));
+      head.appendChild(el("span", "daybreak__count",
+        group.events.length + (group.events.length === 1 ? " party" : " parties")));
+      host.appendChild(head);
+      group.events.forEach(function (event) { host.appendChild(renderGig(event)); });
     });
 
-    $(".listings").setAttribute("aria-busy", "false");
-    updateResetVisibility();
+    $(".listing").setAttribute("aria-busy", "false");
   }
 
   function emptyState() {
     var wrap = el("div", "state");
-    var filtered = state.events.length > 0;
-
-    if (filtered) {
+    if (state.events.length) {
       wrap.appendChild(el("h2", "state__title", "Nothing matches"));
-      wrap.appendChild(el("p", "state__body", "No nights fit those filters. Try widening the date range or clearing a genre."));
-      var clear = el("button", "btn btn--ghost", "Clear filters");
+      wrap.appendChild(el("p", "state__body", "No nights fit those filters. Try a wider date range or fewer genres."));
+      var clear = el("button", "ghost", "Reset filters");
       clear.type = "button";
       clear.addEventListener("click", resetFilters);
       wrap.appendChild(clear);
       return wrap;
     }
-
-    // No events at all — either the feeds haven't run yet or they're all down.
     wrap.appendChild(el("h2", "state__title", "Nothing listed yet"));
     var failed = state.meta && (state.meta.sources || []).filter(function (s) { return s.status === "failed"; });
-    var message = (failed && failed.length)
+    wrap.appendChild(el("p", "state__body", (failed && failed.length)
       ? "The feeds came back empty on the last refresh. They retry automatically every six hours."
-      : "The first feed refresh hasn't run yet. Once it does, the city shows up here.";
-    wrap.appendChild(el("p", "state__body", message));
-
-    var submit = el("a", "btn btn--solid", "Add a night");
-    submit.href = submitUrl();
-    submit.target = "_blank";
-    submit.rel = "noopener noreferrer";
+      : "The first feed refresh hasn't run yet. Once it does, the city shows up here."));
+    var submit = el("a", "btn", "Add a night");
+    submit.href = submitUrl(); submit.target = "_blank"; submit.rel = "noopener noreferrer";
     wrap.appendChild(submit);
     return wrap;
   }
 
-  function renderFilters() {
+  /* --------------------------------------------------------------- chrome */
+
+  function renderLegend() {
     var counts = {};
-    state.events.forEach(function (event) {
-      (event.genres || []).forEach(function (g) { counts[g] = (counts[g] || 0) + 1; });
+    state.events.forEach(function (e) {
+      (e.genres || []).forEach(function (g) { counts[g] = (counts[g] || 0) + 1; });
     });
 
     var box = role("genre-filters");
     box.textContent = "";
-    Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).forEach(function (genre) {
-      var chip = el("button", "chip" + (state.genres.has(genre) ? " is-active" : ""));
-      chip.type = "button";
-      chip.setAttribute("aria-pressed", state.genres.has(genre) ? "true" : "false");
-      chip.appendChild(document.createTextNode(genre));
-      chip.appendChild(el("span", "chip__count", counts[genre]));
-      chip.addEventListener("click", function () {
-        if (state.genres.has(genre)) state.genres.delete(genre); else state.genres.add(genre);
-        renderFilters();
-        renderListings();
-      });
-      box.appendChild(chip);
-    });
+    box.classList.toggle("has-selection", state.genres.size > 0);
 
-    var venues = {};
-    state.events.forEach(function (event) {
-      if (event.venue) venues[event.venue] = (venues[event.venue] || 0) + 1;
+    Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).forEach(function (genre) {
+      var on = state.genres.has(genre);
+      var key = el("button", "key" + (on ? " is-on" : ""));
+      key.type = "button";
+      key.setAttribute("aria-pressed", on ? "true" : "false");
+      var swatch = el("span", "key__swatch");
+      swatch.style.background = hueVar([genre]);
+      key.appendChild(swatch);
+      key.appendChild(document.createTextNode(genre));
+      key.appendChild(el("span", "key__count", counts[genre]));
+      key.addEventListener("click", function () {
+        if (on) state.genres.delete(genre); else state.genres.add(genre);
+        renderLegend();
+        draw();
+      });
+      box.appendChild(key);
     });
+  }
+
+  function renderVenuePicker() {
+    var counts = {};
+    state.events.forEach(function (e) { if (e.venue) counts[e.venue] = (counts[e.venue] || 0) + 1; });
     var select = role("venue-filter");
     select.textContent = "";
-    select.appendChild(new Option("All rooms", ""));
-    Object.keys(venues).sort(function (a, b) { return venues[b] - venues[a] || a.localeCompare(b); })
+    select.appendChild(new Option("Every room", ""));
+    Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); })
       .forEach(function (name) {
-        var option = new Option(name + " (" + venues[name] + ")", name);
+        var option = new Option(name + " (" + counts[name] + ")", name);
         if (name === state.venue) option.selected = true;
         select.appendChild(option);
       });
   }
 
-  function renderVenues() {
+  function renderRooms() {
+    var counts = {};
+    state.events.forEach(function (e) { if (e.venue) counts[e.venue] = (counts[e.venue] || 0) + 1; });
     var list = role("venue-list");
     list.textContent = "";
-    var counts = {};
-    state.events.forEach(function (event) {
-      if (!event.venue) return;
-      if (!counts[event.venue]) counts[event.venue] = { name: event.venue, count: 0 };
-      counts[event.venue].count += 1;
-    });
-
-    var venues = Object.keys(counts).map(function (k) { return counts[k]; })
-      .sort(function (a, b) { return b.count - a.count || a.name.localeCompare(b.name); })
-      .slice(0, 12);
-
-    if (!venues.length) {
-      list.appendChild(el("li", "footer__meta", "No rooms listed yet."));
-      return;
-    }
-
-    venues.forEach(function (venue) {
-      var item = el("li", "venue");
-      var button = el("button", "venue__name", venue.name);
+    var names = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); }).slice(0, 12);
+    if (!names.length) { list.appendChild(el("li", "room", "No rooms listed yet.")); return; }
+    names.forEach(function (name) {
+      var item = el("li", "room");
+      var button = el("button", null, name);
       button.type = "button";
       button.addEventListener("click", function () {
-        state.venue = state.venue === venue.name ? "" : venue.name;
+        state.venue = state.venue === name ? "" : name;
         state.when = "all";
-        syncWhenChips();
-        renderFilters();
-        renderListings();
-        document.getElementById("listings").scrollIntoView({ behavior: "smooth", block: "start" });
+        syncWhen();
+        renderVenuePicker();
+        draw();
+        role("plot-scroll").scrollIntoView({ behavior: "smooth", block: "start" });
       });
       item.appendChild(button);
-      item.appendChild(el("span", "venue__count", venue.count));
+      item.appendChild(el("span", null, counts[name]));
       list.appendChild(item);
     });
-  }
-
-  function renderTallies() {
-    var tonight = currentNight();
-    role("tally-events").textContent = state.events.length;
-    var venues = {};
-    state.events.forEach(function (e) { if (e.venue) venues[e.venue] = 1; });
-    role("tally-venues").textContent = Object.keys(venues).length;
-
-    var onTonight = state.events.filter(function (e) { return e.night === tonight; }).length;
-    role("tally-tonight").textContent = onTonight;
-    // A quiet Tuesday is real information — don't stamp it in fluorescent pink.
-    role("stamp").classList.toggle("is-empty", onTonight === 0);
-    role("stamp").querySelector(".stamp__label").textContent =
-      onTonight === 1 ? "on tonight" : onTonight === 0 ? "nothing tonight" : "on tonight";
   }
 
   function renderSources() {
     var list = role("source-list");
     list.textContent = "";
-    var sources = (state.meta && state.meta.sources) || [];
-    if (!sources.length) { role("source-health").hidden = true; return; }
-
-    sources.forEach(function (source) {
+    ((state.meta && state.meta.sources) || []).forEach(function (source) {
       var item = el("li", "source source--" + source.status);
       item.appendChild(el("span", "source__dot"));
       item.appendChild(el("span", null, source.label || source.source));
-      var note = source.status === "ok" ? source.count + " listed"
-        : source.status === "skipped" ? "not configured"
-        : "unreachable";
-      item.appendChild(el("span", "source__count", note));
       if (source.detail) item.title = source.detail;
       list.appendChild(item);
     });
@@ -422,19 +586,16 @@
       var updated = parseDate(state.meta.updated);
       if (updated) {
         role("updated").textContent = fmt(updated, {
-          weekday: "short", month: "short", day: "numeric",
-          hour: "2-digit", minute: "2-digit", hour12: false
+          weekday: "short", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false
         });
       }
     }
   }
 
-  /* --------------------------------------------------------------- links */
+  /* ---------------------------------------------------------------- links */
 
   function repoBase() {
-    // Works on <user>.github.io/<repo>/ and on a custom domain.
-    var owner = "KM101304";
-    var repo = "Vancouver-house-events";
+    var owner = "KM101304", repo = "Vancouver-house-events";
     var match = window.location.hostname.match(/^([^.]+)\.github\.io$/i);
     if (match) {
       owner = match[1];
@@ -443,110 +604,84 @@
     }
     return "https://github.com/" + owner + "/" + repo;
   }
+  function submitUrl() { return repoBase() + "/issues/new?template=submit-event.yml"; }
 
-  function submitUrl() {
-    return repoBase() + "/issues/new?template=submit-event.yml";
-  }
+  /* --------------------------------------------------------------- events */
 
-  /* -------------------------------------------------------------- events */
-
-  function resetFilters() {
-    state.when = "all";
-    state.genres.clear();
-    state.venue = "";
-    state.afterhours = false;
-    state.query = "";
-    $("#search").value = "";
-    role("afterhours-filter").checked = false;
-    syncWhenChips();
-    renderFilters();
-    renderListings();
-  }
-
-  function syncWhenChips() {
-    Array.prototype.forEach.call(role("when-filters").children, function (chip) {
-      var active = chip.dataset.when === state.when;
-      chip.classList.toggle("is-active", active);
-      chip.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-  }
-
-  function updateResetVisibility() {
+  function draw() {
+    var events = visibleEvents();
+    renderPlot(events);
+    renderListing(events);
     var dirty = state.when !== "all" || state.genres.size > 0 || state.venue ||
       state.afterhours || state.query.trim() !== "";
     role("reset").hidden = !dirty;
   }
 
+  function resetFilters() {
+    state.when = "all"; state.genres.clear(); state.venue = "";
+    state.afterhours = false; state.query = "";
+    $("#search").value = "";
+    role("afterhours-filter").checked = false;
+    syncWhen();
+    renderLegend();
+    renderVenuePicker();
+    draw();
+  }
+
+  function syncWhen() {
+    Array.prototype.forEach.call(role("when-filters").children, function (seg) {
+      var active = seg.dataset.when === state.when;
+      seg.classList.toggle("is-active", active);
+      seg.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
   function bind() {
-    var search = $("#search");
-    var debounce;
+    var search = $("#search"), debounce;
     search.addEventListener("input", function () {
       clearTimeout(debounce);
-      debounce = setTimeout(function () {
-        state.query = search.value;
-        renderListings();
-      }, 120);
+      debounce = setTimeout(function () { state.query = search.value; draw(); }, 120);
     });
 
-    Array.prototype.forEach.call(role("when-filters").children, function (chip) {
-      chip.addEventListener("click", function () {
-        state.when = chip.dataset.when;
-        syncWhenChips();
-        renderListings();
+    Array.prototype.forEach.call(role("when-filters").children, function (seg) {
+      seg.addEventListener("click", function () {
+        state.when = seg.dataset.when;
+        syncWhen();
+        draw();
       });
     });
 
-    role("venue-filter").addEventListener("change", function (e) {
-      state.venue = e.target.value;
-      renderListings();
-    });
-
-    role("afterhours-filter").addEventListener("change", function (e) {
-      state.afterhours = e.target.checked;
-      renderListings();
-    });
-
+    role("venue-filter").addEventListener("change", function (e) { state.venue = e.target.value; draw(); });
+    role("afterhours-filter").addEventListener("change", function (e) { state.afterhours = e.target.checked; draw(); });
     role("reset").addEventListener("click", resetFilters);
-
     role("submit-link").href = submitUrl();
     role("repo-link").href = repoBase();
-
-    var clock = role("clock");
-    var tick = function () {
-      clock.textContent = fmt(new Date(), { hour: "2-digit", minute: "2-digit", hour12: false });
-    };
-    tick();
-    setInterval(tick, 30000);
+    window.addEventListener("scroll", hideTip, { passive: true });
   }
 
-  /* ---------------------------------------------------------------- boot */
-
   function showError() {
-    var container = role("listings");
-    container.textContent = "";
+    var host = role("listings");
+    host.textContent = "";
     var wrap = el("div", "state");
     wrap.appendChild(el("h2", "state__title", "Couldn't load listings"));
     wrap.appendChild(el("p", "state__body", "The data feed didn't come back. Refresh, or read it directly at data/events.json."));
-    container.appendChild(wrap);
-    $(".listings").setAttribute("aria-busy", "false");
+    host.appendChild(wrap);
+    role("plot-section").hidden = true;
+    $(".listing").setAttribute("aria-busy", "false");
   }
 
   function boot() {
     bind();
-
     fetch(DATA_URL, { cache: "no-cache" })
-      .then(function (response) {
-        if (!response.ok) throw new Error("HTTP " + response.status);
-        return response.json();
-      })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (payload) {
         state.events = (payload.events || []).filter(function (e) { return e && e.title && e.start; });
         state.meta = payload.meta || null;
-        renderTallies();
-        renderFilters();
-        renderVenues();
         renderSources();
-        renderListings();
+        renderLegend();
+        renderVenuePicker();
+        renderRooms();
+        draw();
       })
       .catch(function (err) {
         console.error("failed to load listings", err);

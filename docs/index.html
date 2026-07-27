@@ -3,141 +3,118 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>After Dark — Vancouver house &amp; techno listings</title>
-<meta name="description" content="Every house, techno and underground electronic night in Vancouver, in one place. Aggregated from Resident Advisor, Ticketmaster and local promoters. Free, open data.">
-<meta name="theme-color" content="#E8E0CE">
+<title>After Dark — what's running tonight in Vancouver</title>
+<meta name="description" content="Vancouver house and techno listings plotted across the night, from doors to last call to afterhours. Aggregated from Resident Advisor, Ticketmaster and local promoters. Free, open data.">
+<meta name="theme-color" content="#0F0F0E">
 
-<meta property="og:title" content="After Dark — Vancouver house &amp; techno listings">
-<meta property="og:description" content="Every house, techno and underground electronic night in Vancouver, in one place.">
+<meta property="og:title" content="After Dark — what's running tonight in Vancouver">
+<meta property="og:description" content="Every house and techno night in Vancouver, plotted across the night.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E8E0CE'/%3E%3Crect x='7' y='6' width='19' height='4' fill='%23FF2E88'/%3E%3Crect x='5' y='8' width='19' height='4' fill='%2317150F'/%3E%3Crect x='5' y='16' width='13' height='3' fill='%2317150F'/%3E%3Crect x='5' y='22' width='17' height='3' fill='%2317150F'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F0F0E'/%3E%3Crect x='3' y='7' width='13' height='4' fill='%233987e5'/%3E%3Crect x='9' y='14' width='17' height='4' fill='%23d95926'/%3E%3Crect x='6' y='21' width='9' height='4' fill='%23199e70'/%3E%3C/svg%3E">
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
-<a class="skip-link" href="#listings">Skip to listings</a>
 
-<header class="masthead">
-  <div class="masthead__inner">
-    <p class="dateline">
-      <span>Vancouver BC</span>
-      <span aria-hidden="true">◆</span>
-      <span data-role="clock">—</span>
-      <span aria-hidden="true">◆</span>
-      <span>Free listings, no login</span>
+<header class="intro">
+  <div class="shell">
+    <h1 class="intro__title">Every house&nbsp;&amp; techno night in Vancouver, laid out across the night.</h1>
+    <p class="intro__body">
+      Clubs call last round at 3. The afterhours rooms are only getting started.
+      This plots what's running when — so you can see the handover instead of
+      reading twelve separate listings.
     </p>
-
-    <h1 class="wordmark">
-      <span class="wordmark__line">After</span>
-      <span class="wordmark__line">Dark</span>
-    </h1>
-
-    <div class="masthead__foot">
-      <p class="masthead__lede">
-        Every house, techno and underground night in the city, pulled from the
-        places they actually get announced. One page instead of six apps.
-      </p>
-
-      <div class="stamp" data-role="stamp">
-        <span class="stamp__count" data-role="tally-tonight">—</span>
-        <span class="stamp__label">on tonight</span>
-      </div>
-    </div>
-
-    <dl class="tallies">
-      <div class="tally"><dt>Nights listed</dt><dd data-role="tally-events">—</dd></div>
-      <div class="tally"><dt>Rooms open</dt><dd data-role="tally-venues">—</dd></div>
-      <div class="tally"><dt>Last pull</dt><dd data-role="updated" class="tally--small">—</dd></div>
-    </dl>
   </div>
 </header>
 
 <main>
   <section class="controls" aria-label="Filter listings">
-    <div class="controls__inner">
-      <div class="search">
-        <label class="visually-hidden" for="search">Search artists, venues or nights</label>
-        <input id="search" type="search" placeholder="Artist, venue, promoter…" autocomplete="off" spellcheck="false">
+    <div class="shell controls__inner">
+      <div class="controls__line">
+        <div class="field">
+          <label class="visually-hidden" for="search">Search artists, venues or nights</label>
+          <input id="search" type="search" placeholder="Artist, venue, promoter…" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="segmented" role="group" aria-label="Date range" data-role="when-filters">
+          <button type="button" class="seg is-active" data-when="all">All</button>
+          <button type="button" class="seg" data-when="tonight">Tonight</button>
+          <button type="button" class="seg" data-when="weekend">Weekend</button>
+          <button type="button" class="seg" data-when="week">7 nights</button>
+        </div>
       </div>
 
-      <div class="chipset" role="group" aria-label="Time range" data-role="when-filters">
-        <button type="button" class="chip is-active" data-when="all">Everything</button>
-        <button type="button" class="chip" data-when="tonight">Tonight</button>
-        <button type="button" class="chip" data-when="weekend">This weekend</button>
-        <button type="button" class="chip" data-when="week">Next 7 nights</button>
-      </div>
-
-      <div class="chipset chipset--genres" role="group" aria-label="Genre" data-role="genre-filters"></div>
-
-      <div class="controls__row">
-        <label class="select">
-          <span class="visually-hidden">Venue</span>
-          <select data-role="venue-filter"><option value="">All rooms</option></select>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" data-role="afterhours-filter">
-          <span>Afterhours only</span>
-        </label>
-        <button type="button" class="btn btn--ghost" data-role="reset" hidden>Clear filters</button>
+      <div class="controls__line">
+        <!-- The legend is the genre filter: one control, not two. -->
+        <div class="legend" role="group" aria-label="Filter by genre" data-role="genre-filters"></div>
+        <div class="controls__line controls__line--tight">
+          <label class="field field--select">
+            <span class="visually-hidden">Venue</span>
+            <select data-role="venue-filter"><option value="">Every room</option></select>
+          </label>
+          <label class="check">
+            <input type="checkbox" data-role="afterhours-filter">
+            <span>Afterhours</span>
+          </label>
+          <button type="button" class="ghost" data-role="reset" hidden>Reset</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="listings" class="listings" aria-live="polite" aria-busy="true">
-    <div class="listings__inner" data-role="listings">
+  <section class="plot" aria-label="The night, plotted" data-role="plot-section">
+    <div class="shell">
+      <div class="plot__frame">
+        <div class="plot__scroll" data-role="plot-scroll">
+          <div class="plot__inner" data-role="plot"></div>
+        </div>
+      </div>
+      <p class="plot__hint" data-role="plot-hint" hidden>
+        Bars run from doors to close. A dashed tail means the source didn't
+        publish an end time.
+      </p>
+    </div>
+  </section>
+
+  <section class="listing" aria-live="polite" aria-busy="true">
+    <div class="shell" data-role="listings">
       <p class="state">Loading listings…</p>
     </div>
   </section>
 
-  <section class="panels">
-    <div class="panels__inner">
+  <section class="ends">
+    <div class="shell ends__inner">
 
-      <article class="panel" id="feeds">
-        <h2 class="panel__title">Take the data</h2>
-        <p class="panel__body">
-          The listings are a static, versioned, CORS-open feed. No key, no rate
-          limit, no account. Build something with it.
+      <article class="block">
+        <h2 class="block__title">Take the data</h2>
+        <p class="block__body">
+          Static, versioned, CORS-open. No key, no rate limit, no account.
         </p>
-        <ul class="feedlist">
-          <li>
-            <a class="feedlist__link" href="data/events.json"><code>events.json</code></a>
-            <span class="feedlist__note">Everything upcoming, normalized to one schema.</span>
-          </li>
-          <li>
-            <a class="feedlist__link" href="data/events.ics"><code>events.ics</code></a>
-            <span class="feedlist__note">Subscribe in Google or Apple Calendar and the city fills itself in.</span>
-          </li>
-          <li>
-            <a class="feedlist__link" href="data/venues.json"><code>venues.json</code></a>
-            <span class="feedlist__note">Rooms currently programming, and what they book.</span>
-          </li>
-          <li>
-            <a class="feedlist__link" href="data/meta.json"><code>meta.json</code></a>
-            <span class="feedlist__note">Last refresh time and per-source health.</span>
-          </li>
+        <ul class="filelist">
+          <li><a href="data/events.json"><code>events.json</code></a><span>Everything upcoming, one schema</span></li>
+          <li><a href="data/events.ics"><code>events.ics</code></a><span>Subscribe and the city fills your calendar</span></li>
+          <li><a href="data/venues.json"><code>venues.json</code></a><span>Rooms currently programming</span></li>
+          <li><a href="data/meta.json"><code>meta.json</code></a><span>Refresh time and source health</span></li>
         </ul>
       </article>
 
-      <article class="panel" id="venues">
-        <h2 class="panel__title">Rooms</h2>
-        <p class="panel__body">Venues with something booked. Tap one to filter.</p>
-        <ol class="venuelist" data-role="venue-list"></ol>
+      <article class="block">
+        <h2 class="block__title">Rooms</h2>
+        <p class="block__body">Venues with something booked. Pick one to filter.</p>
+        <ol class="rooms" data-role="venue-list"></ol>
       </article>
 
-      <article class="panel" id="submit">
-        <h2 class="panel__title">Something missing?</h2>
-        <p class="panel__body">
-          Plenty of the good ones never touch a ticketing platform. If a night
-          isn't here, add it — curated entries outrank the platforms and go live
-          on the next refresh.
+      <article class="block">
+        <h2 class="block__title">Missing a night?</h2>
+        <p class="block__body">
+          Plenty of the good ones never touch a ticketing platform. Add it and it
+          outranks the platform listings on the next refresh.
         </p>
-        <p class="panel__actions">
-          <a class="btn btn--solid" data-role="submit-link" href="#">Submit a night</a>
-          <a class="btn btn--ghost" data-role="repo-link" href="#">Source on GitHub</a>
+        <p class="block__actions">
+          <a class="btn" data-role="submit-link" href="#">Submit a night</a>
+          <a class="ghost" data-role="repo-link" href="#">Source</a>
         </p>
       </article>
 
@@ -145,18 +122,17 @@
   </section>
 </main>
 
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="sources" data-role="source-health">
-      <h2 class="footer__heading">Where this comes from</h2>
-      <ul class="sources__list" data-role="source-list"></ul>
-    </div>
-    <p class="footer__meta">
-      Refreshed automatically every six hours. Listings and artwork belong to the
-      promoters and venues — this is an index, not a box office.
+<footer class="foot">
+  <div class="shell foot__inner">
+    <ul class="sources" data-role="source-list"></ul>
+    <p>
+      Updated <span data-role="updated">—</span> · refreshed every six hours ·
+      an index, not a box office — tickets are sold by the venues and promoters.
     </p>
   </div>
 </footer>
+
+<div class="tip" data-role="tip" role="status" hidden></div>
 
 <script src="assets/js/app.js"></script>
 </body>

@@ -1,36 +1,49 @@
 /* After Dark — Vancouver house & techno listings
-   ---------------------------------------------------------------
-   Anchor: lo-fi risograph / photocopied flyer. The material culture of this
-   scene is xeroxed posters stapled to poles and misregistered riso prints,
-   not a black website with a neon accent.
+   ================================================================
+   The page is an instrument, not a landing page. Its primary object is a
+   13-hour time axis (19:00 → 08:00) with every party drawn at its real
+   hours, because this scene has a shape: clubs stop at 3, the afterhours
+   rooms run to 8. Reading that handover is the whole point.
 
-   Committed rules, applied without exception:
-     · Paper stock ground. Never a dark surface.
-     · Zero border-radius. Every corner is cut, not rounded.
-     · Ink is warm black; pink and blue are inks, not "accents".
-     · Misregistration is the signature — display type prints off-plate.
-     · Light theme by intent; the paper IS the design. */
+   Genre colour is FUNCTIONAL — it is what makes the plot legible — so it
+   is a validated categorical palette, not decoration. Six hues, checked
+   for CVD separation and contrast against the plot surface. Identity is
+   never carried by colour alone: every bar and every row also states its
+   genre in text.
+
+   Deliberately absent: hero banner, gradient fills, rounded cards with an
+   accent stripe, a lone neon accent, emoji. */
 
 :root {
-  --paper:      #E8E0CE;  /* newsprint, yellowed */
-  --paper-2:    #DDD3BB;  /* second sheet, panels */
-  --paper-3:    #D2C7AC;  /* deepest inset */
-  --toner:      #17150F;  /* photocopier black, warm not neutral */
-  --toner-mid:  #4A4538;  /* faded toner, secondary text */
-  --toner-thin: #857C68;  /* third-generation copy, tertiary */
-  --pink:       #FF2E88;  /* riso fluorescent pink — fills and plate offsets */
-  /* Fluorescent pink only hits 2.7:1 on paper, so text and fine rules print in
-     a denser pull of the same ink (4.6:1). Same colour family, legible. */
-  --pink-ink:   #C4005F;
-  --blue:       #0B58BF;  /* riso blue — interactive ink */
+  --ground:     #0F0F0E;   /* page */
+  --surface-1:  #1A1A19;   /* plot + panel surface (palette-validated) */
+  --surface-2:  #232321;   /* raised: inputs, bars' base */
+  --line:       #33332F;   /* structural rules */
+  --line-soft:  #26261F;
 
-  --poster: "Archivo Black", "Haettenschweiler", Impact, sans-serif;
-  --body: "Archivo", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --type: "Courier Prime", ui-monospace, "Courier New", monospace;
+  --text-1:     #FFFFFF;
+  --text-2:     #C3C2B7;
+  --text-3:     #86857C;
 
-  --rail: 5rem;
-  --shell: 74rem;
-  --gut: clamp(1.1rem, 4vw, 2.5rem);
+  /* Categorical genre hues. Fixed order, never cycled, assigned to the
+     entity — a filter that hides a genre must not repaint the survivors. */
+  --g-techno:   #3987E5;
+  --g-house:    #D95926;
+  --g-garage:   #199E70;
+  --g-disco:    #C98500;
+  --g-dnb:      #D55181;
+  --g-trance:   #9085E9;
+  --g-breaks:   #008300;
+  /* Neutral, and only ever the unlabelled catch-all -- a real genre never
+     shares a swatch with another, or the legend stops identifying anything. */
+  --g-other:    #7A7970;
+
+  --sans: "Chivo", ui-sans-serif, system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --shell: 82rem;
+  --gut: clamp(1rem, 3.5vw, 2.25rem);
+  --lane-w: 8.5rem;        /* night label column in the plot */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -39,580 +52,560 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--toner);
-  font-family: var(--body);
-  font-size: 1rem;
+  background: var(--ground);
+  color: var(--text-1);
+  font-family: var(--sans);
+  font-size: 0.95rem;
   line-height: 1.5;
-  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Paper grain over the whole sheet. Multiply so it darkens like fibre. */
-.grain {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0.35;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-}
-
-h1, h2, h3 { margin: 0; text-wrap: balance; }
+h1, h2, h3 { margin: 0; font-weight: 700; text-wrap: balance; }
 p { margin: 0; }
-ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
 a { color: inherit; }
-code { font-family: var(--type); font-size: 0.92em; }
+code { font-family: var(--mono); font-size: 0.92em; }
 
-:focus-visible {
-  outline: 3px solid var(--pink);
-  outline-offset: 2px;
-}
+:focus-visible { outline: 2px solid var(--text-1); outline-offset: 2px; }
+
+.shell { max-width: var(--shell); margin: 0 auto; padding-inline: var(--gut); }
 
 .visually-hidden {
   position: absolute; width: 1px; height: 1px;
   margin: -1px; padding: 0; overflow: hidden;
-  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  clip-path: inset(50%); white-space: nowrap;
 }
 
-.skip-link {
-  position: absolute; left: -999px; top: 0; z-index: 200;
-  background: var(--toner); color: var(--paper);
-  padding: 0.7rem 1.1rem; font-weight: 700; text-decoration: none;
-}
-.skip-link:focus { left: 0; }
+/* --------------------------------------------------------- source health */
 
-/* ---------------------------------------------------------------- masthead */
+.sources { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; }
+.source { display: inline-flex; align-items: center; gap: 0.3rem; }
+/* Status reads from shape as well as hue, so it survives CVD and greyscale. */
+.source__dot { width: 0.45rem; height: 0.45rem; background: var(--text-3); }
+.source--ok .source__dot { background: var(--g-garage); }
+.source--failed .source__dot {
+  background: var(--g-house);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.source--skipped .source__dot { background: transparent; box-shadow: inset 0 0 0 1px var(--text-3); }
 
-.masthead {
-  position: relative;
-  border-bottom: 3px solid var(--toner);
-  overflow: hidden;
-}
+/* ------------------------------------------------------------------ intro */
 
-/* Halftone wash, dense at the top edge and fading out — a bad photocopy. */
-.masthead::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: radial-gradient(var(--toner) 1.1px, transparent 1.3px);
-  background-size: 6px 6px;
-  opacity: 0.16;
-  -webkit-mask-image: linear-gradient(190deg, #000 0%, transparent 62%);
-  mask-image: linear-gradient(190deg, #000 0%, transparent 62%);
+.intro { padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(1.2rem, 3vw, 1.8rem); }
+.intro__title {
+  font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 900;
+  max-width: 20ch;
+  margin-bottom: 0.8rem;
 }
+.intro__body { color: var(--text-2); max-width: 56ch; }
 
-.masthead__inner {
-  position: relative;
-  max-width: var(--shell);
-  margin: 0 auto;
-  padding: clamp(1.4rem, 3vw, 2.4rem) var(--gut) clamp(1.8rem, 4vw, 2.8rem);
-}
-
-.dateline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  font-family: var(--type);
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--toner-mid);
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid var(--toner);
-  margin-bottom: clamp(1rem, 3vw, 1.8rem);
-}
-
-/* The signature: display type printed off-plate, pink and blue plates shifted. */
-.wordmark {
-  font-family: var(--poster);
-  font-weight: 400;
-  font-size: clamp(3.5rem, 15vw, 11rem);
-  line-height: 0.84;
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
-  color: var(--toner);
-  text-shadow:
-     0.045em -0.028em 0 var(--pink),
-    -0.045em  0.028em 0 var(--blue);
-}
-.wordmark__line { display: block; }
-.wordmark__line + .wordmark__line { margin-left: 0.055em; }
-
-.masthead__foot {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-top: clamp(1.1rem, 3vw, 1.8rem);
-}
-
-.masthead__lede {
-  max-width: 40ch;
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
-  color: var(--toner-mid);
-}
-
-/* Rubber stamp, struck slightly crooked the way a real one lands. */
-.stamp {
-  flex: none;
-  transform: rotate(-4deg);
-  border: 3px solid var(--pink-ink);
-  color: var(--pink-ink);
-  padding: 0.5rem 1rem 0.6rem;
-  text-align: center;
-  min-width: 8.5rem;
-}
-.stamp__count {
-  display: block;
-  font-family: var(--poster);
-  font-size: 2.6rem;
-  line-height: 0.9;
-  font-variant-numeric: tabular-nums;
-}
-.stamp__label {
-  display: block;
-  font-family: var(--type);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-/* Nothing on tonight is information too — don't stamp a lie. */
-.stamp.is-empty { border-color: var(--toner-thin); color: var(--toner-thin); }
-
-.tallies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 clamp(1.6rem, 5vw, 3rem);
-  margin-top: clamp(1.4rem, 3vw, 2rem);
-  border-top: 1px solid var(--toner);
-  padding-top: 0.8rem;
-}
-.tally dt {
-  font-family: var(--type);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--toner-thin);
-}
-.tally dd {
-  font-family: var(--poster);
-  font-size: 1.9rem;
-  line-height: 1.1;
-  font-variant-numeric: tabular-nums;
-}
-.tally--small {
-  font-family: var(--type) !important;
-  font-size: 0.9rem !important;
-  font-weight: 700;
-  padding-top: 0.5rem;
-}
-
-/* ---------------------------------------------------------------- controls */
+/* --------------------------------------------------------------- controls */
 
 .controls {
   position: sticky;
   top: 0;
-  z-index: 20;
-  background: var(--paper-2);
-  border-bottom: 3px solid var(--toner);
+  z-index: 30;
+  background: color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-block: 1px solid var(--line);
 }
-
 .controls__inner {
-  max-width: var(--shell);
-  margin: 0 auto;
-  padding: 0.85rem var(--gut);
+  padding-block: 0.7rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.55rem;
 }
-
-.search input {
-  width: 100%;
-  background: var(--paper);
-  border: 2px solid var(--toner);
-  border-radius: 0;
-  color: var(--toner);
-  font-family: var(--type);
-  font-size: 0.95rem;
-  padding: 0.6rem 0.8rem;
-}
-.search input::placeholder { color: var(--toner-thin); }
-.search input:focus { outline: 3px solid var(--pink); outline-offset: 0; }
-
-.chipset { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.chipset--genres:empty { display: none; }
-
-/* Square, hard-edged, no fill until chosen — a checkbox on a photocopied form. */
-.chip {
-  font-family: var(--type);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--toner);
-  background: transparent;
-  border: 2px solid var(--toner);
-  border-radius: 0;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
-}
-.chip:hover { background: var(--paper-3); }
-.chip.is-active {
-  background: var(--toner);
-  color: var(--paper);
-}
-.chip__count { opacity: 0.6; margin-left: 0.3rem; }
-
-.controls__row {
+.controls__line {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem 0.9rem;
 }
+.controls__line--tight { gap: 0.5rem; }
 
-.select select {
+.field input, .field select {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--text-1);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 2px;
+  min-width: 0;
+}
+.field input { width: min(22rem, 100%); }
+.field input::placeholder { color: var(--text-3); }
+.field--select select {
   appearance: none;
-  background: var(--paper);
-  border: 2px solid var(--toner);
-  border-radius: 0;
-  color: var(--toner);
-  font-family: var(--type);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 0.34rem 1.9rem 0.34rem 0.6rem;
   cursor: pointer;
-  max-width: 15rem;
-  background-image: linear-gradient(45deg, transparent 50%, var(--toner) 50%),
-                    linear-gradient(135deg, var(--toner) 50%, transparent 50%);
-  background-position: calc(100% - 14px) 55%, calc(100% - 9px) 55%;
-  background-size: 5px 5px, 5px 5px;
+  padding-right: 1.7rem;
+  max-width: 13rem;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-3) 50%),
+                    linear-gradient(135deg, var(--text-3) 50%, transparent 50%);
+  background-position: calc(100% - 13px) 54%, calc(100% - 9px) 54%;
+  background-size: 4px 4px;
   background-repeat: no-repeat;
 }
 
-.toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--type);
+.segmented { display: flex; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
+.seg {
+  font-family: var(--mono);
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: var(--text-2);
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--line);
+  padding: 0.38rem 0.7rem;
   cursor: pointer;
 }
-.toggle input { accent-color: var(--pink); width: 1rem; height: 1rem; cursor: pointer; }
+.seg:last-child { border-right: 0; }
+.seg:hover { background: var(--surface-2); color: var(--text-1); }
+.seg.is-active { background: var(--text-1); color: var(--ground); font-weight: 600; }
 
-/* ---------------------------------------------------------------- listings */
-
-.listings__inner {
-  max-width: var(--shell);
-  margin: 0 auto;
-  padding: 0 var(--gut) clamp(3rem, 7vw, 5rem);
-}
-
-/* Night divider: a solid ink bar with the day knocked out of it. */
-.nightbreak {
-  display: flex;
-  align-items: baseline;
-  gap: 0.8rem;
-  background: var(--toner);
-  color: var(--paper);
-  padding: 0.5rem 0.9rem;
-  margin: 2.2rem 0 0;
-}
-.nightbreak:first-child { margin-top: 1.6rem; }
-
-.nightbreak__day {
-  font-family: var(--poster);
-  font-size: clamp(1.15rem, 3vw, 1.6rem);
-  line-height: 1.1;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
-}
-.nightbreak__date,
-.nightbreak__count {
-  font-family: var(--type);
+/* Legend doubles as the genre filter. */
+.legend { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.legend:empty { display: none; }
+.key {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--mono);
   font-size: 0.72rem;
-  font-weight: 700;
+  color: var(--text-2);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.26rem 0.5rem;
+  cursor: pointer;
+}
+.key:hover { border-color: var(--text-3); color: var(--text-1); }
+.key__swatch { width: 0.6rem; height: 0.6rem; background: var(--key-hue, var(--g-other)); flex: none; }
+.key__count { color: var(--text-3); }
+.key.is-on { border-color: var(--text-1); color: var(--text-1); background: var(--surface-2); }
+/* Dimmed rather than hidden: the set of genres is itself information. */
+.legend.has-selection .key:not(.is-on) { opacity: 0.42; }
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.check input { accent-color: var(--g-techno); width: 0.9rem; height: 0.9rem; cursor: pointer; }
+
+.ghost {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-2);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ghost:hover { border-color: var(--text-1); color: var(--text-1); }
+
+/* ------------------------------------------------------------------- plot */
+
+.plot { padding-top: clamp(1.2rem, 3vw, 2rem); }
+
+.plot__frame {
+  border: 1px solid var(--line);
+  background: var(--surface-1);
+  border-radius: 2px;
+}
+/* Wide content scrolls in its own container; the page never moves sideways. */
+.plot__scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.plot__inner { min-width: 44rem; }
+
+.plot__hint {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-3);
+  margin-top: 0.5rem;
+}
+
+/* Hour axis, sticky so it stays readable down a long night list. */
+.axis {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: var(--lane-w) 1fr;
+  background: var(--surface-1);
+  border-bottom: 1px solid var(--line);
+}
+.axis__corner {
+  font-family: var(--mono);
+  font-size: 0.62rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.75;
+  color: var(--text-3);
+  padding: 0.45rem 0.7rem;
+  border-right: 1px solid var(--line);
 }
-.nightbreak__count { margin-left: auto; white-space: nowrap; }
+.axis__track { position: relative; height: 100%; }
+.axis__tick {
+  position: absolute;
+  top: 0; bottom: 0;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--text-3);
+  padding-left: 0.3rem;
+  border-left: 1px solid var(--line-soft);
+  display: flex;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+}
+/* Stated once here rather than on every night row. */
+.axis__call {
+  position: absolute;
+  top: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 0.3rem;
+  border-left: 1px dashed var(--text-3);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  white-space: nowrap;
+}
 
-/* Tonight's bar prints in fluorescent ink. Knocked-out paper type is only
-   2.7:1 on that pink, so tonight's bar overprints in black instead. */
-.nightbreak--tonight { background: var(--pink); color: var(--toner); }
-.nightbreak--tonight .nightbreak__date,
-.nightbreak--tonight .nightbreak__count { opacity: 0.7; }
+.night {
+  display: grid;
+  grid-template-columns: var(--lane-w) 1fr;
+  border-bottom: 1px solid var(--line-soft);
+}
+.night:last-child { border-bottom: 0; }
+
+.night__label {
+  border-right: 1px solid var(--line);
+  padding: 0.55rem 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  position: sticky;
+  left: 0;
+  background: var(--surface-1);
+  z-index: 1;
+}
+.night__day { display: block; color: var(--text-1); font-weight: 600; }
+.night__date { display: block; color: var(--text-3); font-size: 0.68rem; }
+.night--tonight .night__day { color: var(--g-techno); }
+
+.night__track {
+  position: relative;
+  padding: 0.4rem 0;
+  min-height: 2.4rem;
+}
+/* Hour gridlines behind the bars. */
+.night__track::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--line-soft) 0 1px,
+    transparent 1px var(--hour-step, 7.6923%)
+  );
+  pointer-events: none;
+}
+
+/* Last call. The one structural fact the whole plot is organised around. */
+.marker {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 0;
+  border-left: 1px dashed var(--text-3);
+  pointer-events: none;
+  z-index: 1;
+}
+.marker--now { border-left: 1px solid var(--g-house); border-left-style: solid; }
+.marker__flag {
+  position: absolute;
+  top: -0.1rem;
+  left: 0.25rem;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  white-space: nowrap;
+}
+.marker--now .marker__flag { color: var(--g-house); }
+
+.bar {
+  position: absolute;
+  left: var(--from);
+  width: var(--span);
+  top: calc(var(--lane) * 1.75rem);
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 0.35rem;
+  background: var(--hue);
+  color: #0F0F0E;
+  border: 0;
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  /* 2px surface ring keeps touching bars from reading as one block. */
+  box-shadow: 0 0 0 2px var(--surface-1);
+  z-index: 2;
+}
+.bar:hover, .bar.is-lit { box-shadow: 0 0 0 2px var(--surface-1), 0 0 0 3px var(--text-1); }
+/* No published end time — the tail is an estimate and says so. */
+.bar--open {
+  -webkit-mask-image: linear-gradient(to right, #000 62%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 62%, transparent 100%);
+}
+.bar--clipped { border-left: 3px solid #0F0F0E; }
+
+.plot__more {
+  padding: 0.7rem 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-3);
+  border-top: 1px solid var(--line);
+}
+
+.plot__empty {
+  padding: 2rem 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-3);
+}
+
+/* Tooltip — the hover layer the plot needs to be readable. */
+.tip {
+  position: fixed;
+  z-index: 60;
+  max-width: 20rem;
+  background: var(--ground);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.tip__title { font-weight: 700; margin-bottom: 0.15rem; }
+.tip__meta { font-family: var(--mono); font-size: 0.7rem; color: var(--text-2); }
+.tip__genre { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; }
+.tip__swatch { width: 0.55rem; height: 0.55rem; flex: none; }
+
+/* ---------------------------------------------------------------- listing */
+
+.listing { padding: clamp(1.6rem, 4vw, 2.6rem) 0 clamp(2.5rem, 6vw, 4rem); }
+
+.daybreak {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 1.4rem 0 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.daybreak:first-child { padding-top: 0; }
+.daybreak__day {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.daybreak__count {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-3);
+  margin-left: auto;
+}
+.daybreak--tonight .daybreak__day { color: var(--g-techno); }
 
 .gig {
   display: grid;
-  grid-template-columns: var(--rail) 1fr auto;
-  gap: 0 1.2rem;
+  grid-template-columns: 4.6rem 1fr auto;
+  gap: 0 1rem;
   align-items: start;
-  padding: 1rem 0.9rem;
-  border-bottom: 1px solid var(--toner-thin);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line-soft);
 }
-.gig:hover { background: var(--paper-2); }
+.gig.is-lit { background: var(--surface-1); }
 
 .gig__time {
-  font-family: var(--type);
-  font-size: 1rem;
-  font-weight: 700;
+  font-family: var(--mono);
+  font-size: 0.82rem;
   font-variant-numeric: tabular-nums;
+  color: var(--text-1);
   padding-top: 0.1rem;
 }
 .gig__time small {
   display: block;
-  font-size: 0.66rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--toner-thin);
+  font-size: 0.64rem;
+  color: var(--text-3);
 }
 
 .gig__main { min-width: 0; }
-
-.gig__title {
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
-  margin-bottom: 0.2rem;
-}
-.gig__title a { text-decoration: none; box-shadow: inset 0 -2px 0 var(--blue); }
-.gig__title a:hover { color: var(--blue); }
-
+.gig__title { font-size: 1rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.15rem; }
+.gig__title a { text-decoration: none; }
+.gig__title a:hover { text-decoration: underline; }
 .gig__lineup {
-  font-family: var(--type);
-  font-size: 0.86rem;
-  color: var(--toner-mid);
-  margin-bottom: 0.35rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-2);
+  margin-bottom: 0.25rem;
   overflow-wrap: anywhere;
 }
-
 .gig__facts {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.35rem 0.6rem;
-  font-family: var(--type);
+  gap: 0.3rem 0.6rem;
+  font-family: var(--mono);
   font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: var(--text-3);
 }
-.gig__venue { color: var(--toner); }
+.gig__venue { color: var(--text-2); }
+/* Genre is stated in words next to its swatch — never colour alone. */
+.chip { display: inline-flex; align-items: center; gap: 0.28rem; }
+.chip__swatch { width: 0.5rem; height: 0.5rem; flex: none; }
+.flag { border: 1px solid var(--line); padding: 0 0.3rem; }
+.flag--afterhours { color: var(--g-trance); border-color: var(--g-trance); }
+.flag--stale { color: var(--text-3); }
 
-.tag {
-  border: 1px solid var(--toner-mid);
-  padding: 0.05rem 0.35rem;
-  color: var(--toner-mid);
-  font-weight: 400;
-}
-.tag--afterhours { color: var(--pink-ink); border-color: var(--pink-ink); font-weight: 700; }
-.tag--stale { color: var(--paper); background: var(--toner-mid); border-color: var(--toner-mid); }
-
-.gig__aside {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.35rem;
-}
+.gig__aside { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
 .gig__price {
-  font-family: var(--type);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-family: var(--mono);
+  font-size: 0.76rem;
   font-variant-numeric: tabular-nums;
+  color: var(--text-2);
   white-space: nowrap;
 }
-
-/* ---------------------------------------------------------------- buttons */
 
 .btn {
   display: inline-block;
-  font-family: var(--type);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
   text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  border: 2px solid var(--toner);
-  border-radius: 0;
+  background: var(--text-1);
+  color: var(--ground);
+  border: 1px solid var(--text-1);
+  border-radius: 2px;
+  padding: 0.3rem 0.6rem;
   cursor: pointer;
   white-space: nowrap;
-  background: transparent;
-  color: var(--toner);
 }
-/* Tickets are the one thing that prints in fluorescent ink. */
-.btn--solid { background: var(--pink); border-color: var(--toner); color: var(--toner); }
-.btn--solid:hover { background: var(--toner); color: var(--pink); }
-.btn--ghost:hover { background: var(--toner); color: var(--paper); }
-.btn--mini { font-size: 0.66rem; padding: 0.25rem 0.5rem; border-width: 1px; }
+.btn:hover { background: transparent; color: var(--text-1); }
 
-/* ---------------------------------------------------------------- states */
+/* ----------------------------------------------------------------- states */
 
 .state {
-  padding: clamp(2.5rem, 7vw, 4.5rem) 0;
+  padding: clamp(2rem, 6vw, 3.5rem) 0;
   max-width: 46ch;
-  font-family: var(--type);
-  color: var(--toner-mid);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--text-3);
 }
 .state__title {
-  font-family: var(--poster);
-  font-size: clamp(1.6rem, 4vw, 2.3rem);
-  text-transform: uppercase;
-  color: var(--toner);
-  line-height: 1.05;
-  margin-bottom: 0.6rem;
-  text-shadow: 0.03em -0.02em 0 var(--pink);
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-1);
+  margin-bottom: 0.4rem;
 }
-.state__body { margin-bottom: 1.1rem; }
+.state__body { margin-bottom: 1rem; }
 
-/* ---------------------------------------------------------------- panels */
+/* ------------------------------------------------------------------- ends */
 
-.panels {
-  border-top: 3px solid var(--toner);
-  background: var(--paper-2);
-}
-.panels__inner {
-  max-width: var(--shell);
-  margin: 0 auto;
-  padding: clamp(2.2rem, 5vw, 3.5rem) var(--gut);
+.ends { border-top: 1px solid var(--line); background: var(--surface-1); }
+.ends__inner {
+  padding-block: clamp(2rem, 5vw, 3.2rem);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-  gap: clamp(1.8rem, 4vw, 3rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: clamp(1.6rem, 4vw, 2.8rem);
   align-items: start;
 }
-
-.panel__title {
-  font-family: var(--poster);
-  font-size: 1.35rem;
+.block__title {
+  font-size: 0.76rem;
+  font-family: var(--mono);
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  color: var(--text-3);
   padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--toner);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 0.7rem;
 }
-.panel__body {
-  font-size: 0.92rem;
-  color: var(--toner-mid);
-  margin-bottom: 1rem;
-}
-.panel__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.block__body { color: var(--text-2); font-size: 0.88rem; margin-bottom: 0.9rem; }
+.block__actions { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 
-.feedlist { display: flex; flex-direction: column; gap: 0.8rem; }
-.feedlist__link { color: var(--blue); font-weight: 700; }
-.feedlist__note {
+.filelist { display: flex; flex-direction: column; gap: 0.6rem; }
+.filelist a { color: var(--text-1); }
+.filelist span {
   display: block;
-  font-size: 0.82rem;
-  color: var(--toner-mid);
-  margin-top: 0.1rem;
+  font-size: 0.8rem;
+  color: var(--text-3);
+  margin-top: 0.05rem;
 }
 
-.venuelist { display: flex; flex-direction: column; }
-.venue {
+.rooms { display: flex; flex-direction: column; }
+.room {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
-  font-size: 0.9rem;
-  border-bottom: 1px solid var(--toner-thin);
-  padding: 0.4rem 0;
+  gap: 0.5rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 0.88rem;
 }
-.venue__name {
+.room button {
   background: none; border: 0; padding: 0;
-  color: var(--toner); font: inherit; font-weight: 600;
-  text-align: left; cursor: pointer;
+  color: var(--text-1); font: inherit; text-align: left; cursor: pointer;
 }
-.venue__name:hover { color: var(--blue); }
-.venue__count {
-  font-family: var(--type);
-  font-size: 0.76rem;
-  font-weight: 700;
+.room button:hover { text-decoration: underline; }
+.room span {
+  font-family: var(--mono);
+  font-size: 0.72rem;
   font-variant-numeric: tabular-nums;
-  color: var(--toner-thin);
+  color: var(--text-3);
   margin-left: auto;
 }
 
-/* ---------------------------------------------------------------- footer */
-
-.footer { border-top: 3px solid var(--toner); }
-.footer__inner {
-  max-width: var(--shell);
-  margin: 0 auto;
-  padding: clamp(1.8rem, 4vw, 2.6rem) var(--gut) clamp(2.5rem, 6vw, 3.5rem);
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+.foot {
+  border-top: 1px solid var(--line);
+  padding-block: clamp(1.4rem, 3vw, 2rem) clamp(2rem, 5vw, 3rem);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-3);
 }
-.footer__heading {
-  font-family: var(--type);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--toner-thin);
-  margin-bottom: 0.6rem;
-}
-.sources__list { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+.foot__inner { display: flex; flex-direction: column; gap: 0.8rem; }
 
-.source {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--type);
-  font-size: 0.76rem;
-}
-/* State reads from shape as well as ink, so it survives a mono photocopy. */
-.source__dot {
-  width: 0.6rem; height: 0.6rem;
-  background: var(--toner-thin);
-  flex: none;
-}
-.source--ok .source__dot { background: var(--toner); }
-.source--failed .source__dot {
-  background: var(--pink-ink);
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-.source--skipped .source__dot { background: transparent; border: 1px solid var(--toner-thin); }
-.source__count { color: var(--toner-thin); }
+/* ----------------------------------------------------------------- narrow */
 
-.footer__meta {
-  font-family: var(--type);
-  font-size: 0.78rem;
-  color: var(--toner-mid);
-  max-width: 66ch;
-}
+@media (max-width: 46rem) {
+  :root { --lane-w: 5.2rem; }
 
-/* ---------------------------------------------------------------- narrow */
-
-@media (max-width: 44rem) {
-  :root { --rail: 100%; }
-
-  .gig {
-    grid-template-columns: 1fr;
-    gap: 0.4rem;
-    padding: 1rem 0.5rem;
-  }
+  .gig { grid-template-columns: 1fr; gap: 0.35rem; padding: 0.9rem 0; }
   .gig__time { display: flex; align-items: baseline; gap: 0.5rem; padding-top: 0; }
-  .gig__time small { margin-top: 0; }
-  .gig__aside {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    padding-top: 0.3rem;
-  }
-  .masthead__foot { flex-direction: column-reverse; align-items: flex-start; }
-  .stamp { transform: rotate(-3deg); }
-  .tallies { gap: 0 1.6rem; }
+  .gig__aside { flex-direction: row; align-items: center; justify-content: flex-start; gap: 0.5rem; }
+  .field input { width: 100%; }
+  .controls__line { gap: 0.45rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

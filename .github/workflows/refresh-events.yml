@@ -37,8 +37,11 @@ jobs:
           python-version: "3.12"
 
       # The pipeline is stdlib-only on purpose: no install step to break.
-      - name: Run pipeline tests
-        run: python -m pipeline.test_pipeline
+      # Catch a broken adapter before it overwrites good data.
+      - name: Run tests
+        run: |
+          python -m pipeline.test_pipeline
+          python -m pipeline.test_sources
 
       - name: Refresh feeds
         env:

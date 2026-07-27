@@ -130,10 +130,20 @@ downstream needs to change.
 
 ## Design
 
-The site is deliberately not a dark nightclub website with a neon accent. It's
-built on the lo-fi risograph anchor — paper stock, misregistered display type,
-typewriter data, zero rounded corners — because photocopied flyers are the
-actual material culture of this scene.
+The page is an instrument, not a landing page. Its primary object is a 13-hour
+axis (19:00 → 08:00) with every party drawn at its real hours, because this
+scene has a shape: clubs call last round at 3, the afterhours rooms run to 8.
+Reading that handover is the point — overlapping parties are lane-packed so a
+busy Saturday stacks instead of colliding.
+
+Genre colour is therefore *functional*, not decoration: it is what makes the
+plot legible. The seven hues are a categorical palette validated for
+colour-vision-deficiency separation and contrast against the plot surface, and
+identity is never carried by colour alone — every bar and row states its genre
+in text, and the legend doubles as the genre filter.
+
+Deliberately absent: hero banner, gradient fills, rounded cards with an accent
+stripe, a lone neon accent, emoji.
 
 ## Notes
 

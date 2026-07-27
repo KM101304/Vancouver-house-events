@@ -34,6 +34,10 @@ def test_classify() -> None:
     check("adjacent alone", classify("italo disco records"), [])
     check("dnb long form", classify("drum and bass night"), ["dnb"])
     check("empty", classify(""), [])
+    # The catch-all only survives when nothing specific matched.
+    check("catchall alone", classify("electronic music night"), ["electronic"])
+    check("catchall demoted", classify("Dance/Electronic · Techno"), ["techno"])
+    check("catchall demoted w/ adjacent", classify("electronic house and disco"), ["house", "disco"])
 
 
 def test_make_event() -> None:

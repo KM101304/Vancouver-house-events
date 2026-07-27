@@ -17,6 +17,9 @@ jobs:
       - name: Pipeline tests
         run: python -m pipeline.test_pipeline
 
+      - name: Source adapter tests
+        run: python -m pipeline.test_sources
+
       - name: Curated listings parse and validate
         run: python -m pipeline.ingest --only manual
 

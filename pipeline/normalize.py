@@ -99,6 +99,11 @@ def classify(*texts: str) -> list[str]:
     primary = [g for g in found if g in _PRIMARY_LABELS]
     if not primary:
         return []
+    # "electronic" is a catch-all, not a peer genre. A listing tagged
+    # "Dance/Electronic · Techno" is a techno night -- carrying both would put
+    # an "electronic" chip on nearly every platform listing and say nothing.
+    if len(primary) > 1:
+        primary = [g for g in primary if g != "electronic"]
     adjacent = [g for g in found if g not in _PRIMARY_LABELS]
     return primary + adjacent
 
