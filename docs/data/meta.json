@@ -1,8 +1,8 @@
 {
  "schemaVersion": 2,
- "updated": "2026-07-26T17:41:46.815733-07:00",
- "eventCount": 0,
- "venueCount": 0,
+ "updated": "2026-07-26T17:25:02.234194-07:00",
+ "eventCount": 88,
+ "venueCount": 46,
  "windowDays": 120,
  "sources": [
   {
@@ -15,9 +15,9 @@
   {
    "source": "residentadvisor",
    "label": "Resident Advisor",
-   "status": "failed",
-   "count": 0,
-   "detail": "RuntimeError: request failed for https://ra.co/graphql: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "status": "ok",
+   "count": 93,
+   "detail": ""
   },
   {
    "source": "ticketmaster",
@@ -31,8 +31,14 @@
    "label": "Showpass",
    "status": "failed",
    "count": 0,
-   "detail": "RuntimeError: no parseable response from any Showpass endpoint: request failed for https://api.showpass.com/api/public/discovery/?location=Vancouver&page_size=100&starts_on__gte=2026-07-26&starts_on__lte=2026-11-23&ordering=starts_on&page=1: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "detail": "RuntimeError: no parseable response from any Showpass endpoint: request failed for https://api.showpass.com/api/public/discovery/?location=Vancouver&page_size=100&starts_on__gte=2026-07-26&starts_on__lte=2026-11-23&ordering=starts_on&page=1: <urlopen error [Errno -2] Name or service not known>"
   }
  ],
- "genres": {}
+ "genres": {
+  "electronic": 85,
+  "house": 1,
+  "disco": 1,
+  "breaks": 1,
+  "techno": 1
+ }
 }

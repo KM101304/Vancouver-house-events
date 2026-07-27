@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-26T17:41:46.815733-07:00",
-  "eventCount": 0,
-  "venueCount": 0,
+  "updated": "2026-07-26T17:25:02.234194-07:00",
+  "eventCount": 88,
+  "venueCount": 46,
   "windowDays": 120,
   "sources": [
    {
@@ -16,9 +16,9 @@
    {
     "source": "residentadvisor",
     "label": "Resident Advisor",
-    "status": "failed",
-    "count": 0,
-    "detail": "RuntimeError: request failed for https://ra.co/graphql: <urlopen error Tunnel connection failed: 403 Forbidden>"
+    "status": "ok",
+    "count": 93,
+    "detail": ""
    },
    {
     "source": "ticketmaster",
@@ -32,10 +32,2106 @@
     "label": "Showpass",
     "status": "failed",
     "count": 0,
-    "detail": "RuntimeError: no parseable response from any Showpass endpoint: request failed for https://api.showpass.com/api/public/discovery/?location=Vancouver&page_size=100&starts_on__gte=2026-07-26&starts_on__lte=2026-11-23&ordering=starts_on&page=1: <urlopen error Tunnel connection failed: 403 Forbidden>"
+    "detail": "RuntimeError: no parseable response from any Showpass endpoint: request failed for https://api.showpass.com/api/public/discovery/?location=Vancouver&page_size=100&starts_on__gte=2026-07-26&starts_on__lte=2026-11-23&ordering=starts_on&page=1: <urlopen error [Errno -2] Name or service not known>"
    }
   ],
-  "genres": {}
+  "genres": {
+   "electronic": 85,
+   "house": 1,
+   "disco": 1,
+   "breaks": 1,
+   "techno": 1
+  }
  },
- "events": []
+ "events": [
+  {
+   "id": "734ab78cb767f579",
+   "title": "Max Huberdeau Quartet",
+   "artists": [],
+   "venue": "Hero's Welcome",
+   "address": "Vancouver",
+   "start": "2026-07-26T14:00:00-07:00",
+   "end": "2026-07-26T16:00:00-07:00",
+   "date": "2026-07-26",
+   "night": "2026-07-26",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494254",
+   "ticketUrl": "https://ra.co/events/2494254",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "bb3a0c2e69b4e709",
+   "title": "Gorg-O-Mish presents: PRIDE // Hera, G-Luve & TASHI",
+   "artists": [
+    "Hera (IE)",
+    "TASHI"
+   ],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-07-26T23:00:00-07:00",
+   "end": "2026-07-27T08:00:00-07:00",
+   "date": "2026-07-26",
+   "night": "2026-07-26",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2492853",
+   "ticketUrl": "https://ra.co/events/2492853",
+   "image": "",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "3a28fb8f91c5d9db",
+   "title": "Kim Gordon - Play Me Tour",
+   "artists": [],
+   "venue": "Hollywood Theatre",
+   "address": "Vancouver",
+   "start": "2026-07-27T20:00:00-07:00",
+   "end": "2026-07-27T23:00:00-07:00",
+   "date": "2026-07-27",
+   "night": "2026-07-27",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2489232",
+   "ticketUrl": "https://ra.co/events/2489232",
+   "image": "",
+   "promoter": "Timbre Concerts Ltd.",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "bf87aa2d5e09950a",
+   "title": "A Deep Listen of Boards of Canada's 'Inferno'",
+   "artists": [],
+   "venue": "TBA - Emily Carr University of Art + Design",
+   "address": "Vancouver",
+   "start": "2026-07-29T19:00:00-07:00",
+   "end": "2026-07-29T20:30:00-07:00",
+   "date": "2026-07-29",
+   "night": "2026-07-29",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2484094",
+   "ticketUrl": "https://ra.co/events/2484094",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "bda32da6af924369",
+   "title": "underscores",
+   "artists": [],
+   "venue": "Celebrities Night Club",
+   "address": "Vancouver",
+   "start": "2026-07-30T19:00:00-07:00",
+   "end": "2026-07-30T22:00:00-07:00",
+   "date": "2026-07-30",
+   "night": "2026-07-30",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2441529",
+   "ticketUrl": "https://ra.co/events/2441529",
+   "image": "",
+   "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "4ee6804b45ecd3af",
+   "title": "Gordon Grdina Trio",
+   "artists": [],
+   "venue": "Hero's Welcome",
+   "address": "Vancouver",
+   "start": "2026-07-30T19:00:00-07:00",
+   "end": "2026-07-30T21:00:00-07:00",
+   "date": "2026-07-30",
+   "night": "2026-07-30",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494257",
+   "ticketUrl": "https://ra.co/events/2494257",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "847e926c4f0df1c3",
+   "title": "The Ryze presents Synesthesia #30",
+   "artists": [
+    "The Ryze"
+   ],
+   "venue": "The Beaumont Studios",
+   "address": "Vancouver",
+   "start": "2026-07-30T20:00:00-07:00",
+   "end": "2026-07-30T22:00:00-07:00",
+   "date": "2026-07-30",
+   "night": "2026-07-30",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2489144",
+   "ticketUrl": "https://ra.co/events/2489144",
+   "image": "",
+   "promoter": "JOMA Studios",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "d47a2bed0be6cbec",
+   "title": "Habibi Paradise",
+   "artists": [
+    "Parmis"
+   ],
+   "venue": "The Lido",
+   "address": "Vancouver",
+   "start": "2026-07-30T21:00:00-07:00",
+   "end": "2026-07-31T01:00:00-07:00",
+   "date": "2026-07-30",
+   "night": "2026-07-30",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494213",
+   "ticketUrl": "https://ra.co/events/2494213",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "2c0cee34e6324d23",
+   "title": "CUM TOGETHER PRES. dj g2g",
+   "artists": [
+    "dj g2g"
+   ],
+   "venue": "Celebrities Night Club",
+   "address": "Vancouver",
+   "start": "2026-07-30T23:00:00-07:00",
+   "end": "2026-07-31T04:00:00-07:00",
+   "date": "2026-07-30",
+   "night": "2026-07-30",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2489102",
+   "ticketUrl": "https://ra.co/events/2489102",
+   "image": "",
+   "promoter": "Blueprint, Blueprint Events, Normie",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "8cb1195e88bf6f63",
+   "title": "Home By Midnight XL Pride Kick Off Party",
+   "artists": [],
+   "venue": "Hollywood Theatre",
+   "address": "Vancouver",
+   "start": "2026-07-31T19:00:00-07:00",
+   "end": "2026-08-01T23:59:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494232",
+   "ticketUrl": "https://ra.co/events/2494232",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor",
+   "alsoOn": [
+    "residentadvisor"
+   ]
+  },
+  {
+   "id": "422f16f9919df574",
+   "title": "Club Roxy",
+   "artists": [
+    "Roxy Motorola"
+   ],
+   "venue": "The Lido",
+   "address": "Vancouver",
+   "start": "2026-07-31T21:00:00-07:00",
+   "end": "2026-08-01T02:00:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494211",
+   "ticketUrl": "https://ra.co/events/2494211",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "4fda6d2f68b6ecee",
+   "title": "down the well with Yuya61 & captivate",
+   "artists": [
+    "captivate"
+   ],
+   "venue": "The Well Studios",
+   "address": "Vancouver",
+   "start": "2026-07-31T21:00:00-07:00",
+   "end": "2026-08-01T03:00:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2492551",
+   "ticketUrl": "https://ra.co/events/2492551",
+   "image": "",
+   "promoter": "down the well",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "d6a760a81220a484",
+   "title": "DJ Seinfeld (Vancouver)",
+   "artists": [
+    "DJ Seinfeld",
+    "Pacific Coliseum",
+    "Galen Allan"
+   ],
+   "venue": "Fortune Sound Club",
+   "address": "Vancouver",
+   "start": "2026-07-31T22:00:00-07:00",
+   "end": "2026-08-01T04:00:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2464481",
+   "ticketUrl": "https://ra.co/events/2464481",
+   "image": "",
+   "promoter": "Blueprint Events, Mint Productions",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "3fad4a617f7fc5ea",
+   "title": "CUM TOGETHER PRES. Coco & Breezy",
+   "artists": [
+    "Coco & Breezy"
+   ],
+   "venue": "Celebrities Night Club",
+   "address": "Vancouver",
+   "start": "2026-07-31T23:00:00-07:00",
+   "end": "2026-08-01T04:00:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2461955",
+   "ticketUrl": "https://ra.co/events/2461955",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "b3f3d1793c8834e0",
+   "title": "HOMO DEPOT // PRIDE",
+   "artists": [
+    "AWood",
+    "mykissera",
+    "SUBDIDI"
+   ],
+   "venue": "Platform9",
+   "address": "Vancouver",
+   "start": "2026-07-31T23:00:00-07:00",
+   "end": "2026-08-01T06:00:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2490313",
+   "ticketUrl": "https://ra.co/events/2490313",
+   "image": "",
+   "promoter": "The Birdhouse",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "002a42dd84e854b4",
+   "title": "Public Disco Pride Block Party: Colored Craig (LA/NY), Carrieondisco (SF)",
+   "artists": [
+    "Colored Craig",
+    "Carrieondisco",
+    "Overland",
+    "Phillippe",
+    "Fisher Bryce",
+    "ZIGGY ZAYA",
+    "DJ dood",
+    "Lucci (CA)",
+    "jiggity jeff",
+    "educación física"
+   ],
+   "venue": "TBA - 3rd & Ontario",
+   "address": "Vancouver",
+   "start": "2026-08-01T16:00:00-07:00",
+   "end": "2026-08-01T23:30:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2420747",
+   "ticketUrl": "https://ra.co/events/2420747",
+   "image": "",
+   "promoter": "Public Disco",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "495c27ace8ecc9a1",
+   "title": "SHAME FEST",
+   "artists": [
+    "Babies R Stupid"
+   ],
+   "venue": "Red Gate Arts Society",
+   "address": "Vancouver",
+   "start": "2026-08-01T19:00:00-07:00",
+   "end": "2026-08-02T01:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2486874",
+   "ticketUrl": "https://ra.co/events/2486874",
+   "image": "",
+   "promoter": "Incidental Press",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "9424183aaf40db29",
+   "title": "CUM TOGETHER pres. Alex Chapman",
+   "artists": [
+    "Alex Chapman"
+   ],
+   "venue": "Celebrities Night Club",
+   "address": "Vancouver",
+   "start": "2026-08-01T22:00:00-07:00",
+   "end": "2026-08-02T03:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2471847",
+   "ticketUrl": "https://ra.co/events/2471847",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "2679a6b5672ff597",
+   "title": "Daft Disko: A French House & Disco Party",
+   "artists": [],
+   "venue": "Hollywood Theatre",
+   "address": "Vancouver",
+   "start": "2026-08-01T22:00:00-07:00",
+   "end": "2026-08-02T02:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "house",
+    "disco"
+   ],
+   "url": "https://ra.co/events/2494251",
+   "ticketUrl": "https://ra.co/events/2494251",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "41f149c9a4f4dfa0",
+   "title": "Shuka Invites: SYSTEM MUSIC X WHITE PEACH",
+   "artists": [
+    "V.I.V.E.K.",
+    "Zha (UK)",
+    "Shuka",
+    "Emrrld",
+    "Michael Red"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-01T22:00:00-07:00",
+   "end": "2026-08-02T05:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2447681",
+   "ticketUrl": "https://ra.co/events/2447681",
+   "image": "",
+   "promoter": "Shuka Invites",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "7d8d399adac695af",
+   "title": "DOLLY X PPRZ Pride 2026: Annika Wolfe (Akela Recs/WRKTRX/LA) + 2flowers, LVT, DJ Hockey",
+   "artists": [
+    "Annika Wolfe",
+    "2flowers",
+    "LVT",
+    "DJ Hockey"
+   ],
+   "venue": "TBA - Private Location",
+   "address": "Vancouver",
+   "start": "2026-08-01T22:00:00-07:00",
+   "end": "2026-08-02T04:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2401276",
+   "ticketUrl": "https://ra.co/events/2401276",
+   "image": "",
+   "promoter": "DOLLY, PPRZ Records",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "ec3fbc8d24902148",
+   "title": "DAS MORTUARY: Goth Pride ft bystander, HOLLENNACHT & Kasey Riot [Industrial/EBM/Electro] 10-3AM",
+   "artists": [
+    "Kasey Riot",
+    "bystander"
+   ],
+   "venue": "The Well Studios",
+   "address": "Vancouver",
+   "start": "2026-08-01T22:00:00-07:00",
+   "end": "2026-08-02T03:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "breaks"
+   ],
+   "url": "https://ra.co/events/2488410",
+   "ticketUrl": "https://ra.co/events/2488410",
+   "image": "",
+   "promoter": "Kasey Riot",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "eb6300126059f7ad",
+   "title": "F A G // O U T ~ PRIDE",
+   "artists": [
+    "ZIGGY ZAYA"
+   ],
+   "venue": "Platform9",
+   "address": "Vancouver",
+   "start": "2026-08-01T23:00:00-07:00",
+   "end": "2026-08-02T06:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2490314",
+   "ticketUrl": "https://ra.co/events/2490314",
+   "image": "",
+   "promoter": "The Birdhouse",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "dcfcb388ef395cdb",
+   "title": "dood's dancefloor: pride after party",
+   "artists": [
+    "ephemeral objects",
+    "Slim J (2)",
+    "DJ dood",
+    "Beiti",
+    "AVRY"
+   ],
+   "venue": "TBA - Secret Location",
+   "address": "Vancouver",
+   "start": "2026-08-01T23:00:00-07:00",
+   "end": "2026-08-02T05:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2472803",
+   "ticketUrl": "https://ra.co/events/2472803",
+   "image": "",
+   "promoter": "dood's dancefloor",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "71ffd1858ace5f5e",
+   "title": "CUM TOGETHER pres. Roi Perez",
+   "artists": [
+    "Roi Perez",
+    "Fisher Bryce",
+    "ZIGGY ZAYA"
+   ],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-08-01T23:00:00-07:00",
+   "end": "2026-08-02T04:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2441497",
+   "ticketUrl": "https://ra.co/events/2441497",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "be2ffe11f6b9feae",
+   "title": "FOG: Forest Edition",
+   "artists": [
+    "Behrad Tehrani",
+    "C-Star",
+    "Cataria",
+    "David Alcaniz",
+    "DK PAU",
+    "POPU",
+    "Yum!"
+   ],
+   "venue": "TBA - Secret Location",
+   "address": "Vancouver",
+   "start": "2026-08-01T23:59:00-07:00",
+   "end": "2026-08-02T06:30:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2424060",
+   "ticketUrl": "https://ra.co/events/2424060",
+   "image": "",
+   "promoter": "VANTEK, FOG",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "427c545e9d079c83",
+   "title": "Club Bebé PRESENTS: Ms. Nina",
+   "artists": [
+    "Ms Nina (ES)",
+    "BINKY",
+    "Brendocha",
+    "abers"
+   ],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-08-02T17:00:00-07:00",
+   "end": "2026-08-02T22:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2469043",
+   "ticketUrl": "https://ra.co/events/2469043",
+   "image": "",
+   "promoter": "Club Bebé",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "f9e4737dc4ca6ae6",
+   "title": "DOLLY X The Biltmore Pride 2026",
+   "artists": [
+    "como se DJ",
+    "Succubass",
+    "educación física"
+   ],
+   "venue": "Biltmore Cabaret",
+   "address": "Vancouver",
+   "start": "2026-08-02T21:00:00-07:00",
+   "end": "2026-08-03T03:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2474875",
+   "ticketUrl": "https://ra.co/events/2474875",
+   "image": "",
+   "promoter": "DOLLY",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "f213683fe8a1e01f",
+   "title": "PLUR PRIDE Vancouver - Rave at the Penthouse",
+   "artists": [
+    "Dreya (2)"
+   ],
+   "venue": "TBA - The Penthouse Nightclub",
+   "address": "Vancouver",
+   "start": "2026-08-02T21:00:00-07:00",
+   "end": "2026-08-03T03:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2488241",
+   "ticketUrl": "https://ra.co/events/2488241",
+   "image": "",
+   "promoter": "PLUR Productions",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "9d5f45e580236db6",
+   "title": "HARD KANDY (Pride Sunday Warehouse Party)",
+   "artists": [
+    "Anna Morgan"
+   ],
+   "venue": "Skylight Warehouse",
+   "address": "Vancouver",
+   "start": "2026-08-02T22:00:00-07:00",
+   "end": "2026-08-03T04:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2490202",
+   "ticketUrl": "https://ra.co/events/2490202",
+   "image": "",
+   "promoter": "Normie",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "0775e360c96f5202",
+   "title": "Nordic Trax: RELEASE: Pride Weekend Special",
+   "artists": [
+    "Luke McKeehan"
+   ],
+   "venue": "TBA - The Penthouse Nightclub (Upstairs), 1019 Seymour St, Vancouver BC",
+   "address": "Vancouver",
+   "start": "2026-08-02T22:00:00-07:00",
+   "end": "2026-08-03T03:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2479734",
+   "ticketUrl": "https://ra.co/events/2479734",
+   "image": "",
+   "promoter": "Nordic Trax",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "15e21f4fb3f24c15",
+   "title": "HOTLINE ☏ VanPride Rave [10YR ANNIV.] feat. 2NOYU, DJ Hockey, DJ TRANCERIGHTS & Kasey Riot",
+   "artists": [
+    "DJ Hockey",
+    "Kasey Riot",
+    "DJ TRANCERIGHTS"
+   ],
+   "venue": "TBA - near Main St. Skytrain Station",
+   "address": "Vancouver",
+   "start": "2026-08-02T22:00:00-07:00",
+   "end": "2026-08-03T05:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2474642",
+   "ticketUrl": "https://ra.co/events/2474642",
+   "image": "",
+   "promoter": "Kasey Riot",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "e4cfb730022f73d2",
+   "title": "Night Tales (Pride Closing Party)",
+   "artists": [
+    "Perfect Lovers",
+    "DJ dood",
+    "Fisher Bryce",
+    "ZIGGY ZAYA"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-02T23:00:00-07:00",
+   "end": "2026-08-03T05:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2464862",
+   "ticketUrl": "https://ra.co/events/2464862",
+   "image": "",
+   "promoter": "Niche UGD",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "2fd2d8c0de7a4521",
+   "title": "CUM TOGETHER pres. Only Fire",
+   "artists": [
+    "Only Fire"
+   ],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-08-02T23:00:00-07:00",
+   "end": "2026-08-03T04:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2489117",
+   "ticketUrl": "https://ra.co/events/2489117",
+   "image": "",
+   "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "1376fa9b7b83e893",
+   "title": "Taylah Elaine",
+   "artists": [],
+   "venue": "Fortune Sound Club",
+   "address": "Vancouver",
+   "start": "2026-08-03T23:00:00-07:00",
+   "end": "2026-08-04T04:00:00-07:00",
+   "date": "2026-08-03",
+   "night": "2026-08-03",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2488988",
+   "ticketUrl": "https://ra.co/events/2488988",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "296f0d772d208b5e",
+   "title": "Electric Love - Pritchard",
+   "artists": [
+    "Rozenza",
+    "Serum (UK)",
+    "Anna Morgan"
+   ],
+   "venue": "TBA - The Meadow at Cel7wet Festival Grounds 5653 Celewt Road, Pritchard",
+   "address": "Vancouver",
+   "start": "2026-08-06T14:00:00-07:00",
+   "end": "2026-08-09T18:00:00-07:00",
+   "date": "2026-08-06",
+   "night": "2026-08-06",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2473434",
+   "ticketUrl": "https://ra.co/events/2473434",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor",
+   "alsoOn": [
+    "residentadvisor"
+   ]
+  },
+  {
+   "id": "eb127a21c6672b9e",
+   "title": "Trust Me 06: Teen Daze",
+   "artists": [
+    "Teen Daze"
+   ],
+   "venue": "TBA - Sidekick Brewing",
+   "address": "Vancouver",
+   "start": "2026-08-07T18:00:00-07:00",
+   "end": "2026-08-07T22:00:00-07:00",
+   "date": "2026-08-07",
+   "night": "2026-08-07",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2478915",
+   "ticketUrl": "https://ra.co/events/2478915",
+   "image": "",
+   "promoter": "Trust Me",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "a6484239cc42dd9d",
+   "title": "Club Fiction E3: Live from a Mexican Cocina",
+   "artists": [],
+   "venue": "El Comal",
+   "address": "Vancouver",
+   "start": "2026-08-07T20:00:00-07:00",
+   "end": "2026-08-08T02:00:00-07:00",
+   "date": "2026-08-07",
+   "night": "2026-08-07",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494769",
+   "ticketUrl": "https://ra.co/events/2494769",
+   "image": "",
+   "promoter": "Club Fiction",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "a388aaedcc1ae159",
+   "title": "Groove Therapy",
+   "artists": [
+    "SUBDIDI"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-07T22:00:00-07:00",
+   "end": "2026-08-08T04:00:00-07:00",
+   "date": "2026-08-07",
+   "night": "2026-08-07",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2496285",
+   "ticketUrl": "https://ra.co/events/2496285",
+   "image": "",
+   "promoter": "Floor Freakout",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "78a98168eda986a6",
+   "title": "MOMENT Series: Nico Morano",
+   "artists": [
+    "Nico Morano"
+   ],
+   "venue": "Cinemagic Lab",
+   "address": "Vancouver",
+   "start": "2026-08-08T21:00:00-07:00",
+   "end": "2026-08-09T04:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2493664",
+   "ticketUrl": "https://ra.co/events/2493664",
+   "image": "",
+   "promoter": "CINEMAGIC",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "07aa9f7467066f8f",
+   "title": "Black Thorn presents: NOS-talgia(extended set),DJ Indifferent, Devønn",
+   "artists": [
+    "NOS-talgia",
+    "DJ Indifferent",
+    "Devønn"
+   ],
+   "venue": "Skylight Warehouse",
+   "address": "Vancouver",
+   "start": "2026-08-08T21:00:00-07:00",
+   "end": "2026-08-09T03:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2489136",
+   "ticketUrl": "https://ra.co/events/2489136",
+   "image": "",
+   "promoter": "Black Thorn",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "13bef8bbc36ee69a",
+   "title": "NOOSH Toxic Techno with Doruksen",
+   "artists": [
+    "Doruksen",
+    "NIMAHA",
+    "The Nu Po",
+    "Wonderboi",
+    "Sam AK",
+    "JACK-8"
+   ],
+   "venue": "Harbour Event Centre",
+   "address": "Vancouver",
+   "start": "2026-08-08T22:00:00-07:00",
+   "end": "2026-08-09T04:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "techno"
+   ],
+   "url": "https://ra.co/events/2489233",
+   "ticketUrl": "https://ra.co/events/2489233",
+   "image": "",
+   "promoter": "NOOSH",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "0e3eb0fc2b1eb6cc",
+   "title": "No Digital Devices 4 with AWood, NOTEVENDOWN and DJ Hockey",
+   "artists": [
+    "AWood",
+    "NOTEVENDOWN",
+    "DJ Hockey"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-08T23:00:00-07:00",
+   "end": "2026-08-09T05:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2496302",
+   "ticketUrl": "https://ra.co/events/2496302",
+   "image": "",
+   "promoter": "Floor Freakout",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "f2ae830a90c6dc7d",
+   "title": "Polskarave II",
+   "artists": [
+    "electrocabbage",
+    "DJ Skytrain",
+    "Worldwide Wojtek"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-09T15:00:00-07:00",
+   "end": "2026-08-09T22:00:00-07:00",
+   "date": "2026-08-09",
+   "night": "2026-08-09",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2493862",
+   "ticketUrl": "https://ra.co/events/2493862",
+   "image": "",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "09b6cfd15c4f53cf",
+   "title": "SLAB presents Justin Martin & Friends",
+   "artists": [
+    "Justin Martin"
+   ],
+   "venue": "TBA - Address sent to ticket holders 8pm day of show",
+   "address": "Vancouver",
+   "start": "2026-08-14T22:00:00-07:00",
+   "end": "2026-08-15T03:00:00-07:00",
+   "date": "2026-08-14",
+   "night": "2026-08-14",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2457437",
+   "ticketUrl": "https://ra.co/events/2457437",
+   "image": "",
+   "promoter": "SLAB, Vancouver",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "fad501913b1e8d00",
+   "title": "SUMMERVILLE FESTIVAL 4 - Outdoors Day & Night at The Waldorf Vancouver",
+   "artists": [
+    "Sivz"
+   ],
+   "venue": "At The Waldorf Hotel",
+   "address": "Vancouver",
+   "start": "2026-08-15T15:00:00-07:00",
+   "end": "2026-08-16T02:00:00-07:00",
+   "date": "2026-08-15",
+   "night": "2026-08-15",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2480126",
+   "ticketUrl": "https://ra.co/events/2480126",
+   "image": "",
+   "promoter": "Mercury Artists Entertainment",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "1b63235f5112f8b5",
+   "title": "LIVID: OTRA HORA",
+   "artists": [
+    "KINGO",
+    "C-Star",
+    "DK PAU",
+    "VLADJ",
+    "XXBWQ",
+    "MED!C",
+    "Sopik",
+    "Wonderboi"
+   ],
+   "venue": "1201 Franklin St",
+   "address": "Vancouver",
+   "start": "2026-08-15T18:00:00-07:00",
+   "end": "2026-08-16T06:00:00-07:00",
+   "date": "2026-08-15",
+   "night": "2026-08-15",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2480715",
+   "ticketUrl": "https://ra.co/events/2480715",
+   "image": "",
+   "promoter": "LIVID UNDERGROUND",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "2fb6c0dc92a7872f",
+   "title": "ZAP! #26 *Special Edition*",
+   "artists": [
+    "KAITO.",
+    "ZAP! Deejays",
+    "Scott W.",
+    "Abdul Qadim Haqq"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-15T23:00:00-07:00",
+   "end": "2026-08-16T04:00:00-07:00",
+   "date": "2026-08-15",
+   "night": "2026-08-15",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2486989",
+   "ticketUrl": "https://ra.co/events/2486989",
+   "image": "",
+   "promoter": "ZAP!",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "2001924d1a55dc29",
+   "title": "Synesthesia LIVE",
+   "artists": [
+    "The Ryze"
+   ],
+   "venue": "Junction Public Market",
+   "address": "Vancouver",
+   "start": "2026-08-22T15:00:00-07:00",
+   "end": "2026-08-22T20:00:00-07:00",
+   "date": "2026-08-22",
+   "night": "2026-08-22",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2497894",
+   "ticketUrl": "https://ra.co/events/2497894",
+   "image": "",
+   "promoter": "JOMA Studios",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "dfb89d0cc957fde8",
+   "title": "A Midsummer Eve",
+   "artists": [
+    "Jesse Walker",
+    "AVRY"
+   ],
+   "venue": "Platform9",
+   "address": "Vancouver",
+   "start": "2026-08-22T16:00:00-07:00",
+   "end": "2026-08-22T22:00:00-07:00",
+   "date": "2026-08-22",
+   "night": "2026-08-22",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2474876",
+   "ticketUrl": "https://ra.co/events/2474876",
+   "image": "",
+   "promoter": "Main Street Dance Authority, Flamer",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "b8a49ee0d2109157",
+   "title": "PROSPECT",
+   "artists": [
+    "Kevin Saunderson",
+    "Luigi Madonna",
+    "AWood"
+   ],
+   "venue": "TBA - Jonathan Rogers Park",
+   "address": "Vancouver",
+   "start": "2026-08-22T16:00:00-07:00",
+   "end": "2026-08-22T22:00:00-07:00",
+   "date": "2026-08-22",
+   "night": "2026-08-22",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2393084",
+   "ticketUrl": "https://ra.co/events/2393084",
+   "image": "",
+   "promoter": "VANTEK",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "81e4f90bc468e107",
+   "title": "Conrad Taylor",
+   "artists": [],
+   "venue": "Celebrities Night Club",
+   "address": "Vancouver",
+   "start": "2026-08-22T22:00:00-07:00",
+   "end": "2026-08-23T03:00:00-07:00",
+   "date": "2026-08-22",
+   "night": "2026-08-22",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2461972",
+   "ticketUrl": "https://ra.co/events/2461972",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "4be57fb507c73749",
+   "title": "Vertical Migration with Ciel & DairyFree",
+   "artists": [
+    "Ciel",
+    "Dairy Free"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-22T23:00:00-07:00",
+   "end": "2026-08-23T05:00:00-07:00",
+   "date": "2026-08-22",
+   "night": "2026-08-22",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2475722",
+   "ticketUrl": "https://ra.co/events/2475722",
+   "image": "",
+   "promoter": "Vertical Migration",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "673fd085ed95e6a1",
+   "title": "VANTEK: Bailey Ibbs",
+   "artists": [
+    "Bailey Ibbs",
+    "POPU",
+    "untorn"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-28T23:00:00-07:00",
+   "end": "2026-08-29T06:00:00-07:00",
+   "date": "2026-08-28",
+   "night": "2026-08-28",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2461985",
+   "ticketUrl": "https://ra.co/events/2461985",
+   "image": "",
+   "promoter": "VANTEK",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "7ae8716bb749d4c3",
+   "title": "Public Disco Block Party: Downtown",
+   "artists": [
+    "Dairy Free"
+   ],
+   "venue": "Vancouver Art Gallery",
+   "address": "Vancouver",
+   "start": "2026-08-29T14:00:00-07:00",
+   "end": "2026-08-29T22:00:00-07:00",
+   "date": "2026-08-29",
+   "night": "2026-08-29",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2421655",
+   "ticketUrl": "https://ra.co/events/2421655",
+   "image": "",
+   "promoter": "Public Disco",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "ee45900055cf1c32",
+   "title": "Step Out: Chez Damier & Eddie Leader [Hudd Traxx 20 Year Anniversary]",
+   "artists": [
+    "Chez Damier",
+    "Eddie Leader",
+    "Beiti",
+    "Limbowalk",
+    "Schemmatic"
+   ],
+   "venue": "Container Brewing",
+   "address": "Vancouver",
+   "start": "2026-08-29T18:00:00-07:00",
+   "end": "2026-08-30T02:00:00-07:00",
+   "date": "2026-08-29",
+   "night": "2026-08-29",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2467820",
+   "ticketUrl": "https://ra.co/events/2467820",
+   "image": "",
+   "promoter": "STEP OUT Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "fdc1bd563fa4a44f",
+   "title": "CINEMAGIC OpenAir presents AWEN",
+   "artists": [
+    "AWEN",
+    "Sotto Voce",
+    "Perspectiv"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-09-05T17:00:00-07:00",
+   "end": "2026-09-06T00:00:00-07:00",
+   "date": "2026-09-05",
+   "night": "2026-09-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2477947",
+   "ticketUrl": "https://ra.co/events/2477947",
+   "image": "",
+   "promoter": "CINEMAGIC",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "cf083e3a8616c3c6",
+   "title": "Tiffany Day - NEW VENUE",
+   "artists": [],
+   "venue": "Commodore Ballroom",
+   "address": "Vancouver",
+   "start": "2026-09-05T19:00:00-07:00",
+   "end": "2026-09-05T22:00:00-07:00",
+   "date": "2026-09-05",
+   "night": "2026-09-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2435540",
+   "ticketUrl": "https://ra.co/events/2435540",
+   "image": "",
+   "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "d88e67cbd9026cc7",
+   "title": "Takuya Nakamura",
+   "artists": [],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-09-05T19:00:00-07:00",
+   "end": "2026-09-05T22:00:00-07:00",
+   "date": "2026-09-05",
+   "night": "2026-09-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2474638",
+   "ticketUrl": "https://ra.co/events/2474638",
+   "image": "",
+   "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "a0f83f8ede212460",
+   "title": "BRAIN BATH with Pilgrims Of The Mind & Kelbey Saruk",
+   "artists": [],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-09-05T21:00:00-07:00",
+   "end": "2026-09-06T04:00:00-07:00",
+   "date": "2026-09-05",
+   "night": "2026-09-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2468377",
+   "ticketUrl": "https://ra.co/events/2468377",
+   "image": "",
+   "promoter": "Pacific Rhythm, Floor Freakout",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "337680a8461c65cb",
+   "title": "IVY LAB - A FAREWELL TOUR at SUBculture Saturdays",
+   "artists": [],
+   "venue": "The Red Room",
+   "address": "Vancouver",
+   "start": "2026-09-05T21:30:00-07:00",
+   "end": "2026-09-06T03:00:00-07:00",
+   "date": "2026-09-05",
+   "night": "2026-09-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2484389",
+   "ticketUrl": "https://ra.co/events/2484389",
+   "image": "",
+   "promoter": "Digital Motion BC",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "e65a7305ee31428b",
+   "title": "FOG: Closing Summer - Outdoor",
+   "artists": [],
+   "venue": "TBA - Secret Location",
+   "address": "Vancouver",
+   "start": "2026-09-05T23:59:00-07:00",
+   "end": "2026-09-07T06:30:00-07:00",
+   "date": "2026-09-05",
+   "night": "2026-09-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2424070",
+   "ticketUrl": "https://ra.co/events/2424070",
+   "image": "",
+   "promoter": "VANTEK, FOG",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor",
+   "alsoOn": [
+    "residentadvisor"
+   ]
+  },
+  {
+   "id": "d7999cac1bee2fe9",
+   "title": "Synchronize",
+   "artists": [],
+   "venue": "TBA - Underground Location",
+   "address": "Vancouver",
+   "start": "2026-09-11T20:00:00-07:00",
+   "end": "2026-09-12T06:00:00-07:00",
+   "date": "2026-09-11",
+   "night": "2026-09-11",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2487267",
+   "ticketUrl": "https://ra.co/events/2487267",
+   "image": "",
+   "promoter": "Hard Dance Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "20517216c026eef6",
+   "title": "ATRIP & DJ BORING: Can You Keep Up (Vancouver)",
+   "artists": [
+    "DJ BORING",
+    "ATRIP"
+   ],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-09-11T22:00:00-07:00",
+   "end": "2026-09-12T04:00:00-07:00",
+   "date": "2026-09-11",
+   "night": "2026-09-11",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2469767",
+   "ticketUrl": "https://ra.co/events/2469767",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "0d2d68d591d22f44",
+   "title": "Mark Farina",
+   "artists": [
+    "Luke McKeehan",
+    "Schemmatic"
+   ],
+   "venue": "The Pearl",
+   "address": "Vancouver",
+   "start": "2026-09-11T22:30:00-07:00",
+   "end": "2026-09-12T04:00:00-07:00",
+   "date": "2026-09-11",
+   "night": "2026-09-11",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2493715",
+   "ticketUrl": "https://ra.co/events/2493715",
+   "image": "",
+   "promoter": "Nordic Trax",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "77491ada1539391b",
+   "title": "Jika Jika End of Summer Boat Party with George Feely & Opus Klien",
+   "artists": [
+    "George Feely",
+    "Bob Manzanilla",
+    "REEN",
+    "Translucent"
+   ],
+   "venue": "Plaza of Nations Dock",
+   "address": "Vancouver",
+   "start": "2026-09-12T15:00:00-07:00",
+   "end": "2026-09-12T19:00:00-07:00",
+   "date": "2026-09-12",
+   "night": "2026-09-12",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2486445",
+   "ticketUrl": "https://ra.co/events/2486445",
+   "image": "",
+   "promoter": "Jika Jika!, Jika Jika! Derry",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "534f88e3a5521d47",
+   "title": "Sasha & John Digweed (Vancouver Open Air)",
+   "artists": [
+    "Sasha",
+    "John Digweed",
+    "Kevin Shiu"
+   ],
+   "venue": "Malkin Bowl",
+   "address": "Vancouver",
+   "start": "2026-09-12T19:00:00-07:00",
+   "end": "2026-09-12T22:00:00-07:00",
+   "date": "2026-09-12",
+   "night": "2026-09-12",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2419744",
+   "ticketUrl": "https://ra.co/events/2419744",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "5c1d498d922d09ee",
+   "title": "Gravagerz",
+   "artists": [],
+   "venue": "Fortune Sound Club",
+   "address": "Vancouver",
+   "start": "2026-09-12T22:00:00-07:00",
+   "end": "2026-09-13T03:00:00-07:00",
+   "date": "2026-09-12",
+   "night": "2026-09-12",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2487712",
+   "ticketUrl": "https://ra.co/events/2487712",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "abf410af9cb99128",
+   "title": "Ninajirachi",
+   "artists": [],
+   "venue": "Commodore Ballroom",
+   "address": "Vancouver",
+   "start": "2026-09-17T20:00:00-07:00",
+   "end": "2026-09-17T23:30:00-07:00",
+   "date": "2026-09-17",
+   "night": "2026-09-17",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2434193",
+   "ticketUrl": "https://ra.co/events/2434193",
+   "image": "",
+   "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "76e9ac538c1e46af",
+   "title": "Heaven Camera YVR || Ivy Hollivana, BINKY, ANTI-NOTHING + more",
+   "artists": [
+    "Ivy Hollivana",
+    "BINKY",
+    "ANTI-NOTHING"
+   ],
+   "venue": "KW Studios",
+   "address": "Vancouver",
+   "start": "2026-09-18T20:00:00-07:00",
+   "end": "2026-09-19T00:30:00-07:00",
+   "date": "2026-09-18",
+   "night": "2026-09-18",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2485148",
+   "ticketUrl": "https://ra.co/events/2485148",
+   "image": "",
+   "promoter": "Ivy Hollivana",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "2e6036962f7351b8",
+   "title": "Soul Hop & JK Gaultier present: LADYMONIX (3 hour set)",
+   "artists": [
+    "LADYMONIX",
+    "Jesse Walker",
+    "Kon Radd"
+   ],
+   "venue": "The Beaumont Studios",
+   "address": "Vancouver",
+   "start": "2026-09-19T21:30:00-07:00",
+   "end": "2026-09-20T03:00:00-07:00",
+   "date": "2026-09-19",
+   "night": "2026-09-19",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2470117",
+   "ticketUrl": "https://ra.co/events/2470117",
+   "image": "",
+   "promoter": "Soul Hop Productions, JK Gaultier",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "f41cd6e280d0d881",
+   "title": "Stacked pres. Denham Audio & Rohaan (Vancouver)",
+   "artists": [
+    "Denham Audio",
+    "Rohaan"
+   ],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-09-19T22:00:00-07:00",
+   "end": "2026-09-20T03:00:00-07:00",
+   "date": "2026-09-19",
+   "night": "2026-09-19",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2493621",
+   "ticketUrl": "https://ra.co/events/2493621",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "1721ce133b3d88ce",
+   "title": "Julian Fijma",
+   "artists": [],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-09-19T23:00:00-07:00",
+   "end": "2026-09-20T06:00:00-07:00",
+   "date": "2026-09-19",
+   "night": "2026-09-19",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2489212",
+   "ticketUrl": "https://ra.co/events/2489212",
+   "image": "",
+   "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "8bc44e7df49206e9",
+   "title": "Dean Turnley (Vancouver)",
+   "artists": [
+    "Dean Turnley"
+   ],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-09-25T23:00:00-07:00",
+   "end": "2026-09-26T04:00:00-07:00",
+   "date": "2026-09-25",
+   "night": "2026-09-25",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2463411",
+   "ticketUrl": "https://ra.co/events/2463411",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "e3fb3b1746cc2679",
+   "title": "VANTANIOR - Dark Bass in the Black",
+   "artists": [
+    "C-Star"
+   ],
+   "venue": "The Spot",
+   "address": "Vancouver",
+   "start": "2026-09-26T21:00:00-07:00",
+   "end": "2026-09-27T02:00:00-07:00",
+   "date": "2026-09-26",
+   "night": "2026-09-26",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2477877",
+   "ticketUrl": "https://ra.co/events/2477877",
+   "image": "",
+   "promoter": "PLUR Productions",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "dd00f92025a015ab",
+   "title": "The Last Angel of History",
+   "artists": [
+    "Speaker Music"
+   ],
+   "venue": "Viff Centre",
+   "address": "Vancouver",
+   "start": "2026-10-02T17:00:00-07:00",
+   "end": "2026-10-02T18:30:00-07:00",
+   "date": "2026-10-02",
+   "night": "2026-10-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494986",
+   "ticketUrl": "https://ra.co/events/2494986",
+   "image": "",
+   "promoter": "Vancouver International Film Festival",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "3fb8a58dc434793c",
+   "title": "MUTEK x VIFF Live",
+   "artists": [
+    "Dopplereffekt",
+    "Honeydrip",
+    "MIIIA"
+   ],
+   "venue": "SFU Goldcorp Centre for the Arts",
+   "address": "Vancouver",
+   "start": "2026-10-02T21:30:00-07:00",
+   "end": "2026-10-03T01:30:00-07:00",
+   "date": "2026-10-02",
+   "night": "2026-10-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494982",
+   "ticketUrl": "https://ra.co/events/2494982",
+   "image": "",
+   "promoter": "MUTEK, Vancouver International Film Festival",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "1576a1cb188f3e2a",
+   "title": "Public Disco Festival",
+   "artists": [
+    "Leon Vynehall",
+    "Fred P",
+    "Prosumer",
+    "DJ Holographic",
+    "Dane",
+    "DJ Hannah",
+    "Scott W.",
+    "Kozue",
+    "Christa Belle",
+    "Toi Whakairo",
+    "ephemeral objects"
+   ],
+   "venue": "TBA - Shipyards Waterfront",
+   "address": "Vancouver",
+   "start": "2026-10-03T14:00:00-07:00",
+   "end": "2026-10-03T22:00:00-07:00",
+   "date": "2026-10-03",
+   "night": "2026-10-03",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2466699",
+   "ticketUrl": "https://ra.co/events/2466699",
+   "image": "",
+   "promoter": "Public Disco",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "16af7f043c6a6906",
+   "title": "The KLF: 23 Seconds to Eternity",
+   "artists": [
+    "CHXMERAS"
+   ],
+   "venue": "Viff Centre",
+   "address": "Vancouver",
+   "start": "2026-10-03T17:00:00-07:00",
+   "end": "2026-10-03T19:30:00-07:00",
+   "date": "2026-10-03",
+   "night": "2026-10-03",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494994",
+   "ticketUrl": "https://ra.co/events/2494994",
+   "image": "",
+   "promoter": "Vancouver International Film Festival",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "fb73e853905c3ffb",
+   "title": "TAKKUUK",
+   "artists": [],
+   "venue": "SFU Goldcorp Centre for the Arts",
+   "address": "Vancouver",
+   "start": "2026-10-03T20:30:00-07:00",
+   "end": "2026-10-03T21:30:00-07:00",
+   "date": "2026-10-03",
+   "night": "2026-10-03",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2496024",
+   "ticketUrl": "https://ra.co/events/2496024",
+   "image": "",
+   "promoter": "Vancouver International Film Festival",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "1defbdff046d7ef9",
+   "title": "Stacked pres. camoufly",
+   "artists": [
+    "camoufly"
+   ],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-10-03T22:00:00-07:00",
+   "end": "2026-10-04T03:00:00-07:00",
+   "date": "2026-10-03",
+   "night": "2026-10-03",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2473654",
+   "ticketUrl": "https://ra.co/events/2473654",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "e7e7bb8b9dbcef85",
+   "title": "Kelly Moran",
+   "artists": [],
+   "venue": "SFU Goldcorp Centre for the Arts",
+   "address": "Vancouver",
+   "start": "2026-10-04T20:00:00-07:00",
+   "end": "2026-10-04T22:00:00-07:00",
+   "date": "2026-10-04",
+   "night": "2026-10-04",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2496034",
+   "ticketUrl": "https://ra.co/events/2496034",
+   "image": "",
+   "promoter": "Vancouver International Film Festival",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "98d53a7e7601f21f",
+   "title": "Los Thuthanaka",
+   "artists": [],
+   "venue": "The Pearl",
+   "address": "Vancouver",
+   "start": "2026-10-05T20:30:00-07:00",
+   "end": "2026-10-05T22:00:00-07:00",
+   "date": "2026-10-05",
+   "night": "2026-10-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2494995",
+   "ticketUrl": "https://ra.co/events/2494995",
+   "image": "",
+   "promoter": "Vancouver International Film Festival",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "381756c0c889daab",
+   "title": "ERASERHEAD XIU XIU",
+   "artists": [],
+   "venue": "Rio Theatre",
+   "address": "Vancouver",
+   "start": "2026-10-06T20:30:00-07:00",
+   "end": "2026-10-06T22:00:00-07:00",
+   "date": "2026-10-06",
+   "night": "2026-10-06",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2495004",
+   "ticketUrl": "https://ra.co/events/2495004",
+   "image": "",
+   "promoter": "Vancouver International Film Festival",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "67140990b57cf342",
+   "title": "Derrick Gee's Radio Hour",
+   "artists": [],
+   "venue": "Lindsay Family Stage At Granville Island",
+   "address": "Vancouver",
+   "start": "2026-10-07T20:00:00-07:00",
+   "end": "2026-10-07T21:30:00-07:00",
+   "date": "2026-10-07",
+   "night": "2026-10-07",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2496081",
+   "ticketUrl": "https://ra.co/events/2496081",
+   "image": "",
+   "promoter": "Vancouver International Film Festival",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "7455a187fb775b61",
+   "title": "FOG: PØPU ALL NIGHT LONG",
+   "artists": [
+    "POPU"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-10-10T23:59:00-07:00",
+   "end": "2026-10-11T06:00:00-07:00",
+   "date": "2026-10-10",
+   "night": "2026-10-10",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2452983",
+   "ticketUrl": "https://ra.co/events/2452983",
+   "image": "",
+   "promoter": "VANTEK, FOG",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "6df020693981e2a8",
+   "title": "Jazzy",
+   "artists": [
+    "Jazzy (IRL)"
+   ],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-10-11T23:00:00-07:00",
+   "end": "2026-10-12T03:00:00-07:00",
+   "date": "2026-10-11",
+   "night": "2026-10-11",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2460990",
+   "ticketUrl": "https://ra.co/events/2460990",
+   "image": "",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "35c5a4239755cca0",
+   "title": "Friction: Psyk (Non Series / Mote Evolver)",
+   "artists": [
+    "Psyk"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-11-21T23:00:00-07:00",
+   "end": "2026-11-22T05:00:00-07:00",
+   "date": "2026-11-21",
+   "night": "2026-11-21",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2486910",
+   "ticketUrl": "https://ra.co/events/2486910",
+   "image": "",
+   "promoter": "Friction",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  }
+ ]
 }
