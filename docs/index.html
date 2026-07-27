@@ -3,136 +3,88 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>After Dark — what's running tonight in Vancouver</title>
-<meta name="description" content="Vancouver house and techno listings plotted across the night, from doors to last call to afterhours. Aggregated from Resident Advisor, Ticketmaster and local promoters. Free, open data.">
-<meta name="theme-color" content="#0F0F0E">
+<title>After Dark — house &amp; techno in Vancouver tonight</title>
+<meta name="description" content="Every house and techno night in Vancouver in one place, with tickets. Aggregated from Resident Advisor, Ticketmaster and local promoters. Free, open data.">
+<meta name="theme-color" content="#08080A">
 
-<meta property="og:title" content="After Dark — what's running tonight in Vancouver">
-<meta property="og:description" content="Every house and techno night in Vancouver, plotted across the night.">
+<meta property="og:title" content="After Dark — house &amp; techno in Vancouver tonight">
+<meta property="og:description" content="Every house and techno night in Vancouver in one place, with tickets.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F0F0E'/%3E%3Crect x='3' y='7' width='13' height='4' fill='%233987e5'/%3E%3Crect x='9' y='14' width='17' height='4' fill='%23d95926'/%3E%3Crect x='6' y='21' width='9' height='4' fill='%23199e70'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308080A'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23FF4438'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2308080A'/%3E%3C/svg%3E">
 </head>
 <body>
 
-<header class="intro">
-  <div class="shell">
-    <h1 class="intro__title">Every house&nbsp;&amp; techno night in Vancouver, laid out across the night.</h1>
-    <p class="intro__body">
-      Clubs call last round at 3. The afterhours rooms are only getting started.
-      This plots what's running when — so you can see the handover instead of
-      reading twelve separate listings.
+<header class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="hero__kicker">Vancouver · house, techno &amp; afters</p>
+    <h1 class="hero__title">Where are you going <em>tonight?</em></h1>
+    <p class="hero__sub">
+      Every house and techno night in the city, pulled together from the places
+      they actually get announced — with a ticket link on every one.
     </p>
+    <div class="hero__stats">
+      <a class="stat stat--live" href="#listings" data-role="stat-tonight">
+        <strong>—</strong><span>on tonight</span>
+      </a>
+      <div class="stat"><strong data-role="stat-week">—</strong><span>this week</span></div>
+      <div class="stat"><strong data-role="stat-venues">—</strong><span>venues</span></div>
+    </div>
   </div>
 </header>
 
-<main>
-  <section class="controls" aria-label="Filter listings">
-    <div class="shell controls__inner">
-      <div class="controls__line">
-        <div class="field">
-          <label class="visually-hidden" for="search">Search artists, venues or nights</label>
-          <input id="search" type="search" placeholder="Artist, venue, promoter…" autocomplete="off" spellcheck="false">
-        </div>
-        <div class="segmented" role="group" aria-label="Date range" data-role="when-filters">
-          <button type="button" class="seg is-active" data-when="all">All</button>
-          <button type="button" class="seg" data-when="tonight">Tonight</button>
-          <button type="button" class="seg" data-when="weekend">Weekend</button>
-          <button type="button" class="seg" data-when="week">7 nights</button>
-        </div>
-      </div>
+<nav class="bar" aria-label="Filter events">
+  <div class="wrap bar__inner">
+    <label class="search">
+      <span class="visually-hidden">Search artists, venues or events</span>
+      <input id="search" type="search" placeholder="Search artist, venue, promoter…" autocomplete="off">
+    </label>
+    <div class="pills" role="group" aria-label="When" data-role="when"></div>
+    <div class="pills pills--genre" role="group" aria-label="Genre" data-role="genres"></div>
+    <button type="button" class="reset" data-role="reset" hidden>Clear</button>
+  </div>
+</nav>
 
-      <div class="controls__line">
-        <!-- The legend is the genre filter: one control, not two. -->
-        <div class="legend" role="group" aria-label="Filter by genre" data-role="genre-filters"></div>
-        <div class="controls__line controls__line--tight">
-          <label class="field field--select">
-            <span class="visually-hidden">Venue</span>
-            <select data-role="venue-filter"><option value="">Every room</option></select>
-          </label>
-          <label class="check">
-            <input type="checkbox" data-role="afterhours-filter">
-            <span>Afterhours</span>
-          </label>
-          <button type="button" class="ghost" data-role="reset" hidden>Reset</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="plot" aria-label="The night, plotted" data-role="plot-section">
-    <div class="shell">
-      <div class="plot__frame">
-        <div class="plot__scroll" data-role="plot-scroll">
-          <div class="plot__inner" data-role="plot"></div>
-        </div>
-      </div>
-      <p class="plot__hint" data-role="plot-hint" hidden>
-        Bars run from doors to close. A dashed tail means the source didn't
-        publish an end time.
-      </p>
-    </div>
-  </section>
-
-  <section class="listing" aria-live="polite" aria-busy="true">
-    <div class="shell" data-role="listings">
-      <p class="state">Loading listings…</p>
-    </div>
-  </section>
-
-  <section class="ends">
-    <div class="shell ends__inner">
-
-      <article class="block">
-        <h2 class="block__title">Take the data</h2>
-        <p class="block__body">
-          Static, versioned, CORS-open. No key, no rate limit, no account.
-        </p>
-        <ul class="filelist">
-          <li><a href="data/events.json"><code>events.json</code></a><span>Everything upcoming, one schema</span></li>
-          <li><a href="data/events.ics"><code>events.ics</code></a><span>Subscribe and the city fills your calendar</span></li>
-          <li><a href="data/venues.json"><code>venues.json</code></a><span>Rooms currently programming</span></li>
-          <li><a href="data/meta.json"><code>meta.json</code></a><span>Refresh time and source health</span></li>
-        </ul>
-      </article>
-
-      <article class="block">
-        <h2 class="block__title">Rooms</h2>
-        <p class="block__body">Venues with something booked. Pick one to filter.</p>
-        <ol class="rooms" data-role="venue-list"></ol>
-      </article>
-
-      <article class="block">
-        <h2 class="block__title">Missing a night?</h2>
-        <p class="block__body">
-          Plenty of the good ones never touch a ticketing platform. Add it and it
-          outranks the platform listings on the next refresh.
-        </p>
-        <p class="block__actions">
-          <a class="btn" data-role="submit-link" href="#">Submit a night</a>
-          <a class="ghost" data-role="repo-link" href="#">Source</a>
-        </p>
-      </article>
-
-    </div>
-  </section>
+<main id="listings" class="feed" aria-live="polite" aria-busy="true">
+  <div class="wrap" data-role="feed">
+    <p class="note">Loading listings…</p>
+  </div>
 </main>
 
+<section class="extras">
+  <div class="wrap extras__inner">
+    <article>
+      <h2>Add a night</h2>
+      <p>Plenty of the best ones never touch a ticketing platform. Submitted nights outrank the platforms on the next refresh.</p>
+      <a class="btn btn--solid" data-role="submit" href="#">Submit an event</a>
+    </article>
+    <article>
+      <h2>Free data</h2>
+      <p>Static, CORS-open, no key. Subscribe to the calendar and the city fills itself in.</p>
+      <ul class="links">
+        <li><a href="data/events.ics">Calendar feed (.ics)</a></li>
+        <li><a href="data/events.json">events.json</a></li>
+        <li><a href="data/venues.json">venues.json</a></li>
+      </ul>
+    </article>
+    <article>
+      <h2>Rooms</h2>
+      <ol class="rooms" data-role="rooms"></ol>
+    </article>
+  </div>
+</section>
+
 <footer class="foot">
-  <div class="shell foot__inner">
-    <ul class="sources" data-role="source-list"></ul>
-    <p>
-      Updated <span data-role="updated">—</span> · refreshed every six hours ·
-      an index, not a box office — tickets are sold by the venues and promoters.
-    </p>
+  <div class="wrap">
+    <ul class="sources" data-role="sources"></ul>
+    <p>Updated <span data-role="updated">—</span> · refreshed every six hours · an index, not a box office — tickets are sold by the venues and promoters.</p>
   </div>
 </footer>
-
-<div class="tip" data-role="tip" role="status" hidden></div>
 
 <script src="assets/js/app.js"></script>
 </body>
