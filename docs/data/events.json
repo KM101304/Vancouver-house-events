@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-26T17:25:02.234194-07:00",
+  "updated": "2026-07-26T17:53:53.976670-07:00",
   "eventCount": 88,
-  "venueCount": 46,
+  "venueCount": 47,
   "windowDays": 120,
   "sources": [
    {
@@ -30,9 +30,9 @@
    {
     "source": "showpass",
     "label": "Showpass",
-    "status": "failed",
+    "status": "skipped",
     "count": 0,
-    "detail": "RuntimeError: no parseable response from any Showpass endpoint: request failed for https://api.showpass.com/api/public/discovery/?location=Vancouver&page_size=100&starts_on__gte=2026-07-26&starts_on__lte=2026-11-23&ordering=starts_on&page=1: <urlopen error [Errno -2] Name or service not known>"
+    "detail": "disabled — set ENABLE_SHOWPASS=1"
    }
   ],
   "genres": {
@@ -44,27 +44,6 @@
   }
  },
  "events": [
-  {
-   "id": "734ab78cb767f579",
-   "title": "Max Huberdeau Quartet",
-   "artists": [],
-   "venue": "Hero's Welcome",
-   "address": "Vancouver",
-   "start": "2026-07-26T14:00:00-07:00",
-   "end": "2026-07-26T16:00:00-07:00",
-   "date": "2026-07-26",
-   "night": "2026-07-26",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494254",
-   "ticketUrl": "https://ra.co/events/2494254",
-   "image": "",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "bb3a0c2e69b4e709",
    "title": "Gorg-O-Mish presents: PRIDE // Hera, G-Luve & TASHI",
@@ -1501,6 +1480,32 @@
    "ticketUrl": "https://ra.co/events/2484389",
    "image": "",
    "promoter": "Digital Motion BC",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "0005d784efd0f8c8",
+   "title": "Substance x The Orchestrator: BMG (Detroit), DJ Hockey, Nancy Dru, untorn",
+   "artists": [
+    "BMG",
+    "DJ Hockey",
+    "Nancy Dru",
+    "untorn"
+   ],
+   "venue": "TBA - East Vancouver",
+   "address": "Vancouver",
+   "start": "2026-09-05T23:00:00-07:00",
+   "end": "2026-09-06T05:00:00-07:00",
+   "date": "2026-09-05",
+   "night": "2026-09-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2493149",
+   "ticketUrl": "https://ra.co/events/2493149",
+   "image": "",
+   "promoter": "Substance",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"

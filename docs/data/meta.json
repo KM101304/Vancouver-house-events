@@ -1,8 +1,8 @@
 {
  "schemaVersion": 2,
- "updated": "2026-07-26T17:25:02.234194-07:00",
+ "updated": "2026-07-26T17:53:53.976670-07:00",
  "eventCount": 88,
- "venueCount": 46,
+ "venueCount": 47,
  "windowDays": 120,
  "sources": [
   {
@@ -29,9 +29,9 @@
   {
    "source": "showpass",
    "label": "Showpass",
-   "status": "failed",
+   "status": "skipped",
    "count": 0,
-   "detail": "RuntimeError: no parseable response from any Showpass endpoint: request failed for https://api.showpass.com/api/public/discovery/?location=Vancouver&page_size=100&starts_on__gte=2026-07-26&starts_on__lte=2026-11-23&ordering=starts_on&page=1: <urlopen error [Errno -2] Name or service not known>"
+   "detail": "disabled — set ENABLE_SHOWPASS=1"
   }
  ],
  "genres": {

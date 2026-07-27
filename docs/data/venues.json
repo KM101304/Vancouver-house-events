@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-26T17:25:02.234194-07:00",
+ "updated": "2026-07-26T17:53:53.976670-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -69,14 +69,6 @@
   },
   {
    "name": "Commodore Ballroom",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "Hero's Welcome",
    "count": 2,
    "area": "Vancouver",
    "genres": [
@@ -197,6 +189,14 @@
    ]
   },
   {
+   "name": "Hero's Welcome",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
    "name": "Junction Public Market",
    "count": 1,
    "area": "Vancouver",
@@ -262,6 +262,14 @@
   },
   {
    "name": "TBA - Address sent to ticket holders 8pm day of show",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - East Vancouver",
    "count": 1,
    "area": "Vancouver",
    "genres": [
