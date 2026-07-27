@@ -1,6 +1,6 @@
 {
  "schemaVersion": 2,
- "updated": "2026-07-26T17:53:53.976670-07:00",
+ "updated": "2026-07-26T17:55:31.888966-07:00",
  "eventCount": 88,
  "venueCount": 47,
  "windowDays": 120,
@@ -35,10 +35,11 @@
   }
  ],
  "genres": {
-  "electronic": 85,
-  "house": 1,
-  "disco": 1,
-  "breaks": 1,
-  "techno": 1
+  "electronic": 72,
+  "house": 11,
+  "breaks": 4,
+  "disco": 2,
+  "techno": 1,
+  "dnb": 1
  }
 }

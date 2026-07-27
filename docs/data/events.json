@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-26T17:53:53.976670-07:00",
+  "updated": "2026-07-26T17:55:31.888966-07:00",
   "eventCount": 88,
   "venueCount": 47,
   "windowDays": 120,
@@ -36,11 +36,12 @@
    }
   ],
   "genres": {
-   "electronic": 85,
-   "house": 1,
-   "disco": 1,
-   "breaks": 1,
-   "techno": 1
+   "electronic": 72,
+   "house": 11,
+   "breaks": 4,
+   "disco": 2,
+   "techno": 1,
+   "dnb": 1
   }
  },
  "events": [
@@ -165,7 +166,8 @@
    "date": "2026-07-30",
    "night": "2026-07-30",
    "genres": [
-    "electronic"
+    "house",
+    "breaks"
    ],
    "url": "https://ra.co/events/2489144",
    "ticketUrl": "https://ra.co/events/2489144",
@@ -709,7 +711,7 @@
    "date": "2026-08-02",
    "night": "2026-08-02",
    "genres": [
-    "electronic"
+    "house"
    ],
    "url": "https://ra.co/events/2488241",
    "ticketUrl": "https://ra.co/events/2488241",
@@ -755,7 +757,8 @@
    "date": "2026-08-02",
    "night": "2026-08-02",
    "genres": [
-    "electronic"
+    "house",
+    "disco"
    ],
    "url": "https://ra.co/events/2479734",
    "ticketUrl": "https://ra.co/events/2479734",
@@ -968,7 +971,7 @@
    "date": "2026-08-08",
    "night": "2026-08-08",
    "genres": [
-    "electronic"
+    "house"
    ],
    "url": "https://ra.co/events/2493664",
    "ticketUrl": "https://ra.co/events/2493664",
@@ -1365,7 +1368,7 @@
    "date": "2026-08-29",
    "night": "2026-08-29",
    "genres": [
-    "electronic"
+    "house"
    ],
    "url": "https://ra.co/events/2467820",
    "ticketUrl": "https://ra.co/events/2467820",
@@ -1390,7 +1393,7 @@
    "date": "2026-09-05",
    "night": "2026-09-05",
    "genres": [
-    "electronic"
+    "house"
    ],
    "url": "https://ra.co/events/2477947",
    "ticketUrl": "https://ra.co/events/2477947",
@@ -1474,7 +1477,7 @@
    "date": "2026-09-05",
    "night": "2026-09-05",
    "genres": [
-    "electronic"
+    "dnb"
    ],
    "url": "https://ra.co/events/2484389",
    "ticketUrl": "https://ra.co/events/2484389",
@@ -1593,7 +1596,7 @@
    "date": "2026-09-11",
    "night": "2026-09-11",
    "genres": [
-    "electronic"
+    "house"
    ],
    "url": "https://ra.co/events/2493715",
    "ticketUrl": "https://ra.co/events/2493715",
@@ -1619,7 +1622,7 @@
    "date": "2026-09-12",
    "night": "2026-09-12",
    "genres": [
-    "electronic"
+    "house"
    ],
    "url": "https://ra.co/events/2486445",
    "ticketUrl": "https://ra.co/events/2486445",
@@ -1644,7 +1647,7 @@
    "date": "2026-09-12",
    "night": "2026-09-12",
    "genres": [
-    "electronic"
+    "house"
    ],
    "url": "https://ra.co/events/2419744",
    "ticketUrl": "https://ra.co/events/2419744",
@@ -1711,7 +1714,7 @@
    "date": "2026-09-18",
    "night": "2026-09-18",
    "genres": [
-    "electronic"
+    "breaks"
    ],
    "url": "https://ra.co/events/2485148",
    "ticketUrl": "https://ra.co/events/2485148",
@@ -1760,7 +1763,7 @@
    "date": "2026-09-19",
    "night": "2026-09-19",
    "genres": [
-    "electronic"
+    "breaks"
    ],
    "url": "https://ra.co/events/2493621",
    "ticketUrl": "https://ra.co/events/2493621",
@@ -1781,7 +1784,7 @@
    "date": "2026-09-19",
    "night": "2026-09-19",
    "genres": [
-    "electronic"
+    "house"
    ],
    "url": "https://ra.co/events/2489212",
    "ticketUrl": "https://ra.co/events/2489212",
