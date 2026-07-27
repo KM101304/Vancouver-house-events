@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-26T18:33:51.139092-07:00",
+ "updated": "2026-07-26T18:50:02.510042-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -7,16 +7,16 @@
    "area": "Vancouver",
    "genres": [
     "electronic",
-    "house"
+    "house",
+    "afro"
    ]
   },
   {
    "name": "Village Studios",
-   "count": 10,
+   "count": 9,
    "area": "Vancouver",
    "genres": [
     "electronic",
-    "breaks",
     "house"
    ]
   },
@@ -37,25 +37,7 @@
    ]
   },
   {
-   "name": "Hollywood Theatre",
-   "count": 3,
-   "area": "Vancouver",
-   "genres": [
-    "electronic",
-    "house",
-    "disco"
-   ]
-  },
-  {
    "name": "Platform9",
-   "count": 3,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "SFU Goldcorp Centre for the Arts",
    "count": 3,
    "area": "Vancouver",
    "genres": [
@@ -79,6 +61,16 @@
    ]
   },
   {
+   "name": "Hollywood Theatre",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic",
+    "house",
+    "disco"
+   ]
+  },
+  {
    "name": "Skylight Warehouse",
    "count": 2,
    "area": "Vancouver",
@@ -91,39 +83,13 @@
    "count": 2,
    "area": "Vancouver",
    "genres": [
-    "house",
+    "afro",
     "breaks",
-    "electronic"
+    "house"
    ]
   },
   {
    "name": "The Lido",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "The Pearl",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "house",
-    "electronic"
-   ]
-  },
-  {
-   "name": "The Well Studios",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic",
-    "breaks"
-   ]
-  },
-  {
-   "name": "Viff Centre",
    "count": 2,
    "area": "Vancouver",
    "genres": [
@@ -203,22 +169,6 @@
    ]
   },
   {
-   "name": "KW Studios",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "breaks"
-   ]
-  },
-  {
-   "name": "Lindsay Family Stage At Granville Island",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
    "name": "Malkin Bowl",
    "count": 1,
    "area": "Vancouver",
@@ -243,14 +193,6 @@
    ]
   },
   {
-   "name": "Rio Theatre",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
    "name": "TBA - 3rd & Ontario",
    "count": 1,
    "area": "Vancouver",
@@ -268,14 +210,6 @@
   },
   {
    "name": "TBA - East Vancouver",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "TBA - Emily Carr University of Art + Design",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -327,7 +261,8 @@
    "count": 1,
    "area": "Vancouver",
    "genres": [
-    "house"
+    "house",
+    "afro"
    ]
   },
   {
@@ -356,15 +291,23 @@
    ]
   },
   {
-   "name": "The Red Room",
+   "name": "The Pearl",
    "count": 1,
    "area": "Vancouver",
    "genres": [
-    "dnb"
+    "house"
    ]
   },
   {
    "name": "The Spot",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Well Studios",
    "count": 1,
    "area": "Vancouver",
    "genres": [

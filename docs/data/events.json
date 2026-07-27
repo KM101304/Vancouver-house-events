@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-26T18:33:51.139092-07:00",
-  "eventCount": 87,
-  "venueCount": 46,
+  "updated": "2026-07-26T18:50:02.510042-07:00",
+  "eventCount": 73,
+  "venueCount": 39,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 92,
+    "count": 78,
     "detail": ""
    },
    {
@@ -36,12 +36,12 @@
    }
   ],
   "genres": {
-   "electronic": 71,
+   "electronic": 61,
    "house": 11,
-   "breaks": 4,
+   "afro": 3,
    "disco": 2,
-   "techno": 1,
-   "dnb": 1
+   "breaks": 1,
+   "techno": 1
   }
  },
  "events": [
@@ -67,48 +67,6 @@
    "promoter": "Gorg-O-Mish",
    "price": null,
    "afterhours": true,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "3a28fb8f91c5d9db",
-   "title": "Kim Gordon - Play Me Tour",
-   "artists": [],
-   "venue": "Hollywood Theatre",
-   "address": "Vancouver",
-   "start": "2026-07-27T20:00:00-07:00",
-   "end": "2026-07-27T23:00:00-07:00",
-   "date": "2026-07-27",
-   "night": "2026-07-27",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2489232",
-   "ticketUrl": "https://ra.co/events/2489232",
-   "image": "https://images.ra.co/dd8f1510c2c71f08ec8cac9df77f39a05b68dd9f.jpg",
-   "promoter": "Timbre Concerts Ltd.",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "bf87aa2d5e09950a",
-   "title": "A Deep Listen of Boards of Canada's 'Inferno'",
-   "artists": [],
-   "venue": "TBA - Emily Carr University of Art + Design",
-   "address": "Vancouver",
-   "start": "2026-07-29T19:00:00-07:00",
-   "end": "2026-07-29T20:30:00-07:00",
-   "date": "2026-07-29",
-   "night": "2026-07-29",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2484094",
-   "ticketUrl": "https://ra.co/events/2484094",
-   "image": "https://images.ra.co/082945ba60f8026ea1e59d1a7e1cbd27ce69677c.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
    "source": "residentadvisor"
   },
   {
@@ -145,8 +103,9 @@
    "date": "2026-07-30",
    "night": "2026-07-30",
    "genres": [
-    "house",
-    "breaks"
+    "afro",
+    "breaks",
+    "house"
    ],
    "url": "https://ra.co/events/2489144",
    "ticketUrl": "https://ra.co/events/2489144",
@@ -499,30 +458,6 @@
    "source": "residentadvisor"
   },
   {
-   "id": "ec3fbc8d24902148",
-   "title": "DAS MORTUARY: Goth Pride ft bystander, HOLLENNACHT & Kasey Riot [Industrial/EBM/Electro] 10-3AM",
-   "artists": [
-    "Kasey Riot",
-    "bystander"
-   ],
-   "venue": "The Well Studios",
-   "address": "Vancouver",
-   "start": "2026-08-01T22:00:00-07:00",
-   "end": "2026-08-02T03:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "breaks"
-   ],
-   "url": "https://ra.co/events/2488410",
-   "ticketUrl": "https://ra.co/events/2488410",
-   "image": "https://images.ra.co/2976d8eb78b7422f0c95b53b6f10326f067c8921.png",
-   "promoter": "Kasey Riot",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
    "id": "eb6300126059f7ad",
    "title": "F A G // O U T ~ PRIDE",
    "artists": [
@@ -690,7 +625,8 @@
    "date": "2026-08-02",
    "night": "2026-08-02",
    "genres": [
-    "house"
+    "house",
+    "afro"
    ],
    "url": "https://ra.co/events/2488241",
    "ticketUrl": "https://ra.co/events/2488241",
@@ -1372,7 +1308,8 @@
    "date": "2026-09-05",
    "night": "2026-09-05",
    "genres": [
-    "house"
+    "house",
+    "afro"
    ],
    "url": "https://ra.co/events/2477947",
    "ticketUrl": "https://ra.co/events/2477947",
@@ -1441,27 +1378,6 @@
    "ticketUrl": "https://ra.co/events/2468377",
    "image": "https://images.ra.co/3b426f82e5f07f3e5c4565812cf34ed39b579166.jpg",
    "promoter": "Pacific Rhythm, Floor Freakout",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "337680a8461c65cb",
-   "title": "IVY LAB - A FAREWELL TOUR at SUBculture Saturdays",
-   "artists": [],
-   "venue": "The Red Room",
-   "address": "Vancouver",
-   "start": "2026-09-05T21:30:00-07:00",
-   "end": "2026-09-06T03:00:00-07:00",
-   "date": "2026-09-05",
-   "night": "2026-09-05",
-   "genres": [
-    "dnb"
-   ],
-   "url": "https://ra.co/events/2484389",
-   "ticketUrl": "https://ra.co/events/2484389",
-   "image": "https://images.ra.co/0f131a8e080803c51f7e7d11e15c9d66f5f8aa49.png",
-   "promoter": "Digital Motion BC",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1679,31 +1595,6 @@
    "source": "residentadvisor"
   },
   {
-   "id": "76e9ac538c1e46af",
-   "title": "Heaven Camera YVR || Ivy Hollivana, BINKY, ANTI-NOTHING + more",
-   "artists": [
-    "Ivy Hollivana",
-    "BINKY",
-    "ANTI-NOTHING"
-   ],
-   "venue": "KW Studios",
-   "address": "Vancouver",
-   "start": "2026-09-18T20:00:00-07:00",
-   "end": "2026-09-19T00:30:00-07:00",
-   "date": "2026-09-18",
-   "night": "2026-09-18",
-   "genres": [
-    "breaks"
-   ],
-   "url": "https://ra.co/events/2485148",
-   "ticketUrl": "https://ra.co/events/2485148",
-   "image": "https://images.ra.co/eadd90d40802ddbe2e25fc2f5919b304abe1a07a.png",
-   "promoter": "Ivy Hollivana",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
    "id": "2e6036962f7351b8",
    "title": "Soul Hop & JK Gaultier present: LADYMONIX (3 hour set)",
    "artists": [
@@ -1724,30 +1615,6 @@
    "ticketUrl": "https://ra.co/events/2470117",
    "image": "https://images.ra.co/ba158f7b5c93667f954451a5dbcee81393b76c1b.jpg",
    "promoter": "Soul Hop Productions, JK Gaultier",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "f41cd6e280d0d881",
-   "title": "Stacked pres. Denham Audio & Rohaan (Vancouver)",
-   "artists": [
-    "Denham Audio",
-    "Rohaan"
-   ],
-   "venue": "Village Studios",
-   "address": "Vancouver",
-   "start": "2026-09-19T22:00:00-07:00",
-   "end": "2026-09-20T03:00:00-07:00",
-   "date": "2026-09-19",
-   "night": "2026-09-19",
-   "genres": [
-    "breaks"
-   ],
-   "url": "https://ra.co/events/2493621",
-   "ticketUrl": "https://ra.co/events/2493621",
-   "image": "https://images.ra.co/125102c0dd307adb051c8e9022c09ba69eb4c427.png",
-   "promoter": "Blueprint Events",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1820,54 +1687,6 @@
    "source": "residentadvisor"
   },
   {
-   "id": "dd00f92025a015ab",
-   "title": "The Last Angel of History",
-   "artists": [
-    "Speaker Music"
-   ],
-   "venue": "Viff Centre",
-   "address": "Vancouver",
-   "start": "2026-10-02T17:00:00-07:00",
-   "end": "2026-10-02T18:30:00-07:00",
-   "date": "2026-10-02",
-   "night": "2026-10-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494986",
-   "ticketUrl": "https://ra.co/events/2494986",
-   "image": "https://images.ra.co/65f2825659c9690c0251104d4acd5ae3e4a9f54b.jpg",
-   "promoter": "Vancouver International Film Festival",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "3fb8a58dc434793c",
-   "title": "MUTEK x VIFF Live",
-   "artists": [
-    "Dopplereffekt",
-    "Honeydrip",
-    "MIIIA"
-   ],
-   "venue": "SFU Goldcorp Centre for the Arts",
-   "address": "Vancouver",
-   "start": "2026-10-02T21:30:00-07:00",
-   "end": "2026-10-03T01:30:00-07:00",
-   "date": "2026-10-02",
-   "night": "2026-10-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494982",
-   "ticketUrl": "https://ra.co/events/2494982",
-   "image": "https://images.ra.co/082d601156d7f3c7367fe6429093a68c3913dd7f.jpg",
-   "promoter": "MUTEK, Vancouver International Film Festival",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
    "id": "1576a1cb188f3e2a",
    "title": "Public Disco Festival",
    "artists": [
@@ -1901,50 +1720,6 @@
    "source": "residentadvisor"
   },
   {
-   "id": "16af7f043c6a6906",
-   "title": "The KLF: 23 Seconds to Eternity",
-   "artists": [
-    "CHXMERAS"
-   ],
-   "venue": "Viff Centre",
-   "address": "Vancouver",
-   "start": "2026-10-03T17:00:00-07:00",
-   "end": "2026-10-03T19:30:00-07:00",
-   "date": "2026-10-03",
-   "night": "2026-10-03",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494994",
-   "ticketUrl": "https://ra.co/events/2494994",
-   "image": "https://images.ra.co/d25e2b23b4f100fdbd3a317183d5b88519255083.jpg",
-   "promoter": "Vancouver International Film Festival",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "fb73e853905c3ffb",
-   "title": "TAKKUUK",
-   "artists": [],
-   "venue": "SFU Goldcorp Centre for the Arts",
-   "address": "Vancouver",
-   "start": "2026-10-03T20:30:00-07:00",
-   "end": "2026-10-03T21:30:00-07:00",
-   "date": "2026-10-03",
-   "night": "2026-10-03",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2496024",
-   "ticketUrl": "https://ra.co/events/2496024",
-   "image": "https://images.ra.co/eb5a9d02667bd3eda8855b9e5ded7b7697eb4163.jpg",
-   "promoter": "Vancouver International Film Festival",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
    "id": "1defbdff046d7ef9",
    "title": "Stacked pres. camoufly",
    "artists": [
@@ -1963,90 +1738,6 @@
    "ticketUrl": "https://ra.co/events/2473654",
    "image": "https://images.ra.co/4dcd03ba82039f8d52dd0c2c6255a85c41283640.png",
    "promoter": "Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "e7e7bb8b9dbcef85",
-   "title": "Kelly Moran",
-   "artists": [],
-   "venue": "SFU Goldcorp Centre for the Arts",
-   "address": "Vancouver",
-   "start": "2026-10-04T20:00:00-07:00",
-   "end": "2026-10-04T22:00:00-07:00",
-   "date": "2026-10-04",
-   "night": "2026-10-04",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2496034",
-   "ticketUrl": "https://ra.co/events/2496034",
-   "image": "https://images.ra.co/fbe44a7be00151514c2efba0b0c6079357d0708d.jpg",
-   "promoter": "Vancouver International Film Festival",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "98d53a7e7601f21f",
-   "title": "Los Thuthanaka",
-   "artists": [],
-   "venue": "The Pearl",
-   "address": "Vancouver",
-   "start": "2026-10-05T20:30:00-07:00",
-   "end": "2026-10-05T22:00:00-07:00",
-   "date": "2026-10-05",
-   "night": "2026-10-05",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494995",
-   "ticketUrl": "https://ra.co/events/2494995",
-   "image": "https://images.ra.co/eeb66663fc340143e1cb82f9452d1f611202c3db.jpg",
-   "promoter": "Vancouver International Film Festival",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "381756c0c889daab",
-   "title": "ERASERHEAD XIU XIU",
-   "artists": [],
-   "venue": "Rio Theatre",
-   "address": "Vancouver",
-   "start": "2026-10-06T20:30:00-07:00",
-   "end": "2026-10-06T22:00:00-07:00",
-   "date": "2026-10-06",
-   "night": "2026-10-06",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2495004",
-   "ticketUrl": "https://ra.co/events/2495004",
-   "image": "https://images.ra.co/74876f26d0ea2ad118e836ac66677888ab46af2d.jpg",
-   "promoter": "Vancouver International Film Festival",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "67140990b57cf342",
-   "title": "Derrick Gee's Radio Hour",
-   "artists": [],
-   "venue": "Lindsay Family Stage At Granville Island",
-   "address": "Vancouver",
-   "start": "2026-10-07T20:00:00-07:00",
-   "end": "2026-10-07T21:30:00-07:00",
-   "date": "2026-10-07",
-   "night": "2026-10-07",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2496081",
-   "ticketUrl": "https://ra.co/events/2496081",
-   "image": "https://images.ra.co/9fc526e565a626e8ea6b5788a8d7185f6222349f.jpg",
-   "promoter": "Vancouver International Film Festival",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
