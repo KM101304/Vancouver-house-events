@@ -54,7 +54,7 @@ EXCLUDE = [
     "country night", "metal", "hardcore punk", "singer-songwriter", "orchestra",
     "musical theatre", "wrestling", "burlesque bingo",
     # Acoustic-ensemble billing: "<Name> Quartet", "<Name> Trio".
-    "quartet", "quintet", "sextet", "big band", "jazz trio", "string trio",
+    "quartet", "quintet", "sextet", "big band", "trio",
 ]
 
 _ALL_GENRE_TERMS = [
@@ -196,10 +196,15 @@ def make_event(
     # Some feeds repeat the venue or the event name in the lineup; drop that noise.
     artists = [a for a in dict.fromkeys(artists) if a.lower() not in {venue.lower(), title.lower()}]
 
-    if is_excluded(title, description):
+    given = [_clean(g).lower() for g in (genres or []) if _clean(g)]
+
+    # A genre the source itself asserts outranks a guess made from the title.
+    # Without this, a confirmed house night called "Metal Disco" would be
+    # thrown out by a keyword that only ever meant to catch metal gigs.
+    confirmed = [g for g in classify(" ".join(given)) if g != "electronic"]
+    if not confirmed and is_excluded(title, description):
         return None
 
-    given = [_clean(g).lower() for g in (genres or []) if _clean(g)]
     detected = classify(" ".join(given), title, description, " ".join(artists), promoter)
     if not detected:
         # Sources that only ever carry this scene (RA, curated listings) declare a

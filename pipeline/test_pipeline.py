@@ -72,6 +72,12 @@ def test_make_event() -> None:
 
     check("non-house rejected", make_event(source="t", title="Country Night", start="2026-08-15T20:00:00", venue="Bar"), None)
     check("excluded word wins", make_event(source="t", title="House Karaoke", start="2026-08-15T20:00:00", venue="Bar"), None)
+    check("acoustic billing excluded", make_event(source="t", title="Gordon Grdina Trio", start="2026-08-15T20:00:00", venue="Bar", fallback_genres=["electronic"]), None)
+    # A genre the source asserts outranks a keyword guess from the title.
+    survives = make_event(source="t", title="Metal Disco", start="2026-08-15T22:00:00",
+                          venue="Room", genres=["house"])
+    check_true("source-confirmed genre beats title exclusion", survives)
+    check("confirmed genre kept", survives["genres"] if survives else None, ["house", "disco"])
     check("no title rejected", make_event(source="t", title="", start="2026-08-15T20:00:00", venue="Bar"), None)
     check("no date rejected", make_event(source="t", title="Techno", start=None, venue="Bar"), None)
 
