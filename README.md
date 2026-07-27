@@ -1,4 +1,6 @@
-# After Dark — Vancouver house & techno listings
+# Afters — Vancouver house & techno listings
+
+*A [Nisse Group](https://nissegroup.com) project.*
 
 Vancouver's house scene is scattered across Resident Advisor, a dozen ticketing
 platforms and a lot of Instagram stories. This pulls it into one page, one open
@@ -56,7 +58,15 @@ evening before, because that's the night you went out.
 | **Curated** (`data/manual-events.json`) | — | Hand-added nights. Wins every dedupe tie. |
 | **Resident Advisor** | — | Public GraphQL endpoint. Best lineup and promoter data. |
 | **Ticketmaster** | `TICKETMASTER_API_KEY` | Skips itself cleanly if unset. Bigger rooms, touring acts. |
+| **Songkick** | `SONGKICK_API_KEY` | Broader concert coverage; skips itself if unset. |
 | **Showpass** | `ENABLE_SHOWPASS=1` | Off by default — see below. |
+
+**Sources evaluated and rejected.** Dice.fm has no public API — every option is
+a paid third-party scraper, and guessing at an undocumented endpoint is exactly
+how the Showpass adapter ended up dead. Bandsintown's API is per-artist, so it
+can't answer "what's on in Vancouver". Eventbrite removed its public search
+endpoint in 2020. If you find a working Dice endpoint, the adapter pattern makes
+it a single new file.
 
 **Resident Advisor genres.** RA's listing payload carries no per-event genre,
 so the pipeline re-runs the query once per genre facet RA offers and records
@@ -87,10 +97,11 @@ branch `main`, folder `/docs`. Nothing to build; every data commit redeploys.
 **2. Let Actions write to the repo.** Settings → Actions → General → Workflow
 permissions → *Read and write*. Without this the refresh job can't commit.
 
-**3. Optional — add Ticketmaster.** Grab a free key at
-[developer.ticketmaster.com](https://developer.ticketmaster.com/), then
-Settings → Secrets and variables → Actions → new secret `TICKETMASTER_API_KEY`.
-Skip it and the other sources carry on.
+**3. Optional — add more sources.** Free keys, each independent, added under
+Settings → Secrets and variables → Actions:
+[Ticketmaster](https://developer.ticketmaster.com/) → `TICKETMASTER_API_KEY`,
+[Songkick](https://www.songkick.com/developer) → `SONGKICK_API_KEY`.
+Skip them and the other sources carry on.
 
 **4. Kick off the first pull.** Actions → *Refresh event feeds* → Run workflow.
 Until this runs, the site correctly shows an empty state — no listings are
@@ -145,20 +156,26 @@ downstream needs to change.
 
 ## Design
 
-The page is an instrument, not a landing page. Its primary object is a 13-hour
-axis (19:00 → 08:00) with every party drawn at its real hours, because this
-scene has a shape: clubs call last round at 3, the afterhours rooms run to 8.
-Reading that handover is the point — overlapping parties are lane-packed so a
-busy Saturday stacks instead of colliding.
+Direction is Bold Energetic (Nike / Spotify): the flyer artwork carries the page
+and the interface is a quiet frame around it. Bricolage Grotesque for
+personality, Geist for the UI. There is no hero banner — the masthead is one
+compact row, so listings start immediately.
 
-Genre colour is therefore *functional*, not decoration: it is what makes the
-plot legible. The seven hues are a categorical palette validated for
-colour-vision-deficiency separation and contrast against the plot surface, and
-identity is never carried by colour alone — every bar and row states its genre
-in text, and the legend doubles as the genre filter.
+Layout is decided by density rather than decoration: a busy Saturday lays out as
+image tiles, a one-event Tuesday as a wide horizontal card, so quiet nights
+don't leave three empty columns.
 
-Deliberately absent: hero banner, gradient fills, rounded cards with an accent
-stripe, a lone neon accent, emoji.
+Colour contrast is computed, not eyeballed — white on ground 20:1, muted 8.5:1,
+accent 5.9:1. Accent buttons carry black text because white on the accent only
+reaches 3.4:1.
+
+Listings with no flyer get generated artwork rather than a grey box —
+deterministic per event and constrained to the warm end of the wheel so it sits
+with the accent. It doubles as the `onerror` fallback, so a dead flyer URL never
+leaves a hole in the grid.
+
+Deliberately absent: hero banner, gradient backgrounds, rounded cards with an
+accent stripe, a lone neon accent on near-black, emoji.
 
 ## Notes
 

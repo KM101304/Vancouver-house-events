@@ -1,4 +1,4 @@
-/* After Dark — listings client.
+/* Afters — listings client.
  *
  * Event data comes from third-party APIs, so nothing from the feed is ever
  * interpolated into innerHTML. Text goes through textContent and URLs are
@@ -302,7 +302,7 @@
 
   function renderStats() {
     var tonight = currentNight();
-    role("stat-tonight").querySelector("strong").textContent =
+    role("stat-tonight").textContent =
       state.events.filter(function (e) { return e.night === tonight; }).length;
     role("stat-week").textContent =
       state.events.filter(function (e) { var d = daysFromTonight(e.night); return d >= 0 && d <= 6; }).length;
@@ -325,7 +325,7 @@
           state.venue = state.venue === name ? "" : name;
           state.when = "all";
           renderPills(); renderFeed(); dirty();
-          document.getElementById("listings").scrollIntoView({ behavior: "smooth", block: "start" });
+          document.getElementById("feed").scrollIntoView({ behavior: "smooth", block: "start" });
         });
         li.appendChild(b);
         li.appendChild(el("span", null, counts[name]));
