@@ -68,6 +68,38 @@ can't answer "what's on in Vancouver". Eventbrite removed its public search
 endpoint in 2020. If you find a working Dice endpoint, the adapter pattern makes
 it a single new file.
 
+## Scope
+
+Strictly **house, techno, afro (afrobeat / afro house / amapiano), disco and
+garage**. That set is one constant — `IN_SCOPE` in `pipeline/normalize.py` —
+so widening or narrowing the site is a one-line change.
+
+Inclusion needs positive evidence, in this order:
+
+1. An in-scope genre is detected in the source's own tags or the title.
+2. A genre is detected and it's *out* of scope (drum & bass, trance) → dropped,
+   even from a trusted source. Knowing what something is beats trusting a feed.
+3. No genre named, but the listing reads as a club night ("rave", "warehouse",
+   "b2b", "all night") or comes from a promoter/room in
+   [`data/scene.json`](data/scene.json) → kept, labelled `electronic`.
+4. Still nothing, but the source only carries electronic music (Resident
+   Advisor) → kept. Most underground parties are billed by promoter and
+   line-up, never by genre, and dropping these loses most of the real feed.
+
+`scene.json` also holds `notPromoters` — bookers known to programme other
+music. The Vancouver International Film Festival was the second-largest
+"promoter" in the live feed until this existed, putting film screenings on a
+house and techno site.
+
+Against the live feed this keeps 73 of 87 listings and drops the film
+festival programme, a rock tour, a seated listening session, and the drum &
+bass and jungle nights.
+
+**A limitation worth knowing:** Resident Advisor exposes a genre facet for only
+about a fifth of its listings, so most events carry the generic `electronic`
+label rather than `house` or `techno`. Sub-genre precision is capped by that,
+not by the classifier.
+
 **Resident Advisor genres.** RA's listing payload carries no per-event genre,
 so the pipeline re-runs the query once per genre facet RA offers and records
 what comes back. This is purely additive: if RA rejects the genre filter the

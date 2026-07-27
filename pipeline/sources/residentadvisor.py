@@ -211,6 +211,9 @@ def fetch(days_ahead: int = 120, area_id: int = DEFAULT_AREA_ID) -> list[dict]:
             # Few RA titles literally say "house"; without a fallback the best
             # listings on the site would classify to nothing and vanish.
             fallback_genres=["electronic"],
+            # RA only lists electronic music; the exclusion list removes the
+            # film festivals and rock shows it carries at the same venues.
+            is_scene_source=True,
         )
         if event:
             events.append(event)

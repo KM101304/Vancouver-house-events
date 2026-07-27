@@ -8,9 +8,11 @@ sees that shape, so adding a source never means touching the site.
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 import unicodedata
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 try:
     from zoneinfo import ZoneInfo
@@ -28,11 +30,17 @@ SCHEMA_VERSION = 2
 # all; `ADJACENT` rides along only when a primary genre is already present, so
 # a disco-tagged funk band doesn't get pulled in on its own.
 PRIMARY = {
-    "house": ["house", "deep house", "tech house", "afro house", "acid house",
-              "progressive house", "melodic house", "soulful house", "bass house",
-              "amapiano", "gqom"],
+    "house": ["house", "deep house", "tech house", "acid house", "progressive house",
+              "melodic house", "soulful house", "bass house", "disco house",
+              "funky house", "jackin house", "jackin' house", "garage house",
+              "microhouse", "micro house", "lo-fi house", "organic house",
+              "indie dance", "french house"],
     "techno": ["techno", "minimal", "melodic techno", "hard techno", "industrial techno",
-               "acid techno", "dub techno"],
+               "acid techno", "dub techno", "hypnotic techno", "raw techno",
+               "peak time", "electro techno"],
+    # Afro-electronic, which increasingly shares the same rooms and line-ups.
+    "afro": ["afrobeat", "afrobeats", "afro house", "afro tech", "afro deep",
+             "amapiano", "gqom", "kuduro", "azonto", "afro disco"],
     "garage": ["garage", "uk garage", "ukg", "2-step", "bassline", "speed garage"],
     "breaks": ["breaks", "breakbeat", "electro", "ghettotech", "jungle"],
     "trance": ["trance", "psytrance", "progressive trance", "hard trance"],
@@ -46,6 +54,30 @@ ADJACENT = {
     "ambient": ["ambient", "downtempo", "experimental", "leftfield", "idm"],
 }
 
+# What actually belongs on this site. The classifier still labels everything it
+# recognises -- dnb, trance, breaks -- but only these qualify a listing for
+# inclusion. Widen this set to broaden the site; it is the single knob.
+IN_SCOPE = {"house", "techno", "afro", "disco", "garage"}
+
+# Words that mark a listing as a club night even when no subgenre is named.
+# Most underground parties are billed by promoter and line-up, not by genre, so
+# without these the strict gate throws out real events with cryptic titles.
+CLUB_SIGNALS = [
+    "rave", "dancefloor", "dance floor", "after party", "afterparty", "afters",
+    "warehouse", "all night", "all-night", "b2b", "back to back", "dj set",
+    "djs", "dj ", "selector", "sound system", "soundsystem", "basement",
+    "underground", "club night", "day party", "block party", "boiler room",
+    "residents", "resident dj", "late night", "til late", "till late",
+]
+
+
+def has_club_signal(*texts: str) -> bool:
+    haystack = " ".join(_clean(t).lower() for t in texts if t)
+    return any(
+        re.search(r"(?<![a-z])" + re.escape(term.strip()) + r"(?![a-z])", haystack)
+        for term in CLUB_SIGNALS
+    )
+
 # Terms that mean "this is not a house night" even if a primary word appears
 # somewhere in the blurb. RA lists everything programmed at the venues it
 # covers, so a jazz trio at an electronic-adjacent room turns up in the feed.
@@ -55,6 +87,12 @@ EXCLUDE = [
     "musical theatre", "wrestling", "burlesque bingo",
     # Acoustic-ensemble billing: "<Name> Quartet", "<Name> Trio".
     "quartet", "quintet", "sextet", "big band", "trio",
+    # RA's Vancouver area carries the film festivals programmed at the same
+    # rooms; they were the second-largest "promoter" in the live feed.
+    "film festival", "screening", "screenings", "documentary", "short film",
+    "cinema", "film fest", "in conversation", "panel discussion",
+    # Seated listening events are not club nights.
+    "deep listen", "listening session", "listening party", "album playback",
 ]
 
 _ALL_GENRE_TERMS = [
@@ -68,6 +106,39 @@ _ALL_GENRE_TERMS = [
 _ALL_GENRE_TERMS.sort(key=lambda pair: len(pair[1]), reverse=True)
 
 _PRIMARY_LABELS = set(PRIMARY)
+
+
+def _load_scene() -> tuple[list[str], list[str], list[str]]:
+    """Curated promoters and rooms that reliably programme this music."""
+    path = Path(__file__).resolve().parents[1] / "data" / "scene.json"
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        return (
+            [p.lower() for p in payload.get("promoters", []) if p],
+            [v.lower() for v in payload.get("venues", []) if v],
+            [p.lower() for p in payload.get("notPromoters", []) if p],
+        )
+    except (OSError, json.JSONDecodeError):
+        return [], [], []
+
+
+SCENE_PROMOTERS, SCENE_VENUES, NOT_PROMOTERS = _load_scene()
+
+
+def is_off_scene(promoter: str) -> bool:
+    """Promoters known to book other music -- film festivals, rock bookers."""
+    promoter = (promoter or "").lower()
+    return bool(promoter) and any(name in promoter for name in NOT_PROMOTERS)
+
+
+def is_scene(promoter: str, venue: str) -> bool:
+    """True when a known house/techno promoter or room is behind the listing."""
+    promoter = (promoter or "").lower()
+    venue = (venue or "").lower()
+    return (
+        any(name in promoter for name in SCENE_PROMOTERS)
+        or any(name in venue for name in SCENE_VENUES)
+    )
 
 
 def _slug(value: str) -> str:
@@ -184,6 +255,7 @@ def make_event(
     source_id: str = "",
     address: str = "",
     fallback_genres=None,
+    is_scene_source: bool = False,
 ) -> dict | None:
     """Build one normalized event, or None if it isn't a usable house/techno listing."""
     title = _clean(title)
@@ -198,19 +270,41 @@ def make_event(
 
     given = [_clean(g).lower() for g in (genres or []) if _clean(g)]
 
+    detected = classify(" ".join(given), title, description, " ".join(artists), promoter)
+    in_scope = [g for g in detected if g in IN_SCOPE]
+
     # A genre the source itself asserts outranks a guess made from the title.
     # Without this, a confirmed house night called "Metal Disco" would be
     # thrown out by a keyword that only ever meant to catch metal gigs.
-    confirmed = [g for g in classify(" ".join(given)) if g != "electronic"]
-    if not confirmed and is_excluded(title, description):
+    asserted = [g for g in classify(" ".join(given)) if g in IN_SCOPE]
+    if not asserted and is_excluded(title, description, promoter):
         return None
 
-    detected = classify(" ".join(given), title, description, " ".join(artists), promoter)
-    if not detected:
-        # Sources that only ever carry this scene (RA, curated listings) declare a
-        # fallback so an unlabelled listing still lands instead of vanishing.
-        detected = [g for g in (fallback_genres or []) if g]
-    if not detected:
+    # A promoter who books other music loses the benefit of the doubt -- but a
+    # listing that names an in-scope genre outright still stands on its own.
+    if not in_scope and is_off_scene(promoter):
+        return None
+
+    # Inclusion needs positive evidence of the right music. A generic
+    # "electronic" tag is not evidence -- it is what let a film festival and a
+    # jazz trio onto a house and techno site.
+    specific = [g for g in detected if g != "electronic"]
+    if in_scope:
+        pass
+    elif specific:
+        # We positively identified what this is and it isn't house, techno or
+        # afro -- a drum & bass or trance night. Knowing beats blanket trust.
+        return None
+    elif has_club_signal(title, description, promoter) or is_scene(promoter, venue):
+        # It reads as a club night, or a known room/promoter vouches for it.
+        # Label it "electronic" rather than inventing a subgenre we don't know.
+        detected = detected or list(fallback_genres or []) or ["electronic"]
+    elif fallback_genres and is_scene_source:
+        # A source that only carries this music (RA) is itself evidence, and
+        # the exclusion list above has already removed the film and rock nights
+        # it also lists. Dropping the rest would lose most of the real feed.
+        detected = list(fallback_genres)
+    else:
         return None
 
     end_dt = parse_dt(end)

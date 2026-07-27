@@ -81,12 +81,50 @@ def test_make_event() -> None:
     check("no title rejected", make_event(source="t", title="", start="2026-08-15T20:00:00", venue="Bar"), None)
     check("no date rejected", make_event(source="t", title="Techno", start=None, venue="Bar"), None)
 
-    # A trusted source can carry an unlabelled listing through.
+    # An electronic-only source can carry an unlabelled listing through.
     fallback = make_event(
         source="ra", title="Mysterious Night 004", start="2026-08-15T23:00:00",
-        venue="Room", fallback_genres=["electronic"],
+        venue="Room", fallback_genres=["electronic"], is_scene_source=True,
     )
-    check("fallback genre applied", fallback["genres"], ["electronic"])
+    check("scene source carries unlabelled listing", fallback["genres"], ["electronic"])
+
+    # ...but a generic "electronic" tag on its own is not evidence of anything.
+    # This is what previously let a film festival onto a house/techno site.
+    check("electronic alone does not qualify", make_event(
+        source="x", title="Mysterious Night 004", start="2026-08-15T23:00:00",
+        venue="Room", fallback_genres=["electronic"]), None)
+
+
+def test_scope_gate() -> None:
+    def build(title, **kw):
+        return make_event(source="ra", title=title, start="2026-08-15T23:00:00",
+                          venue=kw.pop("venue", "Room"), **kw)
+
+    check_true("afro house detected", build("Afro House & Amapiano Night"))
+    check("afro labelled", build("Amapiano All Night")["genres"], ["afro"])
+
+    # Out of scope: identified as something this site deliberately doesn't cover.
+    check("dnb dropped", build("Drum & Bass Downstairs", fallback_genres=["electronic"],
+                               is_scene_source=True), None)
+    check("trance dropped", build("Psytrance Gathering", fallback_genres=["electronic"],
+                                  is_scene_source=True), None)
+
+    # A club signal admits a party whose title names no genre at all.
+    check_true("club signal admits", build("Warehouse Rave II"))
+    # Word-boundary matched: "Polskarave" must not match on "rave", same as "brave".
+    check("signal is word-bounded", make_event(
+        source="x", title="Polskarave II", start="2026-08-15T23:00:00", venue="Room"), None)
+    check_true("warehouse signal admits", build("Basement 004 — all night"))
+    check("no signal, no source, dropped", make_event(
+        source="x", title="Some Evening Thing", start="2026-08-15T20:00:00", venue="Hall"), None)
+
+    # A promoter known to book other music loses the benefit of the doubt.
+    check("off-scene promoter dropped", build(
+        "Some Tour", promoter="Vancouver International Film Festival",
+        fallback_genres=["electronic"], is_scene_source=True), None)
+    # ...unless the listing itself confirms an in-scope genre.
+    check_true("confirmed genre beats off-scene promoter", build(
+        "Deep House Session", promoter="Timbre Concerts Ltd."))
 
 
 def test_dedupe() -> None:
