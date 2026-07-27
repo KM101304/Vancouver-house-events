@@ -1,0 +1,34 @@
+name: Tests
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pipeline tests
+        run: python -m pipeline.test_pipeline
+
+      - name: Curated listings parse and validate
+        run: python -m pipeline.ingest --only manual
+
+      - name: Site assets are syntactically valid
+        run: |
+          node --check docs/assets/js/app.js
+          python - <<'PY'
+          import json, pathlib, sys
+          # Every generated feed must stay parseable JSON.
+          for name in ("events", "venues", "meta"):
+              path = pathlib.Path("docs/data") / f"{name}.json"
+              if path.exists():
+                  json.loads(path.read_text())
+          print("feeds parse cleanly")
+          PY

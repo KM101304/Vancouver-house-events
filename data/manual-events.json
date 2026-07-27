@@ -1,0 +1,33 @@
+{
+  "$comment": [
+    "Hand-curated listings for parties that never appear on a ticketing API:",
+    "warehouse nights, afterhours, door-only shows, Instagram-only announcements.",
+    "",
+    "Add an object to 'events' below and open a PR (or edit straight on GitHub).",
+    "The next scheduled refresh picks it up automatically -- these entries win",
+    "over platform listings when the same party appears in both.",
+    "",
+    "Required: title, start, venue.  'start' is Vancouver local time,",
+    "ISO 8601, e.g. 2026-08-15T23:00:00. A 2am start is fine -- the site files",
+    "it under the night before, the way anyone going to it would.",
+    "",
+    "Set \"draft\": true to keep an entry in the file without publishing it."
+  ],
+  "example": {
+    "title": "Basement Sessions 004",
+    "start": "2026-08-15T23:00:00",
+    "end": "2026-08-16T04:00:00",
+    "venue": "Open Studios",
+    "address": "Mount Pleasant",
+    "artists": ["Local Resident", "Guest Selector"],
+    "genres": ["house", "disco"],
+    "promoter": "Basement Sessions",
+    "ticketUrl": "https://example.com/tickets",
+    "url": "https://instagram.com/p/example",
+    "image": "",
+    "priceMin": 20,
+    "description": "Deep house and disco until late.",
+    "draft": true
+  },
+  "events": []
+}

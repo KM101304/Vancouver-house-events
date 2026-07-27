@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "schemaVersion": 2,
+  "updated": "2026-07-26T17:21:44.019831-07:00",
+  "eventCount": 0,
+  "venueCount": 0,
+  "windowDays": 120,
+  "sources": [
+   {
+    "source": "manual",
+    "label": "Curated",
+    "status": "ok",
+    "count": 0,
+    "detail": ""
+   },
+   {
+    "source": "residentadvisor",
+    "label": "Resident Advisor",
+    "status": "failed",
+    "count": 0,
+    "detail": "RuntimeError: request failed for https://ra.co/graphql: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   },
+   {
+    "source": "ticketmaster",
+    "label": "Ticketmaster",
+    "status": "skipped",
+    "count": 0,
+    "detail": "no API key configured"
+   },
+   {
+    "source": "showpass",
+    "label": "Showpass",
+    "status": "failed",
+    "count": 0,
+    "detail": "RuntimeError: no parseable response from any Showpass endpoint: request failed for https://api.showpass.com/api/public/discovery/?location=Vancouver&page_size=100&starts_on__gte=2026-07-26&starts_on__lte=2026-11-23&ordering=starts_on&page=1: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   }
+  ],
+  "genres": {}
+ },
+ "events": []
+}
