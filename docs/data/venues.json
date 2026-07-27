@@ -1,4 +1,376 @@
 {
- "updated": "2026-07-26T17:21:44.019831-07:00",
- "venues": []
+ "updated": "2026-07-26T17:25:02.234194-07:00",
+ "venues": [
+  {
+   "name": "TBA",
+   "count": 12,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Village Studios",
+   "count": 10,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Celebrities Night Club",
+   "count": 5,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Fortune Sound Club",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Hollywood Theatre",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic",
+    "house",
+    "disco"
+   ]
+  },
+  {
+   "name": "Platform9",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "SFU Goldcorp Centre for the Arts",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Secret Location",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Commodore Ballroom",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Hero's Welcome",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Skylight Warehouse",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Beaumont Studios",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Lido",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Pearl",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Well Studios",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic",
+    "breaks"
+   ]
+  },
+  {
+   "name": "Viff Centre",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "1201 Franklin St",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "At The Waldorf Hotel",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Biltmore Cabaret",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Cinemagic Lab",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Container Brewing",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "El Comal",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Gorg-O-Mish",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Harbour Event Centre",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "techno"
+   ]
+  },
+  {
+   "name": "Junction Public Market",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "KW Studios",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Lindsay Family Stage At Granville Island",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Malkin Bowl",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Plaza of Nations Dock",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Red Gate Arts Society",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Rio Theatre",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - 3rd & Ontario",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Address sent to ticket holders 8pm day of show",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Emily Carr University of Art + Design",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Jonathan Rogers Park",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Private Location",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Shipyards Waterfront",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Sidekick Brewing",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - The Meadow at Cel7wet Festival Grounds 5653 Celewt Road, Pritchard",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - The Penthouse Nightclub",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - The Penthouse Nightclub (Upstairs), 1019 Seymour St, Vancouver BC",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Underground Location",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - near Main St. Skytrain Station",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Red Room",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Spot",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Vancouver Art Gallery",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  }
+ ]
 }
