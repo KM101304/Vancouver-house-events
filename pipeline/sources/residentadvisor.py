@@ -37,6 +37,9 @@ QUERY = (
     "        artists { id name }"
     "      }"
     "    }"
+    # Must be SELECTED, not just passed as an argument -- without this the
+    # response carries no facet list and genre enrichment silently never runs.
+    "    filterOptions { genre { label value } }"
     "    totalResults"
     "  }"
     "}"
@@ -137,6 +140,9 @@ def fetch(days_ahead: int = 120, area_id: int = DEFAULT_AREA_ID) -> list[dict]:
             genres_by_id = _genre_map(area_id, gte, lte, genre_options, headers)
         except Exception as exc:  # noqa: BLE001 - enrichment is best-effort
             print(f"  ra: genre enrichment unavailable ({exc}); using plain listings", file=sys.stderr)
+    elif raw_listings:
+        # Silence here previously hid the fact that enrichment never ran at all.
+        print("  ra: no genre facets in response; every listing keeps the catch-all", file=sys.stderr)
 
     # Only trust enrichment if it actually covered a meaningful share of the
     # listings -- otherwise a partial map would look like "not electronic".

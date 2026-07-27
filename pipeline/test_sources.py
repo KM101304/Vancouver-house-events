@@ -142,6 +142,16 @@ def test_residentadvisor() -> None:
     check("ra stopped after empty page", fake.calls["n"], 2)
 
 
+def test_residentadvisor_query_selects_filter_options() -> None:
+    """Regression: filterOptions must be selected, not only passed as an arg.
+
+    It was previously only an argument, so the response never carried a facet
+    list and genre enrichment was skipped on every single run.
+    """
+    check_true("query selects filterOptions", "filterOptions {" in residentadvisor.QUERY)
+    check_true("query selects genre value", "genre { label value }" in residentadvisor.QUERY)
+
+
 def _ra_page(events, genre_options=None):
     block = {"data": events, "totalResults": len(events)}
     if genre_options is not None:
