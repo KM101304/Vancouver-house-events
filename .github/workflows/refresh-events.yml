@@ -1,0 +1,77 @@
+name: Refresh event feeds
+
+on:
+  schedule:
+    # Every six hours. GitHub only runs cron on the default branch.
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days ahead to pull"
+        required: false
+        default: "120"
+  push:
+    branches: [main]
+    # Re-run when a curated night is added or the pipeline changes.
+    paths:
+      - "data/**"
+      - "pipeline/**"
+      - ".github/workflows/refresh-events.yml"
+
+# Two runs committing to the same branch would race.
+concurrency:
+  group: refresh-events
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The pipeline is stdlib-only on purpose: no install step to break.
+      - name: Run pipeline tests
+        run: python -m pipeline.test_pipeline
+
+      - name: Refresh feeds
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+        run: python -m pipeline.ingest --days "${{ github.event.inputs.days || '120' }}"
+
+      - name: Report source health
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          meta = json.loads(pathlib.Path("docs/data/meta.json").read_text())
+          print(f"### {meta['eventCount']} events across {meta['venueCount']} venues\n")
+          print("| Source | Status | Events |")
+          print("|---|---|---|")
+          for s in meta["sources"]:
+              print(f"| {s['label']} | {s['status']} | {s['count']} |")
+          PY
+
+      - name: Commit refreshed feeds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          if git diff --staged --quiet; then
+            echo "No listing changes."
+            exit 0
+          fi
+          COUNT=$(python -c "import json;print(json.load(open('docs/data/meta.json'))['eventCount'])")
+          git commit -m "data: refresh listings (${COUNT} events)"
+          # The scheduled job and a human push can collide; rebase and retry.
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

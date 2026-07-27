@@ -1,0 +1,67 @@
+name: Submit a night
+description: Add a party that isn't showing up on the site
+title: "[event] "
+labels: ["event submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For house, techno and adjacent underground nights in Vancouver.
+        Anything already ticketed on Resident Advisor or Ticketmaster gets
+        picked up automatically — this is for the ones that don't.
+
+  - type: input
+    id: title
+    attributes:
+      label: Event name
+      placeholder: Basement Sessions 004
+    validations:
+      required: true
+
+  - type: input
+    id: start
+    attributes:
+      label: Date and start time
+      description: Vancouver local time. A 2am start is fine — it gets filed under the night before.
+      placeholder: 2026-08-15 23:00
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: Venue
+      placeholder: Open Studios
+    validations:
+      required: true
+
+  - type: input
+    id: artists
+    attributes:
+      label: Lineup
+      description: Comma separated.
+      placeholder: Local Resident, Guest Selector
+
+  - type: input
+    id: genres
+    attributes:
+      label: Genres
+      placeholder: house, disco
+
+  - type: input
+    id: tickets
+    attributes:
+      label: Ticket link
+      description: Or the announcement post if it's door-only.
+      placeholder: https://…
+
+  - type: input
+    id: promoter
+    attributes:
+      label: Promoter
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      placeholder: Door price, age restriction, afterhours…
