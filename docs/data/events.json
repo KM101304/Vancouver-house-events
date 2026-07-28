@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-28T02:07:19.679495-07:00",
-  "eventCount": 74,
+  "updated": "2026-07-28T07:40:59.714458-07:00",
+  "eventCount": 75,
   "venueCount": 39,
   "windowDays": 120,
   "sources": [
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 79,
+    "count": 81,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 61,
+   "electronic": 62,
    "house": 12,
    "afro": 4,
    "disco": 2,
@@ -276,6 +276,34 @@
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
+  },
+  {
+   "id": "3e10da3e0adbbc30",
+   "title": "PRIDE AFTERS",
+   "artists": [
+    "2flowers",
+    "LVT",
+    "DF Cuke"
+   ],
+   "venue": "TBA - Private Location",
+   "address": "Vancouver",
+   "start": "2026-07-31T23:59:00-07:00",
+   "end": "2026-08-02T06:00:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2499771",
+   "ticketUrl": "https://ra.co/events/2499771",
+   "image": "https://images.ra.co/106576221d723322df40dd68fb989f85640f9178.png",
+   "promoter": "DOLLY",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor",
+   "alsoOn": [
+    "residentadvisor"
+   ]
   },
   {
    "id": "002a42dd84e854b4",

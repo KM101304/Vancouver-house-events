@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-28T02:07:19.679495-07:00",
+ "updated": "2026-07-28T07:40:59.714458-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -72,6 +72,14 @@
   },
   {
    "name": "Skylight Warehouse",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Private Location",
    "count": 2,
    "area": "Vancouver",
    "genres": [
@@ -219,14 +227,6 @@
   },
   {
    "name": "TBA - Jonathan Rogers Park",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "TBA - Private Location",
    "count": 1,
    "area": "Vancouver",
    "genres": [
