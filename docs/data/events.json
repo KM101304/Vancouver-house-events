@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-27T20:39:31.874782-07:00",
-  "eventCount": 73,
-  "venueCount": 38,
+  "updated": "2026-07-28T02:07:19.679495-07:00",
+  "eventCount": 74,
+  "venueCount": 39,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 77,
+    "count": 79,
     "detail": ""
    },
    {
@@ -37,8 +37,8 @@
   ],
   "genres": {
    "electronic": 61,
-   "house": 11,
-   "afro": 3,
+   "house": 12,
+   "afro": 4,
    "disco": 2,
    "breaks": 1,
    "techno": 1
@@ -313,12 +313,15 @@
    "id": "495c27ace8ecc9a1",
    "title": "SHAME FEST",
    "artists": [
+    "Speed.FM",
+    "Obreezy Beats",
+    "RESONATE.JPEG",
     "Babies R Stupid"
    ],
    "venue": "Red Gate Arts Society",
    "address": "Vancouver",
    "start": "2026-08-01T19:00:00-07:00",
-   "end": "2026-08-02T01:00:00-07:00",
+   "end": "2026-08-02T23:59:00-07:00",
    "date": "2026-08-01",
    "night": "2026-08-01",
    "genres": [
@@ -326,11 +329,14 @@
    ],
    "url": "https://ra.co/events/2486874",
    "ticketUrl": "https://ra.co/events/2486874",
-   "image": "https://images.ra.co/daff0834a34d41f58208ec3e7f60980fe19f6783.jpg",
+   "image": "https://images.ra.co/2bf5144031d1c0fb82b6a5069e2a246102bc29ee.jpg",
    "promoter": "Incidental Press",
    "price": null,
    "afterhours": false,
-   "source": "residentadvisor"
+   "source": "residentadvisor",
+   "alsoOn": [
+    "residentadvisor"
+   ]
   },
   {
    "id": "9424183aaf40db29",
@@ -373,6 +379,30 @@
    "ticketUrl": "https://ra.co/events/2494251",
    "image": "https://images.ra.co/effa84506e4ac7ab6dd395c58d6f992df1276b01.jpg",
    "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "81f53d4d8233e11d",
+   "title": "Mili Live",
+   "artists": [
+    "MILI (2)"
+   ],
+   "venue": "Monarca",
+   "address": "Vancouver",
+   "start": "2026-08-01T22:00:00-07:00",
+   "end": "2026-08-02T03:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "afro",
+    "house"
+   ],
+   "url": "https://ra.co/events/2499624",
+   "ticketUrl": "https://ra.co/events/2499624",
+   "image": "https://images.ra.co/120200f51d6a12a7018e6881ab5ba86901051645.jpg",
+   "promoter": "Monoroom, NewGen",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
