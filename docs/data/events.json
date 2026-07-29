@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-29T07:33:32.252039-07:00",
-  "eventCount": 80,
+  "updated": "2026-07-29T12:46:47.657283-07:00",
+  "eventCount": 81,
   "venueCount": 41,
   "windowDays": 120,
   "sources": [
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 86,
+    "count": 87,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 67,
+   "electronic": 68,
    "house": 12,
    "afro": 4,
    "disco": 2,
@@ -976,6 +976,30 @@
    ]
   },
   {
+   "id": "558318e2d97fd5e4",
+   "title": "Avalon Emerson & The Charm",
+   "artists": [
+    "Avalon Emerson",
+    "Pacific Coliseum"
+   ],
+   "venue": "Fortune Sound Club",
+   "address": "Vancouver",
+   "start": "2026-08-06T20:00:00-07:00",
+   "end": "2026-08-06T22:00:00-07:00",
+   "date": "2026-08-06",
+   "night": "2026-08-06",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2501197",
+   "ticketUrl": "https://ra.co/events/2501197",
+   "image": "https://images.ra.co/be7ae91726e70f34d097dfbcbb54d79c748d475f.png",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "eb127a21c6672b9e",
    "title": "Trust Me 06: Teen Daze",
    "artists": [
@@ -1170,7 +1194,7 @@
   },
   {
    "id": "09b6cfd15c4f53cf",
-   "title": "SLAB presents Justin Martin & Friends",
+   "title": "SLAB presents Justin Martin & JOIA",
    "artists": [
     "Justin Martin"
    ],
