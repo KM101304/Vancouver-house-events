@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-29T02:11:53.265796-07:00",
+ "updated": "2026-07-29T07:33:32.252039-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -37,6 +37,14 @@
    ]
   },
   {
+   "name": "Gorg-O-Mish",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
    "name": "Platform9",
    "count": 3,
    "area": "Vancouver",
@@ -46,6 +54,14 @@
   },
   {
    "name": "TBA - Secret Location",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Lido",
    "count": 3,
    "area": "Vancouver",
    "genres": [
@@ -94,14 +110,6 @@
     "afro",
     "breaks",
     "house"
-   ]
-  },
-  {
-   "name": "The Lido",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
    ]
   },
   {

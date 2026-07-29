@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-29T02:11:53.265796-07:00",
-  "eventCount": 76,
-  "venueCount": 40,
+  "updated": "2026-07-29T07:33:32.252039-07:00",
+  "eventCount": 80,
+  "venueCount": 41,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 82,
+    "count": 86,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 63,
+   "electronic": 67,
    "house": 12,
    "afro": 4,
    "disco": 2,
@@ -45,6 +45,29 @@
   }
  },
  "events": [
+  {
+   "id": "d176818a653c57a2",
+   "title": "I <3 music with Dairy Free",
+   "artists": [
+    "Dairy Free"
+   ],
+   "venue": "The Lido",
+   "address": "Vancouver",
+   "start": "2026-07-29T20:00:00-07:00",
+   "end": "2026-07-30T01:00:00-07:00",
+   "date": "2026-07-29",
+   "night": "2026-07-29",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2500639",
+   "ticketUrl": "https://ra.co/events/2500639",
+   "image": "https://images.ra.co/ccbb6c426888a3311e6f7237ab2983fa87896488.png",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
   {
    "id": "bda32da6af924369",
    "title": "underscores",
@@ -135,6 +158,30 @@
    "promoter": "Blueprint, Blueprint Events, Normie",
    "price": null,
    "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "cda993100b74bb95",
+   "title": "Gorg-O-Mish: PRIDE // Steph Tsunami + S@M i @M, Luca Fernandez & Madam Lola",
+   "artists": [
+    "Steph Tsunami",
+    "Luca Fernandez"
+   ],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-07-30T23:00:00-07:00",
+   "end": "2026-07-31T08:00:00-07:00",
+   "date": "2026-07-30",
+   "night": "2026-07-30",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2500515",
+   "ticketUrl": "https://ra.co/events/2500515",
+   "image": "https://images.ra.co/a3d2e8ffe4369c842d83cd56938193dd8ea2e20b.png",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
    "source": "residentadvisor"
   },
   {
@@ -253,6 +300,30 @@
    "source": "residentadvisor"
   },
   {
+   "id": "6ca1ba6eda3fd42c",
+   "title": "Gorg-O-Mish presents: PRIDE // Kasey Riot, C-Star & New Girl",
+   "artists": [
+    "Kasey Riot",
+    "C-Star"
+   ],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-07-31T23:00:00-07:00",
+   "end": "2026-08-01T08:00:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2500517",
+   "ticketUrl": "https://ra.co/events/2500517",
+   "image": "https://images.ra.co/44baf1e509a5e15908f2cc18ba9ff48e8890da7a.png",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
+   "source": "residentadvisor"
+  },
+  {
    "id": "b3f3d1793c8834e0",
    "title": "HOMO DEPOT // PRIDE",
    "artists": [
@@ -283,7 +354,8 @@
    "artists": [
     "2flowers",
     "LVT",
-    "DF Cuke"
+    "DF Cuke",
+    "Kasha T"
    ],
    "venue": "TBA - Private Location",
    "address": "Vancouver",
@@ -613,11 +685,33 @@
    "source": "residentadvisor"
   },
   {
+   "id": "7451dbf7fe2ee4f7",
+   "title": "Gorg-O-Mish presents: PRIDE AFTERHOURS 2AM-8AM // Sappho (PDX) // G-Luve",
+   "artists": [],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-08-02T02:00:00-07:00",
+   "end": "2026-08-02T08:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2500519",
+   "ticketUrl": "https://ra.co/events/2500519",
+   "image": "https://images.ra.co/5b4665da17c0bd297567957a9270aa992878e126.png",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
+   "source": "residentadvisor"
+  },
+  {
    "id": "8e340ac761659ca4",
    "title": "PRIDE at Pangea",
    "artists": [
     "BINKY",
-    "DR BPM"
+    "DR BPM",
+    "Tucy"
    ],
    "venue": "TBA",
    "address": "Vancouver",
