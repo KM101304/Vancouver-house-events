@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-28T12:54:52.217543-07:00",
+  "updated": "2026-07-28T20:43:32.172396-07:00",
   "eventCount": 75,
   "venueCount": 39,
   "windowDays": 120,
@@ -358,7 +358,7 @@
    "url": "https://ra.co/events/2486874",
    "ticketUrl": "https://ra.co/events/2486874",
    "image": "https://images.ra.co/2bf5144031d1c0fb82b6a5069e2a246102bc29ee.jpg",
-   "promoter": "Incidental Press",
+   "promoter": "",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor",
@@ -464,9 +464,8 @@
   },
   {
    "id": "7d8d399adac695af",
-   "title": "DOLLY X PPRZ Pride 2026: Annika Wolfe (Akela Recs/WRKTRX/LA) + 2flowers, LVT, DJ Hockey",
+   "title": "DOLLY X PPRZ Pride 2026",
    "artists": [
-    "Annika Wolfe",
     "2flowers",
     "LVT",
     "DJ Hockey"
@@ -482,7 +481,7 @@
    ],
    "url": "https://ra.co/events/2401276",
    "ticketUrl": "https://ra.co/events/2401276",
-   "image": "https://images.ra.co/f7b5149577aff0e7b7be646eb2008059b6a33387.jpg",
+   "image": "https://images.ra.co/6c43a9dd21dde897a1596f4b22af5f1630ab851e.jpg",
    "promoter": "DOLLY, PPRZ Records",
    "price": null,
    "afterhours": false,
