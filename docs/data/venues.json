@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-29T12:46:47.657283-07:00",
+ "updated": "2026-07-29T20:32:13.430450-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -219,6 +219,14 @@
   },
   {
    "name": "TBA - Address sent to ticket holders 8pm day of show",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Bside Radio",
    "count": 1,
    "area": "Vancouver",
    "genres": [

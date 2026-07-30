@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-29T12:46:47.657283-07:00",
-  "eventCount": 81,
-  "venueCount": 41,
+  "updated": "2026-07-29T20:32:13.430450-07:00",
+  "eventCount": 82,
+  "venueCount": 42,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 87,
+    "count": 88,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 68,
+   "electronic": 69,
    "house": 12,
    "afro": 4,
    "disco": 2,
@@ -551,6 +551,30 @@
    "ticketUrl": "https://ra.co/events/2447681",
    "image": "https://images.ra.co/05098526425a4b77505742b627e8402ece85584f.jpg",
    "promoter": "Shuka Invites",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "8d6c8f98778e6d5e",
+   "title": "Limninal Space Ep. 29",
+   "artists": [
+    "kish",
+    "Bronsön"
+   ],
+   "venue": "TBA - Bside Radio",
+   "address": "Vancouver",
+   "start": "2026-08-01T22:00:00-07:00",
+   "end": "2026-08-02T00:00:00-07:00",
+   "date": "2026-08-01",
+   "night": "2026-08-01",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2501217",
+   "ticketUrl": "https://ra.co/events/2501217",
+   "image": "https://images.ra.co/7b31b7145e54f858b3820f9afd7b77aa355585f0.jpg",
+   "promoter": "",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
