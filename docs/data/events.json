@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-29T20:32:13.430450-07:00",
+  "updated": "2026-07-30T02:04:54.840588-07:00",
   "eventCount": 82,
   "venueCount": 42,
   "windowDays": 120,
@@ -36,38 +36,14 @@
    }
   ],
   "genres": {
-   "electronic": 69,
-   "house": 12,
-   "afro": 4,
+   "electronic": 70,
+   "house": 11,
+   "afro": 3,
    "disco": 2,
-   "breaks": 1,
    "techno": 1
   }
  },
  "events": [
-  {
-   "id": "d176818a653c57a2",
-   "title": "I <3 music with Dairy Free",
-   "artists": [
-    "Dairy Free"
-   ],
-   "venue": "The Lido",
-   "address": "Vancouver",
-   "start": "2026-07-29T20:00:00-07:00",
-   "end": "2026-07-30T01:00:00-07:00",
-   "date": "2026-07-29",
-   "night": "2026-07-29",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2500639",
-   "ticketUrl": "https://ra.co/events/2500639",
-   "image": "https://images.ra.co/ccbb6c426888a3311e6f7237ab2983fa87896488.png",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "bda32da6af924369",
    "title": "underscores",
@@ -102,13 +78,11 @@
    "date": "2026-07-30",
    "night": "2026-07-30",
    "genres": [
-    "afro",
-    "breaks",
-    "house"
+    "electronic"
    ],
    "url": "https://ra.co/events/2489144",
    "ticketUrl": "https://ra.co/events/2489144",
-   "image": "",
+   "image": "https://images.ra.co/e8156fb40580e6863e4ad58176a7e4d48a8c664b.jpg",
    "promoter": "JOMA Studios",
    "price": null,
    "afterhours": false,
@@ -1212,6 +1186,27 @@
    "ticketUrl": "https://ra.co/events/2493862",
    "image": "https://images.ra.co/8f4c48bcdeb52b704ec77a4706bcc403627cbb49.jpg",
    "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "52ec5e7e460184fc",
+   "title": "BDrive: xxxxxx (xxxx) & xxx",
+   "artists": [],
+   "venue": "Platform9",
+   "address": "Vancouver",
+   "start": "2026-08-14T21:30:00-07:00",
+   "end": "2026-08-15T02:30:00-07:00",
+   "date": "2026-08-14",
+   "night": "2026-08-14",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2501455",
+   "ticketUrl": "https://ra.co/events/2501455",
+   "image": "",
+   "promoter": "BDrive",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
