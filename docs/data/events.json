@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-30T07:34:37.424213-07:00",
-  "eventCount": 82,
-  "venueCount": 42,
+  "updated": "2026-07-30T12:54:49.399566-07:00",
+  "eventCount": 83,
+  "venueCount": 43,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 88,
+    "count": 89,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 70,
+   "electronic": 71,
    "house": 11,
    "afro": 3,
    "disco": 2,
@@ -1848,6 +1848,29 @@
    "ticketUrl": "https://ra.co/events/2489212",
    "image": "https://images.ra.co/a6fa4fc34585b2c600fea694927e0f0ab8f570df.jpg",
    "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "a4442b2493d4fdd0",
+   "title": "Andre Kronert- Vancouver",
+   "artists": [
+    "Andre Kronert"
+   ],
+   "venue": "Library Square Public House",
+   "address": "Vancouver",
+   "start": "2026-09-25T21:00:00-07:00",
+   "end": "2026-09-26T03:00:00-07:00",
+   "date": "2026-09-25",
+   "night": "2026-09-25",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2502018",
+   "ticketUrl": "https://ra.co/events/2502018",
+   "image": "https://images.ra.co/9669248c19218494cef9e1d739d4e2f889e7346e.jpg",
+   "promoter": "Lovefest Productions",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"

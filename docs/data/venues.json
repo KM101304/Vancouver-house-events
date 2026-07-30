@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-30T07:34:37.424213-07:00",
+ "updated": "2026-07-30T12:54:49.399566-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -168,6 +168,14 @@
   },
   {
    "name": "Junction Public Market",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Library Square Public House",
    "count": 1,
    "area": "Vancouver",
    "genres": [
