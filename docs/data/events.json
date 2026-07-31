@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-30T12:54:49.399566-07:00",
-  "eventCount": 83,
+  "updated": "2026-07-30T20:52:54.183343-07:00",
+  "eventCount": 84,
   "venueCount": 43,
   "windowDays": 120,
   "sources": [
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 89,
+    "count": 90,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 71,
+   "electronic": 72,
    "house": 11,
    "afro": 3,
    "disco": 2,
@@ -1330,7 +1330,7 @@
    ],
    "url": "https://ra.co/events/2497894",
    "ticketUrl": "https://ra.co/events/2497894",
-   "image": "",
+   "image": "https://images.ra.co/ec0b55e68af553422e61f1f273d2cd272a304574.jpg",
    "promoter": "JOMA Studios",
    "price": null,
    "afterhours": false,
@@ -1501,6 +1501,30 @@
    "ticketUrl": "https://ra.co/events/2467820",
    "image": "https://images.ra.co/918d4ea747e65c02e116d81958ddd6418c3c6cbe.png",
    "promoter": "STEP OUT Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "8bcbecc033902538",
+   "title": "VANTEK: Somewhen",
+   "artists": [
+    "Somewhen",
+    "HEU (CA)"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-09-04T23:00:00-07:00",
+   "end": "2026-09-05T06:00:00-07:00",
+   "date": "2026-09-04",
+   "night": "2026-09-04",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2461989",
+   "ticketUrl": "https://ra.co/events/2461989",
+   "image": "https://images.ra.co/fab6505f83d0959a57b37e4119afe697c58c2cd8.jpg",
+   "promoter": "VANTEK",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
