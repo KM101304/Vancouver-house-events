@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-31T07:38:22.616508-07:00",
-  "eventCount": 81,
-  "venueCount": 45,
+  "updated": "2026-07-31T12:55:05.509637-07:00",
+  "eventCount": 84,
+  "venueCount": 46,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 86,
+    "count": 89,
     "detail": ""
    },
    {
@@ -36,8 +36,8 @@
    }
   ],
   "genres": {
-   "electronic": 68,
-   "house": 12,
+   "electronic": 70,
+   "house": 13,
    "afro": 3,
    "disco": 2,
    "techno": 1
@@ -132,6 +132,30 @@
    "ticketUrl": "https://ra.co/events/2464481",
    "image": "https://images.ra.co/7f8f93ae5a33ef8a33cea2e5bef86c71051127f8.png",
    "promoter": "Blueprint Events, Mint Productions",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "4267f7d9a947bd0f",
+   "title": "PAV4N x JONNY ROCKA MERCH & RAVE Pop Up",
+   "artists": [
+    "Foreign Beggars",
+    "SPECIAL GUEST!"
+   ],
+   "venue": "TBA - RSVP for Address",
+   "address": "Vancouver",
+   "start": "2026-07-31T22:00:00-07:00",
+   "end": "2026-08-01T04:00:00-07:00",
+   "date": "2026-07-31",
+   "night": "2026-07-31",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2502448",
+   "ticketUrl": "https://ra.co/events/2502448",
+   "image": "https://images.ra.co/446b0c0cba02e48a06f532dd35b691f65943be66.png",
+   "promoter": "4NC¥ Ltd.",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1431,6 +1455,29 @@
    "source": "residentadvisor"
   },
   {
+   "id": "45891f568b1b0e39",
+   "title": "widdows95 all nite long",
+   "artists": [
+    "widdows95"
+   ],
+   "venue": "The Lido",
+   "address": "Vancouver",
+   "start": "2026-09-03T21:00:00-07:00",
+   "end": "2026-09-04T13:00:00-07:00",
+   "date": "2026-09-03",
+   "night": "2026-09-03",
+   "genres": [
+    "house"
+   ],
+   "url": "https://ra.co/events/2502714",
+   "ticketUrl": "https://ra.co/events/2502714",
+   "image": "",
+   "promoter": "[Redacted]",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "8bcbecc033902538",
    "title": "VANTEK: Somewhen",
    "artists": [
@@ -1866,6 +1913,33 @@
    "ticketUrl": "https://ra.co/events/2477877",
    "image": "https://images.ra.co/85d37a6dfc57dfab6ec4cbc5a0e884c1016d1540.jpg",
    "promoter": "PLUR Productions",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "46e4907bac188e15",
+   "title": "Thump! presents 1morning (Ilian Tape)",
+   "artists": [
+    "1morning",
+    "AWood",
+    "NOTEVENDOWN",
+    "Max Ulis",
+    "DJ Hockey"
+   ],
+   "venue": "Platform9",
+   "address": "Vancouver",
+   "start": "2026-09-26T23:00:00-07:00",
+   "end": "2026-09-27T04:00:00-07:00",
+   "date": "2026-09-26",
+   "night": "2026-09-26",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2502822",
+   "ticketUrl": "https://ra.co/events/2502822",
+   "image": "https://images.ra.co/1e9fa1b8f95b722dd601d6e83262aba845ddabc9.jpg",
+   "promoter": "SLAB, Vancouver",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"

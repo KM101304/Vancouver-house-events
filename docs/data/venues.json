@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-31T07:38:22.616508-07:00",
+ "updated": "2026-07-31T12:55:05.509637-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -21,15 +21,15 @@
    ]
   },
   {
-   "name": "Fortune Sound Club",
-   "count": 4,
+   "name": "Platform9",
+   "count": 5,
    "area": "Vancouver",
    "genres": [
     "electronic"
    ]
   },
   {
-   "name": "Platform9",
+   "name": "Fortune Sound Club",
    "count": 4,
    "area": "Vancouver",
    "genres": [
@@ -92,6 +92,15 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
+   ]
+  },
+  {
+   "name": "The Lido",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic",
+    "house"
    ]
   },
   {
@@ -248,6 +257,14 @@
    ]
   },
   {
+   "name": "TBA - RSVP for Address",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
    "name": "TBA - SEND TO TICKET HOLDERS",
    "count": 1,
    "area": "Vancouver",
@@ -323,14 +340,6 @@
   },
   {
    "name": "The Beaumont Studios",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "The Lido",
    "count": 1,
    "area": "Vancouver",
    "genres": [
