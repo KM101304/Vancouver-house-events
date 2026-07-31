@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-30T20:52:54.183343-07:00",
+ "updated": "2026-07-31T02:18:54.956666-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -21,14 +21,6 @@
    ]
   },
   {
-   "name": "Celebrities Night Club",
-   "count": 5,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
    "name": "Fortune Sound Club",
    "count": 4,
    "area": "Vancouver",
@@ -45,7 +37,7 @@
    ]
   },
   {
-   "name": "Gorg-O-Mish",
+   "name": "Celebrities Night Club",
    "count": 3,
    "area": "Vancouver",
    "genres": [
@@ -62,6 +54,14 @@
   },
   {
    "name": "Commodore Ballroom",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Gorg-O-Mish",
    "count": 2,
    "area": "Vancouver",
    "genres": [
@@ -88,22 +88,6 @@
   },
   {
    "name": "TBA - Private Location",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "The Beaumont Studios",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "The Lido",
    "count": 2,
    "area": "Vancouver",
    "genres": [
@@ -240,6 +224,14 @@
    ]
   },
   {
+   "name": "TBA - CUB Space - Cumberland - Vancouver Island",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "house"
+   ]
+  },
+  {
    "name": "TBA - East Vancouver",
    "count": 1,
    "area": "Vancouver",
@@ -249,6 +241,14 @@
   },
   {
    "name": "TBA - Jonathan Rogers Park",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - SEND TO TICKET HOLDERS",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -315,6 +315,22 @@
   },
   {
    "name": "Taco Loco",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Beaumont Studios",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Lido",
    "count": 1,
    "area": "Vancouver",
    "genres": [

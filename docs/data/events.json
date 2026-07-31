@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-30T20:52:54.183343-07:00",
-  "eventCount": 84,
-  "venueCount": 43,
+  "updated": "2026-07-31T02:18:54.956666-07:00",
+  "eventCount": 81,
+  "venueCount": 45,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 90,
+    "count": 86,
     "detail": ""
    },
    {
@@ -36,128 +36,14 @@
    }
   ],
   "genres": {
-   "electronic": 72,
-   "house": 11,
+   "electronic": 68,
+   "house": 12,
    "afro": 3,
    "disco": 2,
    "techno": 1
   }
  },
  "events": [
-  {
-   "id": "bda32da6af924369",
-   "title": "underscores",
-   "artists": [],
-   "venue": "Celebrities Night Club",
-   "address": "Vancouver",
-   "start": "2026-07-30T19:00:00-07:00",
-   "end": "2026-07-30T22:00:00-07:00",
-   "date": "2026-07-30",
-   "night": "2026-07-30",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2441529",
-   "ticketUrl": "https://ra.co/events/2441529",
-   "image": "https://images.ra.co/26b001f48f98ed6203b511c5ca9d9ea31bb7e3cf.png",
-   "promoter": "Blueprint, Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "847e926c4f0df1c3",
-   "title": "The Ryze presents Synesthesia #30",
-   "artists": [
-    "The Ryze"
-   ],
-   "venue": "The Beaumont Studios",
-   "address": "Vancouver",
-   "start": "2026-07-30T20:00:00-07:00",
-   "end": "2026-07-30T22:00:00-07:00",
-   "date": "2026-07-30",
-   "night": "2026-07-30",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2489144",
-   "ticketUrl": "https://ra.co/events/2489144",
-   "image": "https://images.ra.co/e8156fb40580e6863e4ad58176a7e4d48a8c664b.jpg",
-   "promoter": "JOMA Studios",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "d47a2bed0be6cbec",
-   "title": "Habibi Paradise",
-   "artists": [
-    "Parmis"
-   ],
-   "venue": "The Lido",
-   "address": "Vancouver",
-   "start": "2026-07-30T21:00:00-07:00",
-   "end": "2026-07-31T01:00:00-07:00",
-   "date": "2026-07-30",
-   "night": "2026-07-30",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494213",
-   "ticketUrl": "https://ra.co/events/2494213",
-   "image": "https://images.ra.co/3c2616a52c03a769213e3f6c547b0c5d0e42dec3.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "2c0cee34e6324d23",
-   "title": "CUM TOGETHER PRES. dj g2g",
-   "artists": [
-    "dj g2g"
-   ],
-   "venue": "Celebrities Night Club",
-   "address": "Vancouver",
-   "start": "2026-07-30T23:00:00-07:00",
-   "end": "2026-07-31T04:00:00-07:00",
-   "date": "2026-07-30",
-   "night": "2026-07-30",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2489102",
-   "ticketUrl": "https://ra.co/events/2489102",
-   "image": "https://images.ra.co/fb7cfb0f951be7177c5a7fdf6146579f69e30ebd.png",
-   "promoter": "Blueprint, Blueprint Events, Normie",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "cda993100b74bb95",
-   "title": "Gorg-O-Mish: PRIDE // Steph Tsunami + S@M i @M, Luca Fernandez & Madam Lola",
-   "artists": [
-    "Steph Tsunami",
-    "Luca Fernandez"
-   ],
-   "venue": "Gorg-O-Mish",
-   "address": "Vancouver",
-   "start": "2026-07-30T23:00:00-07:00",
-   "end": "2026-07-31T08:00:00-07:00",
-   "date": "2026-07-30",
-   "night": "2026-07-30",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2500515",
-   "ticketUrl": "https://ra.co/events/2500515",
-   "image": "https://images.ra.co/a3d2e8ffe4369c842d83cd56938193dd8ea2e20b.png",
-   "promoter": "Gorg-O-Mish",
-   "price": null,
-   "afterhours": true,
-   "source": "residentadvisor"
-  },
   {
    "id": "8cb1195e88bf6f63",
    "title": "Home By Midnight XL Pride Kick Off Party",
@@ -334,7 +220,7 @@
    "venue": "TBA - Private Location",
    "address": "Vancouver",
    "start": "2026-07-31T23:59:00-07:00",
-   "end": "2026-08-02T06:00:00-07:00",
+   "end": "2026-08-01T06:00:00-07:00",
    "date": "2026-07-31",
    "night": "2026-07-31",
    "genres": [
@@ -346,10 +232,7 @@
    "promoter": "DOLLY",
    "price": null,
    "afterhours": false,
-   "source": "residentadvisor",
-   "alsoOn": [
-    "residentadvisor"
-   ]
+   "source": "residentadvisor"
   },
   {
    "id": "002a42dd84e854b4",
@@ -427,7 +310,7 @@
    ],
    "url": "https://ra.co/events/2500455",
    "ticketUrl": "https://ra.co/events/2500455",
-   "image": "https://images.ra.co/df7078bf2fe1a51780215ef521a9cc393a98c960.png",
+   "image": "https://images.ra.co/0d823d1c0dc68009d564a2a9f01c3815bf429f69.png",
    "promoter": "Adam Blare",
    "price": null,
    "afterhours": false,
@@ -622,7 +505,7 @@
    ],
    "url": "https://ra.co/events/2472803",
    "ticketUrl": "https://ra.co/events/2472803",
-   "image": "https://images.ra.co/75d3ab414095f829e0bfd240b328e451973770ca.png",
+   "image": "https://images.ra.co/14b67b48e5eae05a003933fcc5847ae0378bfac6.png",
    "promoter": "dood's dancefloor",
    "price": null,
    "afterhours": false,
@@ -920,6 +803,27 @@
    "ticketUrl": "https://ra.co/events/2489117",
    "image": "https://images.ra.co/6e75ecb72b57d01a695d7661bd13a43f0884fc40.png",
    "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "e68657cf4487d446",
+   "title": "GROOVELAND AUG 2ND",
+   "artists": [],
+   "venue": "TBA - SEND TO TICKET HOLDERS",
+   "address": "Vancouver",
+   "start": "2026-08-02T23:59:00-07:00",
+   "end": "2026-08-03T06:00:00-07:00",
+   "date": "2026-08-02",
+   "night": "2026-08-02",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2502339",
+   "ticketUrl": "https://ra.co/events/2502339",
+   "image": "https://images.ra.co/c1e9cdf2ed4a849ac9cefd6c8c0e07e2d6226d03.png",
+   "promoter": "Lullaby",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1230,6 +1134,27 @@
    "ticketUrl": "https://ra.co/events/2457437",
    "image": "https://images.ra.co/6a40f2e6e8afbf95e15131ac9ee289040d0ec523.jpg",
    "promoter": "SLAB, Vancouver",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "439eddb9ede741b7",
+   "title": "Abstract Audio Summer Series 007",
+   "artists": [],
+   "venue": "TBA - CUB Space - Cumberland - Vancouver Island",
+   "address": "Vancouver",
+   "start": "2026-08-15T12:30:00-07:00",
+   "end": "2026-08-15T20:30:00-07:00",
+   "date": "2026-08-15",
+   "night": "2026-08-15",
+   "genres": [
+    "house"
+   ],
+   "url": "https://ra.co/events/2502378",
+   "ticketUrl": "https://ra.co/events/2502378",
+   "image": "https://images.ra.co/e4c0db3141fd2b77768a1df774910d0478e405e2.png",
+   "promoter": "Abstract Audio CV",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
