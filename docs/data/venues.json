@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-31T20:53:13.621903-07:00",
+ "updated": "2026-08-01T01:35:15.766283-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -22,7 +22,7 @@
   },
   {
    "name": "Fortune Sound Club",
-   "count": 5,
+   "count": 4,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -32,15 +32,7 @@
   },
   {
    "name": "Platform9",
-   "count": 5,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "Celebrities Night Club",
-   "count": 3,
+   "count": 4,
    "area": "Vancouver",
    "genres": [
     "electronic"
@@ -55,29 +47,19 @@
    ]
   },
   {
+   "name": "Celebrities Night Club",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
    "name": "Commodore Ballroom",
    "count": 2,
    "area": "Vancouver",
    "genres": [
     "electronic"
-   ]
-  },
-  {
-   "name": "Gorg-O-Mish",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "Hollywood Theatre",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic",
-    "house",
-    "disco"
    ]
   },
   {
@@ -94,23 +76,6 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
-   ]
-  },
-  {
-   "name": "TBA - Private Location",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "The Lido",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic",
-    "house"
    ]
   },
   {
@@ -162,11 +127,28 @@
    ]
   },
   {
+   "name": "Gorg-O-Mish",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
    "name": "Harbour Event Centre",
    "count": 1,
    "area": "Vancouver",
    "genres": [
     "techno"
+   ]
+  },
+  {
+   "name": "Hollywood Theatre",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "house",
+    "disco"
    ]
   },
   {
@@ -267,7 +249,7 @@
    ]
   },
   {
-   "name": "TBA - RSVP for Address",
+   "name": "TBA - Private Location",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -365,6 +347,14 @@
    ]
   },
   {
+   "name": "The Lido",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "house"
+   ]
+  },
+  {
    "name": "The Pearl",
    "count": 1,
    "area": "Vancouver",
@@ -382,14 +372,6 @@
   },
   {
    "name": "The Spot",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "The Well Studios",
    "count": 1,
    "area": "Vancouver",
    "genres": [

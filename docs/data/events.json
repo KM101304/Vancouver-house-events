@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-07-31T20:53:13.621903-07:00",
-  "eventCount": 90,
-  "venueCount": 49,
+  "updated": "2026-08-01T01:35:15.766283-07:00",
+  "eventCount": 81,
+  "venueCount": 47,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 96,
+    "count": 87,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 75,
+   "electronic": 66,
    "house": 14,
    "afro": 4,
    "disco": 2,
@@ -44,220 +44,6 @@
   }
  },
  "events": [
-  {
-   "id": "8cb1195e88bf6f63",
-   "title": "Home By Midnight XL Pride Kick Off Party",
-   "artists": [],
-   "venue": "Hollywood Theatre",
-   "address": "Vancouver",
-   "start": "2026-07-31T19:00:00-07:00",
-   "end": "2026-07-31T23:59:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494232",
-   "ticketUrl": "https://ra.co/events/2494232",
-   "image": "https://images.ra.co/16272976fa518997ed72035c13e3a4d9f2f9ed2f.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "422f16f9919df574",
-   "title": "Club Roxy",
-   "artists": [
-    "Roxy Motorola"
-   ],
-   "venue": "The Lido",
-   "address": "Vancouver",
-   "start": "2026-07-31T21:00:00-07:00",
-   "end": "2026-08-01T02:00:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494211",
-   "ticketUrl": "https://ra.co/events/2494211",
-   "image": "https://images.ra.co/636a3096322fcae283d71664ddc375151255f887.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "4fda6d2f68b6ecee",
-   "title": "down the well with Yuya61 & captivate",
-   "artists": [
-    "captivate"
-   ],
-   "venue": "The Well Studios",
-   "address": "Vancouver",
-   "start": "2026-07-31T21:00:00-07:00",
-   "end": "2026-08-01T03:00:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2492551",
-   "ticketUrl": "https://ra.co/events/2492551",
-   "image": "https://images.ra.co/31b658172292caf96713bac56b34a2f913f0500e.jpg",
-   "promoter": "down the well",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "d6a760a81220a484",
-   "title": "DJ Seinfeld (Vancouver)",
-   "artists": [
-    "DJ Seinfeld",
-    "Pacific Coliseum",
-    "Galen Allan"
-   ],
-   "venue": "Fortune Sound Club",
-   "address": "Vancouver",
-   "start": "2026-07-31T22:00:00-07:00",
-   "end": "2026-08-01T04:00:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2464481",
-   "ticketUrl": "https://ra.co/events/2464481",
-   "image": "https://images.ra.co/7f8f93ae5a33ef8a33cea2e5bef86c71051127f8.png",
-   "promoter": "Blueprint Events, Mint Productions",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "4267f7d9a947bd0f",
-   "title": "PAV4N x JONNY ROCKA MERCH & RAVE Pop Up",
-   "artists": [
-    "Foreign Beggars",
-    "SPECIAL GUEST!"
-   ],
-   "venue": "TBA - RSVP for Address",
-   "address": "Vancouver",
-   "start": "2026-07-31T22:00:00-07:00",
-   "end": "2026-08-01T04:00:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2502448",
-   "ticketUrl": "https://ra.co/events/2502448",
-   "image": "https://images.ra.co/446b0c0cba02e48a06f532dd35b691f65943be66.png",
-   "promoter": "4NC¥ Ltd.",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "3fad4a617f7fc5ea",
-   "title": "CUM TOGETHER PRES. Coco & Breezy",
-   "artists": [
-    "Coco & Breezy"
-   ],
-   "venue": "Celebrities Night Club",
-   "address": "Vancouver",
-   "start": "2026-07-31T23:00:00-07:00",
-   "end": "2026-08-01T04:00:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2461955",
-   "ticketUrl": "https://ra.co/events/2461955",
-   "image": "https://images.ra.co/0e91666d4a9b7b3495fbbc35a3bcd3f7dd1bd45a.png",
-   "promoter": "Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "6ca1ba6eda3fd42c",
-   "title": "Gorg-O-Mish presents: PRIDE // Kasey Riot, C-Star & New Girl",
-   "artists": [
-    "Kasey Riot",
-    "C-Star"
-   ],
-   "venue": "Gorg-O-Mish",
-   "address": "Vancouver",
-   "start": "2026-07-31T23:00:00-07:00",
-   "end": "2026-08-01T08:00:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2500517",
-   "ticketUrl": "https://ra.co/events/2500517",
-   "image": "https://images.ra.co/44baf1e509a5e15908f2cc18ba9ff48e8890da7a.png",
-   "promoter": "Gorg-O-Mish",
-   "price": null,
-   "afterhours": true,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "b3f3d1793c8834e0",
-   "title": "HOMO DEPOT // PRIDE",
-   "artists": [
-    "AWood",
-    "mykissera",
-    "SUBDIDI"
-   ],
-   "venue": "Platform9",
-   "address": "Vancouver",
-   "start": "2026-07-31T23:00:00-07:00",
-   "end": "2026-08-01T06:00:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2490313",
-   "ticketUrl": "https://ra.co/events/2490313",
-   "image": "https://images.ra.co/c9e5a9829d65fc8037d11e5876eef98329e745e1.png",
-   "promoter": "The Birdhouse",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "3e10da3e0adbbc30",
-   "title": "PRIDE AFTERS",
-   "artists": [
-    "2flowers",
-    "LVT",
-    "DF Cuke",
-    "Kasha T"
-   ],
-   "venue": "TBA - Private Location",
-   "address": "Vancouver",
-   "start": "2026-07-31T23:59:00-07:00",
-   "end": "2026-08-01T06:00:00-07:00",
-   "date": "2026-07-31",
-   "night": "2026-07-31",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2499771",
-   "ticketUrl": "https://ra.co/events/2499771",
-   "image": "https://images.ra.co/106576221d723322df40dd68fb989f85640f9178.png",
-   "promoter": "DOLLY",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "002a42dd84e854b4",
    "title": "Public Disco Pride Block Party: Colored Craig (LA/NY), Carrieondisco (SF)",
