@@ -1,9 +1,9 @@
 {
- "updated": "2026-07-31T12:55:05.509637-07:00",
+ "updated": "2026-07-31T20:53:13.621903-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 14,
+   "count": 15,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -21,16 +21,18 @@
    ]
   },
   {
-   "name": "Platform9",
+   "name": "Fortune Sound Club",
    "count": 5,
    "area": "Vancouver",
    "genres": [
-    "electronic"
+    "electronic",
+    "afro",
+    "house"
    ]
   },
   {
-   "name": "Fortune Sound Club",
-   "count": 4,
+   "name": "Platform9",
+   "count": 5,
    "area": "Vancouver",
    "genres": [
     "electronic"
@@ -80,6 +82,14 @@
   },
   {
    "name": "Skylight Warehouse",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Bside Radio",
    "count": 2,
    "area": "Vancouver",
    "genres": [
@@ -168,6 +178,14 @@
    ]
   },
   {
+   "name": "KW Studios",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
    "name": "Library Square Public House",
    "count": 1,
    "area": "Vancouver",
@@ -218,14 +236,6 @@
   },
   {
    "name": "TBA - Address sent to ticket holders 8pm day of show",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "TBA - Bside Radio",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -339,6 +349,14 @@
    ]
   },
   {
+   "name": "The Astoria",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
    "name": "The Beaumont Studios",
    "count": 1,
    "area": "Vancouver",
@@ -352,6 +370,14 @@
    "area": "Vancouver",
    "genres": [
     "house"
+   ]
+  },
+  {
+   "name": "The Red Room",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
    ]
   },
   {
