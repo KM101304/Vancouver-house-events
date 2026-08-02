@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-01T20:55:40.820384-07:00",
+ "updated": "2026-08-02T01:38:14.230358-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 15,
+   "count": 14,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -13,7 +13,7 @@
   },
   {
    "name": "Village Studios",
-   "count": 9,
+   "count": 8,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -32,23 +32,7 @@
   },
   {
    "name": "Platform9",
-   "count": 4,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "TBA - Secret Location",
    "count": 3,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "Celebrities Night Club",
-   "count": 2,
    "area": "Vancouver",
    "genres": [
     "electronic"
@@ -64,14 +48,6 @@
   },
   {
    "name": "Skylight Warehouse",
-   "count": 2,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "TBA - Bside Radio",
    "count": 2,
    "area": "Vancouver",
    "genres": [
@@ -103,11 +79,11 @@
    ]
   },
   {
-   "name": "Cinemagic Lab",
+   "name": "Celebrities Night Club",
    "count": 1,
    "area": "Vancouver",
    "genres": [
-    "house"
+    "electronic"
    ]
   },
   {
@@ -143,15 +119,6 @@
    ]
   },
   {
-   "name": "Hollywood Theatre",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "house",
-    "disco"
-   ]
-  },
-  {
    "name": "Junction Public Market",
    "count": 1,
    "area": "Vancouver",
@@ -184,15 +151,6 @@
    ]
   },
   {
-   "name": "Monarca",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "afro",
-    "house"
-   ]
-  },
-  {
    "name": "Plaza of Nations Dock",
    "count": 1,
    "area": "Vancouver",
@@ -201,27 +159,19 @@
    ]
   },
   {
-   "name": "Red Gate Arts Society",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "TBA - 3rd & Ontario",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
    "name": "TBA - Address sent to ticket holders 8pm day of show",
    "count": 1,
    "area": "Vancouver",
    "genres": [
     "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Alibi Room",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "house"
    ]
   },
   {
@@ -249,7 +199,7 @@
    ]
   },
   {
-   "name": "TBA - Private Location",
+   "name": "TBA - SEND TO TICKET HOLDERS",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -257,7 +207,7 @@
    ]
   },
   {
-   "name": "TBA - SEND TO TICKET HOLDERS",
+   "name": "TBA - Secret Location",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -316,14 +266,6 @@
   },
   {
    "name": "TBA - near Main St. Skytrain Station",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "Taco Loco",
    "count": 1,
    "area": "Vancouver",
    "genres": [

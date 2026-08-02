@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-01T20:55:40.820384-07:00",
-  "eventCount": 81,
-  "venueCount": 47,
+  "updated": "2026-08-02T01:38:14.230358-07:00",
+  "eventCount": 67,
+  "venueCount": 40,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 87,
+    "count": 72,
     "detail": ""
    },
    {
@@ -36,368 +36,14 @@
    }
   ],
   "genres": {
-   "electronic": 66,
-   "house": 14,
-   "afro": 4,
-   "disco": 2,
+   "electronic": 54,
+   "house": 12,
+   "afro": 3,
+   "disco": 1,
    "techno": 1
   }
  },
  "events": [
-  {
-   "id": "002a42dd84e854b4",
-   "title": "Public Disco Pride Block Party: Colored Craig (LA/NY), Carrieondisco (SF)",
-   "artists": [
-    "Colored Craig",
-    "Carrieondisco",
-    "Overland",
-    "Phillippe",
-    "Fisher Bryce",
-    "ZIGGY ZAYA",
-    "DJ dood",
-    "Lucci (CA)",
-    "jiggity jeff",
-    "educación física"
-   ],
-   "venue": "TBA - 3rd & Ontario",
-   "address": "Vancouver",
-   "start": "2026-08-01T16:00:00-07:00",
-   "end": "2026-08-01T23:30:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2420747",
-   "ticketUrl": "https://ra.co/events/2420747",
-   "image": "https://images.ra.co/8d696d03b1d86ab5ac03eb0759d7c39535d0cca7.jpg",
-   "promoter": "Public Disco",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "9f42e4d04913c345",
-   "title": "MASHKAWOW - EtOH b2b len.p",
-   "artists": [
-    "EtOH"
-   ],
-   "venue": "TBA - Bside Radio",
-   "address": "Vancouver",
-   "start": "2026-08-01T18:00:00-07:00",
-   "end": "2026-08-01T19:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2502970",
-   "ticketUrl": "https://ra.co/events/2502970",
-   "image": "https://images.ra.co/0d37ff46153eed25edca4be4780f23e11ffde2c3.png",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "495c27ace8ecc9a1",
-   "title": "SHAME FEST",
-   "artists": [
-    "Speed.FM",
-    "Obreezy Beats",
-    "RESONATE.JPEG",
-    "Babies R Stupid"
-   ],
-   "venue": "Red Gate Arts Society",
-   "address": "Vancouver",
-   "start": "2026-08-01T19:00:00-07:00",
-   "end": "2026-08-02T23:59:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2486874",
-   "ticketUrl": "https://ra.co/events/2486874",
-   "image": "https://images.ra.co/2bf5144031d1c0fb82b6a5069e2a246102bc29ee.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor",
-   "alsoOn": [
-    "residentadvisor"
-   ]
-  },
-  {
-   "id": "0ac0a21c1e681e2e",
-   "title": "Taco Loco Vol. 3",
-   "artists": [],
-   "venue": "Taco Loco",
-   "address": "Vancouver",
-   "start": "2026-08-01T21:00:00-07:00",
-   "end": "2026-08-02T00:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2500455",
-   "ticketUrl": "https://ra.co/events/2500455",
-   "image": "https://images.ra.co/0d823d1c0dc68009d564a2a9f01c3815bf429f69.png",
-   "promoter": "Adam Blare",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "9424183aaf40db29",
-   "title": "CUM TOGETHER pres. Alex Chapman",
-   "artists": [
-    "Alex Chapman"
-   ],
-   "venue": "Celebrities Night Club",
-   "address": "Vancouver",
-   "start": "2026-08-01T22:00:00-07:00",
-   "end": "2026-08-02T03:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2471847",
-   "ticketUrl": "https://ra.co/events/2471847",
-   "image": "https://images.ra.co/e3ab06f82187ee4e621dd8310970fbb03a771b0a.png",
-   "promoter": "Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "2679a6b5672ff597",
-   "title": "Daft Disko: A French House & Disco Party",
-   "artists": [],
-   "venue": "Hollywood Theatre",
-   "address": "Vancouver",
-   "start": "2026-08-01T22:00:00-07:00",
-   "end": "2026-08-02T02:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "house",
-    "disco"
-   ],
-   "url": "https://ra.co/events/2494251",
-   "ticketUrl": "https://ra.co/events/2494251",
-   "image": "https://images.ra.co/effa84506e4ac7ab6dd395c58d6f992df1276b01.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "81f53d4d8233e11d",
-   "title": "Mili Live",
-   "artists": [
-    "MILI (2)"
-   ],
-   "venue": "Monarca",
-   "address": "Vancouver",
-   "start": "2026-08-01T22:00:00-07:00",
-   "end": "2026-08-02T03:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "afro",
-    "house"
-   ],
-   "url": "https://ra.co/events/2499624",
-   "ticketUrl": "https://ra.co/events/2499624",
-   "image": "https://images.ra.co/120200f51d6a12a7018e6881ab5ba86901051645.jpg",
-   "promoter": "Monoroom, NewGen",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "41f149c9a4f4dfa0",
-   "title": "Shuka Invites: SYSTEM MUSIC X WHITE PEACH",
-   "artists": [
-    "V.I.V.E.K.",
-    "Zha (UK)",
-    "Shuka",
-    "Emrrld",
-    "Michael Red"
-   ],
-   "venue": "TBA",
-   "address": "Vancouver",
-   "start": "2026-08-01T22:00:00-07:00",
-   "end": "2026-08-02T05:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2447681",
-   "ticketUrl": "https://ra.co/events/2447681",
-   "image": "https://images.ra.co/05098526425a4b77505742b627e8402ece85584f.jpg",
-   "promoter": "Shuka Invites",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "8d6c8f98778e6d5e",
-   "title": "Limninal Space Ep. 29",
-   "artists": [
-    "kish",
-    "Bronsön"
-   ],
-   "venue": "TBA - Bside Radio",
-   "address": "Vancouver",
-   "start": "2026-08-01T22:00:00-07:00",
-   "end": "2026-08-02T00:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2501217",
-   "ticketUrl": "https://ra.co/events/2501217",
-   "image": "https://images.ra.co/7b31b7145e54f858b3820f9afd7b77aa355585f0.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "7d8d399adac695af",
-   "title": "DOLLY X PPRZ Pride 2026",
-   "artists": [
-    "2flowers",
-    "LVT",
-    "DJ Hockey"
-   ],
-   "venue": "TBA - Private Location",
-   "address": "Vancouver",
-   "start": "2026-08-01T22:00:00-07:00",
-   "end": "2026-08-02T04:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2401276",
-   "ticketUrl": "https://ra.co/events/2401276",
-   "image": "https://images.ra.co/6c43a9dd21dde897a1596f4b22af5f1630ab851e.jpg",
-   "promoter": "DOLLY, PPRZ Records",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "eb6300126059f7ad",
-   "title": "F A G // O U T ~ PRIDE",
-   "artists": [
-    "ZIGGY ZAYA"
-   ],
-   "venue": "Platform9",
-   "address": "Vancouver",
-   "start": "2026-08-01T23:00:00-07:00",
-   "end": "2026-08-02T06:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2490314",
-   "ticketUrl": "https://ra.co/events/2490314",
-   "image": "https://images.ra.co/f1a2303ead2c17859ba3367486bffb98572fee23.jpg",
-   "promoter": "The Birdhouse",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "dcfcb388ef395cdb",
-   "title": "dood's dancefloor: pride after party",
-   "artists": [
-    "ephemeral objects",
-    "Slim J (2)",
-    "DJ dood",
-    "Beiti",
-    "AVRY"
-   ],
-   "venue": "TBA - Secret Location",
-   "address": "Vancouver",
-   "start": "2026-08-01T23:00:00-07:00",
-   "end": "2026-08-02T05:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2472803",
-   "ticketUrl": "https://ra.co/events/2472803",
-   "image": "https://images.ra.co/14b67b48e5eae05a003933fcc5847ae0378bfac6.png",
-   "promoter": "dood's dancefloor",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "71ffd1858ace5f5e",
-   "title": "CUM TOGETHER pres. Roi Perez",
-   "artists": [
-    "Roi Perez",
-    "Fisher Bryce",
-    "ZIGGY ZAYA"
-   ],
-   "venue": "Village Studios",
-   "address": "Vancouver",
-   "start": "2026-08-01T23:00:00-07:00",
-   "end": "2026-08-02T04:00:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2441497",
-   "ticketUrl": "https://ra.co/events/2441497",
-   "image": "https://images.ra.co/f78ac7233ed2762198db3c44bdcdaf7d2e96479d.png",
-   "promoter": "Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "be2ffe11f6b9feae",
-   "title": "FOG: Outdoor Edition",
-   "artists": [
-    "Behrad Tehrani",
-    "C-Star",
-    "Cataria",
-    "David Alcaniz",
-    "DK PAU",
-    "POPU",
-    "Yum!"
-   ],
-   "venue": "TBA - Secret Location",
-   "address": "Vancouver",
-   "start": "2026-08-01T23:59:00-07:00",
-   "end": "2026-08-02T06:30:00-07:00",
-   "date": "2026-08-01",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2424060",
-   "ticketUrl": "https://ra.co/events/2424060",
-   "image": "https://images.ra.co/50207b27496170624d10af1221310b073d10ab47.png",
-   "promoter": "VANTEK, FOG",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "8e340ac761659ca4",
    "title": "PRIDE at Pangea w/ BINKY, DR BPM, Tucy and OPEN DECKS",
@@ -807,10 +453,10 @@
    "artists": [
     "Nico Morano"
    ],
-   "venue": "Cinemagic Lab",
+   "venue": "TBA - Alibi Room",
    "address": "Vancouver",
-   "start": "2026-08-08T21:00:00-07:00",
-   "end": "2026-08-09T04:00:00-07:00",
+   "start": "2026-08-08T17:00:00-07:00",
+   "end": "2026-08-09T01:00:00-07:00",
    "date": "2026-08-08",
    "night": "2026-08-08",
    "genres": [
@@ -818,7 +464,7 @@
    ],
    "url": "https://ra.co/events/2493664",
    "ticketUrl": "https://ra.co/events/2493664",
-   "image": "https://images.ra.co/ed16e48a30f4384ddaf04ed668b9202a2afa9a22.jpg",
+   "image": "https://images.ra.co/97d0ffee5ef603fb9a9dee616b30ce9a78df682b.jpg",
    "promoter": "CINEMAGIC",
    "price": null,
    "afterhours": false,
