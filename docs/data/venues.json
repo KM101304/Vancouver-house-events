@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-02T06:59:11.775646-07:00",
+ "updated": "2026-08-02T12:36:39.268856-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -96,14 +96,6 @@
   },
   {
    "name": "El Comal",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "Gorg-O-Mish",
    "count": 1,
    "area": "Vancouver",
    "genres": [

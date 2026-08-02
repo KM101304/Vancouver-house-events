@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-02T06:59:11.775646-07:00",
-  "eventCount": 66,
-  "venueCount": 40,
+  "updated": "2026-08-02T12:36:39.268856-07:00",
+  "eventCount": 65,
+  "venueCount": 39,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 71,
+    "count": 70,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 53,
+   "electronic": 52,
    "house": 12,
    "afro": 3,
    "disco": 1,
@@ -44,27 +44,6 @@
   }
  },
  "events": [
-  {
-   "id": "7451dbf7fe2ee4f7",
-   "title": "Gorg-O-Mish presents: PRIDE AFTERHOURS 2AM-8AM // Sappho (PDX) // G-Luve",
-   "artists": [],
-   "venue": "Gorg-O-Mish",
-   "address": "Vancouver",
-   "start": "2026-08-02T02:00:00-07:00",
-   "end": "2026-08-02T08:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2500519",
-   "ticketUrl": "https://ra.co/events/2500519",
-   "image": "https://images.ra.co/5b4665da17c0bd297567957a9270aa992878e126.png",
-   "promoter": "Gorg-O-Mish",
-   "price": null,
-   "afterhours": true,
-   "source": "residentadvisor"
-  },
   {
    "id": "427c545e9d079c83",
    "title": "Club Bebé PRESENTS: Ms. Nina",
