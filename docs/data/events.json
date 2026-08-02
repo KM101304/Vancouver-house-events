@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-02T01:38:14.230358-07:00",
-  "eventCount": 67,
+  "updated": "2026-08-02T06:59:11.775646-07:00",
+  "eventCount": 66,
   "venueCount": 40,
   "windowDays": 120,
   "sources": [
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 72,
+    "count": 71,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 54,
+   "electronic": 53,
    "house": 12,
    "afro": 3,
    "disco": 1,
@@ -44,31 +44,6 @@
   }
  },
  "events": [
-  {
-   "id": "8e340ac761659ca4",
-   "title": "PRIDE at Pangea w/ BINKY, DR BPM, Tucy and OPEN DECKS",
-   "artists": [
-    "BINKY",
-    "DR BPM",
-    "Tucy"
-   ],
-   "venue": "TBA",
-   "address": "Vancouver",
-   "start": "2026-08-02T00:00:00-07:00",
-   "end": "2026-08-02T07:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-01",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2499406",
-   "ticketUrl": "https://ra.co/events/2499406",
-   "image": "https://images.ra.co/f2a5ab5cf28f7bbf62dfb3f594b96b9cc0efcdbe.jpg",
-   "promoter": "Drill Events, Pangea, Tucy",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "7451dbf7fe2ee4f7",
    "title": "Gorg-O-Mish presents: PRIDE AFTERHOURS 2AM-8AM // Sappho (PDX) // G-Luve",
