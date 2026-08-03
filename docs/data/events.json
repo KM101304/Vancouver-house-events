@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-02T20:57:18.071391-07:00",
-  "eventCount": 65,
-  "venueCount": 39,
+  "updated": "2026-08-03T03:07:36.651414-07:00",
+  "eventCount": 56,
+  "venueCount": 34,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 70,
+    "count": 61,
     "detail": ""
    },
    {
@@ -36,231 +36,13 @@
    }
   ],
   "genres": {
-   "electronic": 52,
-   "house": 12,
-   "afro": 3,
-   "disco": 1,
+   "electronic": 45,
+   "house": 10,
+   "afro": 2,
    "techno": 1
   }
  },
  "events": [
-  {
-   "id": "427c545e9d079c83",
-   "title": "Club Bebé PRESENTS: Ms. Nina",
-   "artists": [
-    "Ms Nina (ES)",
-    "BINKY",
-    "Brendocha",
-    "abers"
-   ],
-   "venue": "Village Studios",
-   "address": "Vancouver",
-   "start": "2026-08-02T17:00:00-07:00",
-   "end": "2026-08-02T22:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2469043",
-   "ticketUrl": "https://ra.co/events/2469043",
-   "image": "https://images.ra.co/5b3c163eb34100bfbf1a81f89667265bd3b9065f.jpg",
-   "promoter": "Club Bebé",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "f9e4737dc4ca6ae6",
-   "title": "DOLLY X The Biltmore Pride 2026",
-   "artists": [
-    "como se DJ",
-    "Succubass",
-    "educación física"
-   ],
-   "venue": "Biltmore Cabaret",
-   "address": "Vancouver",
-   "start": "2026-08-02T21:00:00-07:00",
-   "end": "2026-08-03T03:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2474875",
-   "ticketUrl": "https://ra.co/events/2474875",
-   "image": "https://images.ra.co/8c1d39ad6e403e6728c1d18ae331f43774b36fb8.jpg",
-   "promoter": "DOLLY",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "f213683fe8a1e01f",
-   "title": "PLUR PRIDE Vancouver - Rave at the Penthouse",
-   "artists": [
-    "Dreya (2)"
-   ],
-   "venue": "TBA - The Penthouse Nightclub",
-   "address": "Vancouver",
-   "start": "2026-08-02T21:00:00-07:00",
-   "end": "2026-08-03T03:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "house",
-    "afro"
-   ],
-   "url": "https://ra.co/events/2488241",
-   "ticketUrl": "https://ra.co/events/2488241",
-   "image": "https://images.ra.co/2f4e2cf96ebfb225363bad7f243548b054f6ef00.png",
-   "promoter": "PLUR Productions",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "9d5f45e580236db6",
-   "title": "HARD KANDY (Pride Sunday Warehouse Party)",
-   "artists": [
-    "Anna Morgan"
-   ],
-   "venue": "Skylight Warehouse",
-   "address": "Vancouver",
-   "start": "2026-08-02T22:00:00-07:00",
-   "end": "2026-08-03T04:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2490202",
-   "ticketUrl": "https://ra.co/events/2490202",
-   "image": "https://images.ra.co/8ee23bba20a4f0497c6a1327becc5dcdeeecd403.jpg",
-   "promoter": "Normie",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "0775e360c96f5202",
-   "title": "Nordic Trax: RELEASE: Pride Weekend Special",
-   "artists": [
-    "Luke McKeehan"
-   ],
-   "venue": "TBA - The Penthouse Nightclub (Upstairs), 1019 Seymour St, Vancouver BC",
-   "address": "Vancouver",
-   "start": "2026-08-02T22:00:00-07:00",
-   "end": "2026-08-03T03:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "house",
-    "disco"
-   ],
-   "url": "https://ra.co/events/2479734",
-   "ticketUrl": "https://ra.co/events/2479734",
-   "image": "https://images.ra.co/c39a1595396f61e46f8ecdeb7a5cb085d49e1842.png",
-   "promoter": "Nordic Trax",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "15e21f4fb3f24c15",
-   "title": "HOTLINE ☏ VanPride Rave [10YR ANNIV.] feat. 2NOYU, DJ Hockey, DJ TRANCERIGHTS & Kasey Riot",
-   "artists": [
-    "DJ Hockey",
-    "Kasey Riot",
-    "DJ TRANCERIGHTS"
-   ],
-   "venue": "TBA - near Main St. Skytrain Station",
-   "address": "Vancouver",
-   "start": "2026-08-02T22:00:00-07:00",
-   "end": "2026-08-03T05:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2474642",
-   "ticketUrl": "https://ra.co/events/2474642",
-   "image": "https://images.ra.co/894a082bd4d80a51defaa8077b6b9360bea860f1.png",
-   "promoter": "Kasey Riot",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "e4cfb730022f73d2",
-   "title": "Night Tales (Pride Closing Party)",
-   "artists": [
-    "Perfect Lovers",
-    "DJ dood",
-    "Fisher Bryce",
-    "ZIGGY ZAYA"
-   ],
-   "venue": "TBA",
-   "address": "Vancouver",
-   "start": "2026-08-02T23:00:00-07:00",
-   "end": "2026-08-03T05:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2464862",
-   "ticketUrl": "https://ra.co/events/2464862",
-   "image": "https://images.ra.co/91c66399de4de333a04331b982586db8988a9b83.png",
-   "promoter": "Niche UGD",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "2fd2d8c0de7a4521",
-   "title": "CUM TOGETHER pres. Only Fire",
-   "artists": [
-    "Only Fire"
-   ],
-   "venue": "Village Studios",
-   "address": "Vancouver",
-   "start": "2026-08-02T23:00:00-07:00",
-   "end": "2026-08-03T04:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2489117",
-   "ticketUrl": "https://ra.co/events/2489117",
-   "image": "https://images.ra.co/6e75ecb72b57d01a695d7661bd13a43f0884fc40.png",
-   "promoter": "Blueprint, Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "e68657cf4487d446",
-   "title": "GROOVELAND AUG 2ND",
-   "artists": [],
-   "venue": "TBA - SEND TO TICKET HOLDERS",
-   "address": "Vancouver",
-   "start": "2026-08-02T23:59:00-07:00",
-   "end": "2026-08-03T06:00:00-07:00",
-   "date": "2026-08-02",
-   "night": "2026-08-02",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2502339",
-   "ticketUrl": "https://ra.co/events/2502339",
-   "image": "https://images.ra.co/c1e9cdf2ed4a849ac9cefd6c8c0e07e2d6226d03.png",
-   "promoter": "Lullaby",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "1376fa9b7b83e893",
    "title": "Taylah Elaine",
