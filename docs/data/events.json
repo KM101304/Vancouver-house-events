@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-03T20:40:58.392439-07:00",
-  "eventCount": 57,
+  "updated": "2026-08-04T02:11:05.821074-07:00",
+  "eventCount": 56,
   "venueCount": 35,
   "windowDays": 120,
   "sources": [
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 62,
+    "count": 61,
     "detail": ""
    },
    {
@@ -36,34 +36,13 @@
    }
   ],
   "genres": {
-   "electronic": 45,
+   "electronic": 44,
    "house": 11,
    "afro": 3,
    "techno": 1
   }
  },
  "events": [
-  {
-   "id": "1376fa9b7b83e893",
-   "title": "Taylah Elaine",
-   "artists": [],
-   "venue": "Fortune Sound Club",
-   "address": "Vancouver",
-   "start": "2026-08-03T23:00:00-07:00",
-   "end": "2026-08-04T04:00:00-07:00",
-   "date": "2026-08-03",
-   "night": "2026-08-03",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2488988",
-   "ticketUrl": "https://ra.co/events/2488988",
-   "image": "https://images.ra.co/bf98198ba758d281f8c2a5e0aa8af4e29fc63fd3.png",
-   "promoter": "Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "296f0d772d208b5e",
    "title": "Electric Love - Pritchard",
