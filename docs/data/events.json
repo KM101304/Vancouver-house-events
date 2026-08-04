@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-04T07:41:27.471090-07:00",
-  "eventCount": 56,
-  "venueCount": 35,
+  "updated": "2026-08-04T12:59:11.888056-07:00",
+  "eventCount": 64,
+  "venueCount": 37,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 61,
+    "count": 69,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 44,
+   "electronic": 52,
    "house": 11,
    "afro": 3,
    "techno": 1
@@ -163,6 +163,27 @@
    "source": "residentadvisor"
   },
   {
+   "id": "2a3d409b0c490dc9",
+   "title": "LCD Soundsystem Afterparty",
+   "artists": [],
+   "venue": "The Lido",
+   "address": "Vancouver",
+   "start": "2026-08-07T22:00:00-07:00",
+   "end": "2026-08-08T02:00:00-07:00",
+   "date": "2026-08-07",
+   "night": "2026-08-07",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505394",
+   "ticketUrl": "https://ra.co/events/2505394",
+   "image": "https://images.ra.co/5b8bd3dc99116c844487487794147ae063bf2411.jpg",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "78a98168eda986a6",
    "title": "MOMENT Series: Nico Morano",
    "artists": [
@@ -208,6 +229,29 @@
    "source": "residentadvisor"
   },
   {
+   "id": "13370ab292a47170",
+   "title": "BlackBox®",
+   "artists": [
+    "Jesse Walker"
+   ],
+   "venue": "The Lido",
+   "address": "Vancouver",
+   "start": "2026-08-08T21:00:00-07:00",
+   "end": "2026-08-09T02:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505347",
+   "ticketUrl": "https://ra.co/events/2505347",
+   "image": "https://images.ra.co/93d4b9f5f6d553047c1c4b07efb9f6de6b96de08.jpg",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "13bef8bbc36ee69a",
    "title": "NOOSH Toxic Techno with Doruksen",
    "artists": [
@@ -236,6 +280,50 @@
    "source": "residentadvisor"
   },
   {
+   "id": "fb035c978c54587e",
+   "title": "Monstercat 15 Anniversary w/ Adventure Club",
+   "artists": [
+    "Adventure Club"
+   ],
+   "venue": "Harbour Event Centre",
+   "address": "Vancouver",
+   "start": "2026-08-08T22:00:00-07:00",
+   "end": "2026-08-09T03:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505351",
+   "ticketUrl": "https://ra.co/events/2505351",
+   "image": "https://images.ra.co/f31fd874e8c6cee1d9a8b78a742c07bb7a54f20d.jpg",
+   "promoter": "Insomniac",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "6ea137180e14eb9a",
+   "title": "Otha",
+   "artists": [],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-08-08T22:00:00-07:00",
+   "end": "2026-08-09T03:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505355",
+   "ticketUrl": "https://ra.co/events/2505355",
+   "image": "https://images.ra.co/d058c32920d6685411c983001e5422f0d0778a23.jpg",
+   "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "0e3eb0fc2b1eb6cc",
    "title": "No Digital Devices 4 with AWood, NOTEVENDOWN and DJ Hockey",
    "artists": [
@@ -256,6 +344,51 @@
    "ticketUrl": "https://ra.co/events/2496302",
    "image": "https://images.ra.co/5cd92632a60c23b0a6d3e7e5f96bffea5b787f59.jpg",
    "promoter": "Floor Freakout",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "ddef6b6a644b21b3",
+   "title": "Final Fancy presents: Fancy Forever",
+   "artists": [
+    "Ev O'Reilly",
+    "Mkav"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-08T23:00:00-07:00",
+   "end": "2026-08-09T07:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505300",
+   "ticketUrl": "https://ra.co/events/2505300",
+   "image": "https://images.ra.co/b96ff43ec1e72a2e5e763d2b5ba49f2b37c7f788.jpg",
+   "promoter": "Final Fancy",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "6f7886ca00335d66",
+   "title": "August Jazz Jam with Jimi James",
+   "artists": [],
+   "venue": "Hero's Welcome",
+   "address": "Vancouver",
+   "start": "2026-08-09T14:00:00-07:00",
+   "end": "2026-08-09T16:00:00-07:00",
+   "date": "2026-08-09",
+   "night": "2026-08-09",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505322",
+   "ticketUrl": "https://ra.co/events/2505322",
+   "image": "https://images.ra.co/564cb25eb31a8707b66a0c6d25415a76cf758112.jpg",
+   "promoter": "",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -429,6 +562,27 @@
    "source": "residentadvisor"
   },
   {
+   "id": "70e5b8bd08205c2a",
+   "title": "Colin Sankey Band Plays The Music of Mario",
+   "artists": [],
+   "venue": "The Rec Room Granville",
+   "address": "Vancouver",
+   "start": "2026-08-15T19:00:00-07:00",
+   "end": "2026-08-15T22:00:00-07:00",
+   "date": "2026-08-15",
+   "night": "2026-08-15",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505330",
+   "ticketUrl": "https://ra.co/events/2505330",
+   "image": "https://images.ra.co/5a5f1641ddc7e852d5a8f0e6dd3a3127e8f3613d.jpg",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "2fb6c0dc92a7872f",
    "title": "ZAP! #26 *Special Edition*",
    "artists": [
@@ -450,6 +604,27 @@
    "ticketUrl": "https://ra.co/events/2486989",
    "image": "https://images.ra.co/035995f4b9a39f8895e92d9664297759bf685fcd.png",
    "promoter": "ZAP!",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "d697813d13510eba",
+   "title": "TenorRiffic ft. Mike Allen & Steve Kaldestad",
+   "artists": [],
+   "venue": "Hero's Welcome",
+   "address": "Vancouver",
+   "start": "2026-08-16T14:00:00-07:00",
+   "end": "2026-08-16T16:00:00-07:00",
+   "date": "2026-08-16",
+   "night": "2026-08-16",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505334",
+   "ticketUrl": "https://ra.co/events/2505334",
+   "image": "https://images.ra.co/17ad8e0fc14375527cac252a631f3d7e3964dc87.jpg",
+   "promoter": "",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"

@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-04T07:41:27.471090-07:00",
+ "updated": "2026-08-04T12:59:11.888056-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 12,
+   "count": 13,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -13,7 +13,7 @@
   },
   {
    "name": "Village Studios",
-   "count": 6,
+   "count": 7,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -39,7 +39,33 @@
    ]
   },
   {
+   "name": "The Lido",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic",
+    "house"
+   ]
+  },
+  {
    "name": "Commodore Ballroom",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "Harbour Event Centre",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "techno",
+    "electronic"
+   ]
+  },
+  {
+   "name": "Hero's Welcome",
    "count": 2,
    "area": "Vancouver",
    "genres": [
@@ -84,14 +110,6 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
-   ]
-  },
-  {
-   "name": "Harbour Event Centre",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "techno"
    ]
   },
   {
@@ -248,7 +266,7 @@
    ]
   },
   {
-   "name": "The Lido",
+   "name": "The Pearl",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -256,11 +274,11 @@
    ]
   },
   {
-   "name": "The Pearl",
+   "name": "The Rec Room Granville",
    "count": 1,
    "area": "Vancouver",
    "genres": [
-    "house"
+    "electronic"
    ]
   },
   {
