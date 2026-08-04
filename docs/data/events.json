@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-04T02:11:05.821074-07:00",
+  "updated": "2026-08-04T07:41:27.471090-07:00",
   "eventCount": 56,
   "venueCount": 35,
   "windowDays": 120,
@@ -186,31 +186,6 @@
    "source": "residentadvisor"
   },
   {
-   "id": "07aa9f7467066f8f",
-   "title": "Black Thorn presents: NOS-talgia(extended set),DJ Indifferent, Devønn",
-   "artists": [
-    "NOS-talgia",
-    "DJ Indifferent",
-    "Devønn"
-   ],
-   "venue": "Skylight Warehouse",
-   "address": "Vancouver",
-   "start": "2026-08-08T21:00:00-07:00",
-   "end": "2026-08-09T03:00:00-07:00",
-   "date": "2026-08-08",
-   "night": "2026-08-08",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2489136",
-   "ticketUrl": "https://ra.co/events/2489136",
-   "image": "https://images.ra.co/ecdd1e971cd79aa8f2378a42e56152a19d35bd7a.jpg",
-   "promoter": "Black Thorn",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
    "id": "4569344f9c9ea53c",
    "title": "Taco Loco Vol. 4",
    "artists": [],
@@ -311,6 +286,31 @@
    "source": "residentadvisor"
   },
   {
+   "id": "07aa9f7467066f8f",
+   "title": "Black Thorn presents: NOS-talgia(extended set),DJ Indifferent, Devønn",
+   "artists": [
+    "NOS-talgia",
+    "DJ Indifferent",
+    "Devønn"
+   ],
+   "venue": "Skylight Warehouse",
+   "address": "Vancouver",
+   "start": "2026-08-14T21:00:00-07:00",
+   "end": "2026-08-15T03:00:00-07:00",
+   "date": "2026-08-14",
+   "night": "2026-08-14",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2489136",
+   "ticketUrl": "https://ra.co/events/2489136",
+   "image": "https://images.ra.co/ecdd1e971cd79aa8f2378a42e56152a19d35bd7a.jpg",
+   "promoter": "Black Thorn",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "52ec5e7e460184fc",
    "title": "BDrive: xxxxxx (xxxx) & xxx",
    "artists": [],
@@ -402,14 +402,14 @@
    "id": "1b63235f5112f8b5",
    "title": "LIVID: OTRA HORA",
    "artists": [
-    "KINGO",
-    "C-Star",
-    "DK PAU",
-    "VLADJ",
+    "Sopik",
+    "Wonderboi",
     "XXBWQ",
     "MED!C",
-    "Sopik",
-    "Wonderboi"
+    "DK PAU",
+    "KINGO",
+    "C-Star",
+    "VLADJ"
    ],
    "venue": "1201 Franklin St",
    "address": "Vancouver",
