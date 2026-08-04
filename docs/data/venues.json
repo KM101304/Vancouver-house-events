@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-03T13:00:49.538334-07:00",
+ "updated": "2026-08-03T20:40:58.392439-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -220,6 +220,15 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
+   ]
+  },
+  {
+   "name": "Taco Loco",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "afro",
+    "house"
    ]
   },
   {
