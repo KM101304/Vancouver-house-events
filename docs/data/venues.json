@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-04T20:35:58.880957-07:00",
+ "updated": "2026-08-05T02:08:21.233409-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 13,
+   "count": 14,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -194,6 +194,14 @@
   },
   {
    "name": "TBA - Jonathan Rogers Park",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - LOCATION WILL BE SEND TO TICKET HOLDERS",
    "count": 1,
    "area": "Vancouver",
    "genres": [
