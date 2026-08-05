@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-05T07:35:48.920788-07:00",
+ "updated": "2026-08-05T12:57:23.458574-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 14,
+   "count": 15,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -110,6 +110,14 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
+   ]
+  },
+  {
+   "name": "Fable Bar & Grill",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "house"
    ]
   },
   {

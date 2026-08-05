@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-05T07:35:48.920788-07:00",
-  "eventCount": 68,
-  "venueCount": 39,
+  "updated": "2026-08-05T12:57:23.458574-07:00",
+  "eventCount": 70,
+  "venueCount": 40,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 73,
+    "count": 75,
     "detail": ""
    },
    {
@@ -36,8 +36,8 @@
    }
   ],
   "genres": {
-   "electronic": 56,
-   "house": 11,
+   "electronic": 57,
+   "house": 12,
    "afro": 3,
    "techno": 1
   }
@@ -1030,6 +1030,27 @@
    "source": "residentadvisor"
   },
   {
+   "id": "c605c9d049c3be70",
+   "title": "ODDITY PROJECT at FABLE ROOFTOP (OPEN AIR DAY PARTY)",
+   "artists": [],
+   "venue": "Fable Bar & Grill",
+   "address": "Vancouver",
+   "start": "2026-09-05T14:00:00-07:00",
+   "end": "2026-09-05T21:00:00-07:00",
+   "date": "2026-09-05",
+   "night": "2026-09-05",
+   "genres": [
+    "house"
+   ],
+   "url": "https://ra.co/events/2498015",
+   "ticketUrl": "https://ra.co/events/2498015",
+   "image": "https://images.ra.co/4df5cbccde6a4b46812b3b50f0754b042069388f.png",
+   "promoter": "ODDITY PROJECT CLUB, ODDITY PROJECT, District Groove",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "fdc1bd563fa4a44f",
    "title": "CINEMAGIC OpenAir presents AWEN",
    "artists": [
@@ -1511,6 +1532,29 @@
    "ticketUrl": "https://ra.co/events/2502822",
    "image": "https://images.ra.co/1e9fa1b8f95b722dd601d6e83262aba845ddabc9.jpg",
    "promoter": "SLAB, Vancouver",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "6a6c66f9301e231a",
+   "title": "VANTEK: 999999999",
+   "artists": [
+    "999999999"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-09-26T23:00:00-07:00",
+   "end": "2026-09-27T06:00:00-07:00",
+   "date": "2026-09-26",
+   "night": "2026-09-26",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2492573",
+   "ticketUrl": "https://ra.co/events/2492573",
+   "image": "https://images.ra.co/db5eb07c4f2c07750792341612c101def94252b2.jpg",
+   "promoter": "6AM Group, Synthetik Minds, VANTEK",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
