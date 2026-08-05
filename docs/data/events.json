@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-04T12:59:11.888056-07:00",
-  "eventCount": 64,
-  "venueCount": 37,
+  "updated": "2026-08-04T20:35:58.880957-07:00",
+  "eventCount": 66,
+  "venueCount": 38,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 69,
+    "count": 71,
     "detail": ""
    },
    {
@@ -36,13 +36,37 @@
    }
   ],
   "genres": {
-   "electronic": 52,
+   "electronic": 54,
    "house": 11,
    "afro": 3,
    "techno": 1
   }
  },
  "events": [
+  {
+   "id": "1ff306e79a0ea86c",
+   "title": "Post Pride Power Down with Dairy Free and educación física",
+   "artists": [
+    "Dairy Free",
+    "educación física"
+   ],
+   "venue": "The Lido",
+   "address": "Vancouver",
+   "start": "2026-08-05T21:00:00-07:00",
+   "end": "2026-08-06T01:00:00-07:00",
+   "date": "2026-08-05",
+   "night": "2026-08-05",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505655",
+   "ticketUrl": "https://ra.co/events/2505655",
+   "image": "https://images.ra.co/b59b3e869e10544cdab73a4cb144192532040760.png",
+   "promoter": "",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
   {
    "id": "296f0d772d208b5e",
    "title": "Electric Love - Pritchard",
@@ -184,6 +208,29 @@
    "source": "residentadvisor"
   },
   {
+   "id": "e352efb890ff19ba",
+   "title": "UNTRACEABLE",
+   "artists": [
+    "Carmen (5)"
+   ],
+   "venue": "TBA - Pangea",
+   "address": "Vancouver",
+   "start": "2026-08-07T23:00:00-07:00",
+   "end": "2026-08-08T06:00:00-07:00",
+   "date": "2026-08-07",
+   "night": "2026-08-07",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505416",
+   "ticketUrl": "https://ra.co/events/2505416",
+   "image": "https://images.ra.co/6e5b191cf3e4c2c84ba38c5d3df81ba26f9ad31b.jpg",
+   "promoter": "João Ferro",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "78a98168eda986a6",
    "title": "MOMENT Series: Nico Morano",
    "artists": [
@@ -222,7 +269,7 @@
    ],
    "url": "https://ra.co/events/2504509",
    "ticketUrl": "https://ra.co/events/2504509",
-   "image": "https://images.ra.co/a61bb6f4d376c847d15775a9a1c651d8b901d05d.png",
+   "image": "https://images.ra.co/186065e7d6122dd6ab401652cbc19f18786b959a.png",
    "promoter": "Adam Blare",
    "price": null,
    "afterhours": false,
@@ -445,8 +492,11 @@
   },
   {
    "id": "52ec5e7e460184fc",
-   "title": "BDrive: xxxxxx (xxxx) & xxx",
-   "artists": [],
+   "title": "BDrive: EQUISS (OSSX) & SYD",
+   "artists": [
+    "EQUISS",
+    "Syd (US)"
+   ],
    "venue": "Platform9",
    "address": "Vancouver",
    "start": "2026-08-14T21:30:00-07:00",
@@ -458,7 +508,7 @@
    ],
    "url": "https://ra.co/events/2501455",
    "ticketUrl": "https://ra.co/events/2501455",
-   "image": "",
+   "image": "https://images.ra.co/ede49ff248ec6dfa258416aaaefe3049f68c69d0.png",
    "promoter": "BDrive",
    "price": null,
    "afterhours": false,

@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-04T12:59:11.888056-07:00",
+ "updated": "2026-08-04T20:35:58.880957-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -14,6 +14,15 @@
   {
    "name": "Village Studios",
    "count": 7,
+   "area": "Vancouver",
+   "genres": [
+    "electronic",
+    "house"
+   ]
+  },
+  {
+   "name": "The Lido",
+   "count": 4,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -36,15 +45,6 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
-   ]
-  },
-  {
-   "name": "The Lido",
-   "count": 3,
-   "area": "Vancouver",
-   "genres": [
-    "electronic",
-    "house"
    ]
   },
   {
@@ -194,6 +194,14 @@
   },
   {
    "name": "TBA - Jonathan Rogers Park",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - Pangea",
    "count": 1,
    "area": "Vancouver",
    "genres": [
