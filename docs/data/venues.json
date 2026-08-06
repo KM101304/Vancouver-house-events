@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-05T12:57:23.458574-07:00",
+ "updated": "2026-08-05T20:42:05.769693-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 15,
+   "count": 16,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -210,6 +210,14 @@
   },
   {
    "name": "TBA - LOCATION WILL BE SEND TO TICKET HOLDERS",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "TBA - PNGA",
    "count": 1,
    "area": "Vancouver",
    "genres": [

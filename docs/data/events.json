@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-05T12:57:23.458574-07:00",
-  "eventCount": 70,
-  "venueCount": 40,
+  "updated": "2026-08-05T20:42:05.769693-07:00",
+  "eventCount": 72,
+  "venueCount": 41,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 75,
+    "count": 77,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 57,
+   "electronic": 59,
    "house": 12,
    "afro": 3,
    "techno": 1
@@ -420,6 +420,27 @@
    "source": "residentadvisor"
   },
   {
+   "id": "9d36319e25380e10",
+   "title": "VANTEK: TUNNEL RAVE",
+   "artists": [],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-08T23:59:00-07:00",
+   "end": "2026-08-09T06:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2505643",
+   "ticketUrl": "https://ra.co/events/2505643",
+   "image": "https://images.ra.co/81134b4b145c9b6db2298806e091198eb63ecb70.jpg",
+   "promoter": "VANTEK",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "68a3c6003bddeb32",
    "title": "THE LAND OF THE GROOVE",
    "artists": [],
@@ -554,6 +575,27 @@
    "ticketUrl": "https://ra.co/events/2457437",
    "image": "https://images.ra.co/6a40f2e6e8afbf95e15131ac9ee289040d0ec523.jpg",
    "promoter": "SLAB, Vancouver",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "006a0a68ad790dc4",
+   "title": "CASA EN CASA: Showcase Vol. 2",
+   "artists": [],
+   "venue": "TBA - PNGA",
+   "address": "Vancouver",
+   "start": "2026-08-14T23:59:00-07:00",
+   "end": "2026-08-15T08:00:00-07:00",
+   "date": "2026-08-14",
+   "night": "2026-08-14",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2506428",
+   "ticketUrl": "https://ra.co/events/2506428",
+   "image": "https://images.ra.co/911facd5fdc968058999dba12b190273a9faad85.png",
+   "promoter": "Carlos Flores",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1189,7 +1231,15 @@
   {
    "id": "e65a7305ee31428b",
    "title": "FOG: Closing Summer - Outdoor",
-   "artists": [],
+   "artists": [
+    "David Alcaniz",
+    "Fizch",
+    "Goa Pete",
+    "POPU",
+    "DK PAU",
+    "kish",
+    "Bronsön"
+   ],
    "venue": "TBA - Secret Location",
    "address": "Vancouver",
    "start": "2026-09-05T23:59:00-07:00",
@@ -1201,7 +1251,7 @@
    ],
    "url": "https://ra.co/events/2424070",
    "ticketUrl": "https://ra.co/events/2424070",
-   "image": "https://images.ra.co/bc3c11a9a97c19a0810a6863ebd66867a51218fb.jpg",
+   "image": "https://images.ra.co/fd56ce059db1eded41e250f1b27d63cf0460de43.png",
    "promoter": "VANTEK, FOG",
    "price": null,
    "afterhours": false,
