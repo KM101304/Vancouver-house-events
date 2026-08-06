@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-05T20:42:05.769693-07:00",
-  "eventCount": 72,
+  "updated": "2026-08-06T02:08:15.922022-07:00",
+  "eventCount": 74,
   "venueCount": 41,
   "windowDays": 120,
   "sources": [
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 77,
+    "count": 79,
     "detail": ""
    },
    {
@@ -36,37 +36,13 @@
    }
   ],
   "genres": {
-   "electronic": 59,
+   "electronic": 61,
    "house": 12,
    "afro": 3,
    "techno": 1
   }
  },
  "events": [
-  {
-   "id": "1ff306e79a0ea86c",
-   "title": "Post Pride Power Down with Dairy Free and educación física",
-   "artists": [
-    "Dairy Free",
-    "educación física"
-   ],
-   "venue": "The Lido",
-   "address": "Vancouver",
-   "start": "2026-08-05T21:00:00-07:00",
-   "end": "2026-08-06T01:00:00-07:00",
-   "date": "2026-08-05",
-   "night": "2026-08-05",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2505655",
-   "ticketUrl": "https://ra.co/events/2505655",
-   "image": "https://images.ra.co/748a2dfb247c9e028681d55b0322c74edbb073e2.png",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "296f0d772d208b5e",
    "title": "Electric Love - Pritchard",
@@ -767,6 +743,27 @@
    ]
   },
   {
+   "id": "1a7bdc2a1d2b741e",
+   "title": "Apex 21",
+   "artists": [],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-21T22:00:00-07:00",
+   "end": "2026-08-22T04:00:00-07:00",
+   "date": "2026-08-21",
+   "night": "2026-08-21",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2506603",
+   "ticketUrl": "https://ra.co/events/2506603",
+   "image": "https://images.ra.co/d2abcd72ef985a55a3fad2a16e45f535edab98a4.jpg",
+   "promoter": "bobbylution",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "2001924d1a55dc29",
    "title": "Synesthesia LIVE",
    "artists": [
@@ -1067,6 +1064,31 @@
    "ticketUrl": "https://ra.co/events/2461989",
    "image": "https://images.ra.co/fab6505f83d0959a57b37e4119afe697c58c2cd8.jpg",
    "promoter": "VANTEK",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "591f2733b73ca6a0",
+   "title": "Friction: MiiiW + friends",
+   "artists": [
+    "MiiiW",
+    "kish",
+    "Devønn"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-09-04T23:00:00-07:00",
+   "end": "2026-09-05T05:00:00-07:00",
+   "date": "2026-09-04",
+   "night": "2026-09-04",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2506806",
+   "ticketUrl": "https://ra.co/events/2506806",
+   "image": "https://images.ra.co/b17cf2d6b635360cd56462e76ef57954f359cea8.jpg",
+   "promoter": "Friction",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1707,6 +1729,30 @@
    "ticketUrl": "https://ra.co/events/2460990",
    "image": "https://images.ra.co/abb1507257eff5b1c0db47a1040c38ccf75a8d66.jpg",
    "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "28e99832c5670b4d",
+   "title": "GFS Industries",
+   "artists": [
+    "Dairy Free",
+    "dj direct depøsit"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-11-07T22:00:00-07:00",
+   "end": "2026-11-08T05:00:00-07:00",
+   "date": "2026-11-07",
+   "night": "2026-11-07",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2506663",
+   "ticketUrl": "https://ra.co/events/2506663",
+   "image": "https://images.ra.co/9c9b3b0cf96b5896f380f10987ca59762578d6e5.png",
+   "promoter": "Floor Freakout",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"

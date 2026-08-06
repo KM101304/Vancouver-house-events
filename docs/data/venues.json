@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-05T20:42:05.769693-07:00",
+ "updated": "2026-08-06T02:08:15.922022-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 16,
+   "count": 19,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -14,15 +14,6 @@
   {
    "name": "Village Studios",
    "count": 7,
-   "area": "Vancouver",
-   "genres": [
-    "electronic",
-    "house"
-   ]
-  },
-  {
-   "name": "The Lido",
-   "count": 4,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -45,6 +36,15 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
+   ]
+  },
+  {
+   "name": "The Lido",
+   "count": 3,
+   "area": "Vancouver",
+   "genres": [
+    "electronic",
+    "house"
    ]
   },
   {
