@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-06T17:17:15.479289-07:00",
+ "updated": "2026-08-07T00:43:54.994896-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 19,
+   "count": 20,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -22,7 +22,7 @@
   },
   {
    "name": "Fortune Sound Club",
-   "count": 4,
+   "count": 3,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -91,6 +91,14 @@
   },
   {
    "name": "1201 Franklin St",
+   "count": 1,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "520 Alexander Street",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -274,7 +282,7 @@
    ]
   },
   {
-   "name": "TBA - The Meadow at Cel7wet Festival Grounds 5653 Celewt Road, Pritchard",
+   "name": "TBA - Underground Location",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -282,11 +290,11 @@
    ]
   },
   {
-   "name": "TBA - Underground Location",
+   "name": "TBA - downtown",
    "count": 1,
    "area": "Vancouver",
    "genres": [
-    "electronic"
+    "house"
    ]
   },
   {

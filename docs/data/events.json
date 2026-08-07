@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-06T17:17:15.479289-07:00",
-  "eventCount": 79,
-  "venueCount": 42,
+  "updated": "2026-08-07T00:43:54.994896-07:00",
+  "eventCount": 80,
+  "venueCount": 43,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 84,
+    "count": 82,
     "detail": ""
    },
    {
@@ -37,64 +37,12 @@
   ],
   "genres": {
    "electronic": 66,
-   "house": 12,
+   "house": 13,
    "afro": 3,
    "techno": 1
   }
  },
  "events": [
-  {
-   "id": "296f0d772d208b5e",
-   "title": "Electric Love - Pritchard",
-   "artists": [
-    "Rozenza",
-    "Serum (UK)",
-    "Anna Morgan"
-   ],
-   "venue": "TBA - The Meadow at Cel7wet Festival Grounds 5653 Celewt Road, Pritchard",
-   "address": "Vancouver",
-   "start": "2026-08-06T14:00:00-07:00",
-   "end": "2026-08-09T18:00:00-07:00",
-   "date": "2026-08-06",
-   "night": "2026-08-06",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2473434",
-   "ticketUrl": "https://ra.co/events/2473434",
-   "image": "https://images.ra.co/ee5e7f49761d106d0f06ab9ddfe4fcf0238f18f4.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor",
-   "alsoOn": [
-    "residentadvisor"
-   ]
-  },
-  {
-   "id": "558318e2d97fd5e4",
-   "title": "Avalon Emerson & The Charm",
-   "artists": [
-    "Avalon Emerson",
-    "Pacific Coliseum"
-   ],
-   "venue": "Fortune Sound Club",
-   "address": "Vancouver",
-   "start": "2026-08-06T20:00:00-07:00",
-   "end": "2026-08-06T22:00:00-07:00",
-   "date": "2026-08-06",
-   "night": "2026-08-06",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2501197",
-   "ticketUrl": "https://ra.co/events/2501197",
-   "image": "https://images.ra.co/be7ae91726e70f34d097dfbcbb54d79c748d475f.png",
-   "promoter": "Blueprint Events",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "eb127a21c6672b9e",
    "title": "Trust Me 06: Teen Daze",
@@ -492,6 +440,27 @@
    "source": "residentadvisor"
   },
   {
+   "id": "ab2946dc162cb39f",
+   "title": "NOOSH After Party",
+   "artists": [],
+   "venue": "520 Alexander Street",
+   "address": "Vancouver",
+   "start": "2026-08-09T03:00:00-07:00",
+   "end": "2026-08-09T07:00:00-07:00",
+   "date": "2026-08-09",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2507514",
+   "ticketUrl": "https://ra.co/events/2507514",
+   "image": "https://images.ra.co/61751c2873dfaaa16b2667b3512179f65c26621c.png",
+   "promoter": "NOOSH",
+   "price": null,
+   "afterhours": true,
+   "source": "residentadvisor"
+  },
+  {
    "id": "6f7886ca00335d66",
    "title": "August Jazz Jam with Jimi James",
    "artists": [],
@@ -773,6 +742,27 @@
    "source": "residentadvisor"
   },
   {
+   "id": "18c77933e482cdc3",
+   "title": "MoveToTheGroove",
+   "artists": [],
+   "venue": "TBA - downtown",
+   "address": "Vancouver",
+   "start": "2026-08-20T23:00:00-07:00",
+   "end": "2026-08-21T04:00:00-07:00",
+   "date": "2026-08-20",
+   "night": "2026-08-20",
+   "genres": [
+    "house"
+   ],
+   "url": "https://ra.co/events/2507551",
+   "ticketUrl": "https://ra.co/events/2507551",
+   "image": "https://images.ra.co/3b99c9aaa38330b69fde4edc54b49f30b491c843.png",
+   "promoter": "SabioSound",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "c0cb56de8d5aae0c",
    "title": "NITE SCHOOL: BOAN, SRSQ, wire spine, dj Candy Whiplash",
    "artists": [],
@@ -813,6 +803,32 @@
    "ticketUrl": "https://ra.co/events/2506603",
    "image": "https://images.ra.co/d2abcd72ef985a55a3fad2a16e45f535edab98a4.jpg",
    "promoter": "bobbylution, Kohei Kobayashi",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "cc337c5e9833bed7",
+   "title": "No Digital Devices 5",
+   "artists": [
+    "Emrrld",
+    "IHA (CA)",
+    "Max Ulis",
+    "Patrik Cure"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-08-21T23:00:00-07:00",
+   "end": "2026-08-22T05:00:00-07:00",
+   "date": "2026-08-21",
+   "night": "2026-08-21",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2507578",
+   "ticketUrl": "https://ra.co/events/2507578",
+   "image": "https://images.ra.co/649dec8d8545ebe68280ab6ecf3f721e875494e7.png",
+   "promoter": "Emrrld",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1150,7 +1166,10 @@
   {
    "id": "c605c9d049c3be70",
    "title": "ODDITY PROJECT at FABLE ROOFTOP (OPEN AIR DAY PARTY)",
-   "artists": [],
+   "artists": [
+    "Kardano",
+    "Marcs"
+   ],
    "venue": "Fable Bar & Grill",
    "address": "Vancouver",
    "start": "2026-09-05T14:00:00-07:00",
