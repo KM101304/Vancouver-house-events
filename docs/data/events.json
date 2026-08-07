@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-06T07:37:06.353680-07:00",
-  "eventCount": 74,
-  "venueCount": 41,
+  "updated": "2026-08-06T17:17:15.479289-07:00",
+  "eventCount": 79,
+  "venueCount": 42,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 79,
+    "count": 84,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 61,
+   "electronic": 66,
    "house": 12,
    "afro": 3,
    "techno": 1
@@ -205,6 +205,33 @@
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
+  },
+  {
+   "id": "5e7bcf3a7c37096f",
+   "title": "Gorg-O-Mish presents: Mimoni, Mkav & Ev O'Reilly",
+   "artists": [
+    "Mkav",
+    "Ev O'Reilly"
+   ],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-08-07T23:59:00-07:00",
+   "end": "2026-08-09T08:00:00-07:00",
+   "date": "2026-08-07",
+   "night": "2026-08-07",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2507324",
+   "ticketUrl": "https://ra.co/events/2507324",
+   "image": "https://images.ra.co/935c68e29ce41e95614a3c749cd56879b0f11f79.png",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
+   "source": "residentadvisor",
+   "alsoOn": [
+    "residentadvisor"
+   ]
   },
   {
    "id": "78a98168eda986a6",
@@ -396,9 +423,36 @@
    "source": "residentadvisor"
   },
   {
+   "id": "b17fd1e162a3fd2e",
+   "title": "Gorg-O-Mish presents: Jay Tripwire & xtine",
+   "artists": [
+    "Jay Tripwire",
+    "xtine"
+   ],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-08-08T23:59:00-07:00",
+   "end": "2026-08-09T08:00:00-07:00",
+   "date": "2026-08-08",
+   "night": "2026-08-08",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2507337",
+   "ticketUrl": "https://ra.co/events/2507337",
+   "image": "https://images.ra.co/966bd3edf11f84c9464ca05f81a749d8541d4fd6.png",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
+   "source": "residentadvisor"
+  },
+  {
    "id": "9d36319e25380e10",
    "title": "VANTEK: TUNNEL RAVE",
-   "artists": [],
+   "artists": [
+    "HEU (CA)",
+    "Marist"
+   ],
    "venue": "TBA",
    "address": "Vancouver",
    "start": "2026-08-08T23:59:00-07:00",
@@ -570,7 +624,7 @@
    ],
    "url": "https://ra.co/events/2506428",
    "ticketUrl": "https://ra.co/events/2506428",
-   "image": "https://images.ra.co/911facd5fdc968058999dba12b190273a9faad85.png",
+   "image": "https://images.ra.co/e776f46cef2d400ab52580814eb2423d1a83ba92.jpg",
    "promoter": "Carlos Flores",
    "price": null,
    "afterhours": false,
@@ -758,7 +812,7 @@
    "url": "https://ra.co/events/2506603",
    "ticketUrl": "https://ra.co/events/2506603",
    "image": "https://images.ra.co/d2abcd72ef985a55a3fad2a16e45f535edab98a4.jpg",
-   "promoter": "bobbylution",
+   "promoter": "bobbylution, Kohei Kobayashi",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1038,8 +1092,8 @@
    ],
    "url": "https://ra.co/events/2502714",
    "ticketUrl": "https://ra.co/events/2502714",
-   "image": "",
-   "promoter": "[Redacted]",
+   "image": "https://images.ra.co/146e6aa538abeeb1dd232173de3649d2f5858091.png",
+   "promoter": "",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1265,7 +1319,7 @@
    "venue": "TBA - Secret Location",
    "address": "Vancouver",
    "start": "2026-09-05T23:59:00-07:00",
-   "end": "2026-09-07T06:30:00-07:00",
+   "end": "2026-09-06T06:30:00-07:00",
    "date": "2026-09-05",
    "night": "2026-09-05",
    "genres": [
@@ -1277,10 +1331,7 @@
    "promoter": "VANTEK, FOG",
    "price": null,
    "afterhours": false,
-   "source": "residentadvisor",
-   "alsoOn": [
-    "residentadvisor"
-   ]
+   "source": "residentadvisor"
   },
   {
    "id": "d7999cac1bee2fe9",
@@ -1632,6 +1683,27 @@
    "source": "residentadvisor"
   },
   {
+   "id": "c6f43f837a983c3c",
+   "title": "Cult Member",
+   "artists": [],
+   "venue": "Fortune Sound Club",
+   "address": "Vancouver",
+   "start": "2026-09-27T22:00:00-07:00",
+   "end": "2026-09-28T06:00:00-07:00",
+   "date": "2026-09-27",
+   "night": "2026-09-27",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2507393",
+   "ticketUrl": "https://ra.co/events/2507393",
+   "image": "https://images.ra.co/27b2d8195639fbbe81a711cb38d1ad98d5152485.png",
+   "promoter": "Blueprint, Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
    "id": "1576a1cb188f3e2a",
    "title": "Public Disco Festival",
    "artists": [
@@ -1683,6 +1755,27 @@
    "ticketUrl": "https://ra.co/events/2473654",
    "image": "https://images.ra.co/4dcd03ba82039f8d52dd0c2c6255a85c41283640.png",
    "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "e124037627579b13",
+   "title": "DJ Assault",
+   "artists": [],
+   "venue": "The Pearl",
+   "address": "Vancouver",
+   "start": "2026-10-03T22:30:00-07:00",
+   "end": "2026-10-04T04:00:00-07:00",
+   "date": "2026-10-03",
+   "night": "2026-10-03",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2507307",
+   "ticketUrl": "https://ra.co/events/2507307",
+   "image": "https://images.ra.co/2e9c2ca7a046cc3b6814f24f7b37a0aafa7eef9e.jpg",
+   "promoter": "MODO-LIVE",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
@@ -1753,6 +1846,27 @@
    "ticketUrl": "https://ra.co/events/2506663",
    "image": "https://images.ra.co/9c9b3b0cf96b5896f380f10987ca59762578d6e5.png",
    "promoter": "Floor Freakout",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "5c4ba9a9d7814487",
+   "title": "Daniel Allan",
+   "artists": [],
+   "venue": "Village Studios",
+   "address": "Vancouver",
+   "start": "2026-11-21T22:00:00-07:00",
+   "end": "2026-11-22T03:00:00-07:00",
+   "date": "2026-11-21",
+   "night": "2026-11-21",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2507377",
+   "ticketUrl": "https://ra.co/events/2507377",
+   "image": "https://images.ra.co/7025438f93258050e46d6c60242b22e187529d84.jpg",
+   "promoter": "Blueprint Events",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"

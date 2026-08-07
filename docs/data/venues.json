@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-06T07:37:06.353680-07:00",
+ "updated": "2026-08-06T17:17:15.479289-07:00",
  "venues": [
   {
    "name": "TBA",
@@ -13,7 +13,7 @@
   },
   {
    "name": "Village Studios",
-   "count": 7,
+   "count": 8,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -22,7 +22,7 @@
   },
   {
    "name": "Fortune Sound Club",
-   "count": 3,
+   "count": 4,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -56,6 +56,14 @@
    ]
   },
   {
+   "name": "Gorg-O-Mish",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic"
+   ]
+  },
+  {
    "name": "Harbour Event Centre",
    "count": 2,
    "area": "Vancouver",
@@ -69,6 +77,15 @@
    "count": 2,
    "area": "Vancouver",
    "genres": [
+    "electronic"
+   ]
+  },
+  {
+   "name": "The Pearl",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "house",
     "electronic"
    ]
   },
@@ -295,14 +312,6 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
-   ]
-  },
-  {
-   "name": "The Pearl",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "house"
    ]
   },
   {
