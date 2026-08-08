@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-08T00:17:38.602918-07:00",
+  "updated": "2026-08-08T06:13:58.393407-07:00",
   "eventCount": 76,
   "venueCount": 39,
   "windowDays": 120,
@@ -43,30 +43,6 @@
   }
  },
  "events": [
-  {
-   "id": "5e7bcf3a7c37096f",
-   "title": "Gorg-O-Mish presents: Mimoni, Mkav & Ev O'Reilly",
-   "artists": [
-    "Mkav",
-    "Ev O'Reilly"
-   ],
-   "venue": "Gorg-O-Mish",
-   "address": "Vancouver",
-   "start": "2026-08-07T23:59:00-07:00",
-   "end": "2026-08-09T08:00:00-07:00",
-   "date": "2026-08-07",
-   "night": "2026-08-07",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2507324",
-   "ticketUrl": "https://ra.co/events/2507324",
-   "image": "https://images.ra.co/935c68e29ce41e95614a3c749cd56879b0f11f79.png",
-   "promoter": "Gorg-O-Mish",
-   "price": null,
-   "afterhours": true,
-   "source": "residentadvisor"
-  },
   {
    "id": "78a98168eda986a6",
    "title": "MOMENT Series: Nico Morano",
@@ -907,6 +883,30 @@
    "promoter": "Vertical Migration",
    "price": null,
    "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "fccfd24098b08df9",
+   "title": "Gorg-O-Mish presents: Jon Delerious, Luke McKeehan & Tyler Stadius",
+   "artists": [
+    "Luke McKeehan",
+    "Tyler Stadius"
+   ],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-08-22T23:59:00-07:00",
+   "end": "2026-08-23T08:00:00-07:00",
+   "date": "2026-08-22",
+   "night": "2026-08-22",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2508279",
+   "ticketUrl": "https://ra.co/events/2508279",
+   "image": "https://images.ra.co/c4e412a17cd7d39ed91f3117ae2e90eae02e964c.png",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
    "source": "residentadvisor"
   },
   {
