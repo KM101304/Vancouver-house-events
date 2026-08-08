@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-07T12:18:07.040319-07:00",
-  "eventCount": 80,
+  "updated": "2026-08-07T19:23:18.432023-07:00",
+  "eventCount": 83,
   "venueCount": 43,
   "windowDays": 120,
   "sources": [
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 82,
+    "count": 85,
     "detail": ""
    },
    {
@@ -36,7 +36,7 @@
    }
   ],
   "genres": {
-   "electronic": 66,
+   "electronic": 69,
    "house": 13,
    "afro": 3,
    "techno": 1
@@ -507,6 +507,29 @@
    "source": "residentadvisor"
   },
   {
+   "id": "19c2ef3fff5a8a44",
+   "title": "Gorg-O-Mish presents: TASHI & G-Luve",
+   "artists": [
+    "TASHI"
+   ],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-08-09T23:59:00-07:00",
+   "end": "2026-08-10T06:00:00-07:00",
+   "date": "2026-08-09",
+   "night": "2026-08-09",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2508201",
+   "ticketUrl": "https://ra.co/events/2508201",
+   "image": "https://images.ra.co/c53438722a8fa03f1ea080d637673589b62ec67b.png",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
+   "source": "residentadvisor"
+  },
+  {
    "id": "07aa9f7467066f8f",
    "title": "Black Thorn presents: NOS-talgia(extended set),DJ Indifferent, Devønn",
    "artists": [
@@ -724,6 +747,29 @@
    "source": "residentadvisor"
   },
   {
+   "id": "38406f09d924442b",
+   "title": "Gorg-O-Mish presents: SIM (MTL), Shiny Things, AYY DEN (UK) & Lovely Dae",
+   "artists": [
+    "SIM (SI)"
+   ],
+   "venue": "Gorg-O-Mish",
+   "address": "Vancouver",
+   "start": "2026-08-15T23:59:00-07:00",
+   "end": "2026-08-16T08:00:00-07:00",
+   "date": "2026-08-15",
+   "night": "2026-08-15",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2508198",
+   "ticketUrl": "https://ra.co/events/2508198",
+   "image": "https://images.ra.co/1b58adff87698f6252611de489b12f6952b6a7fc.png",
+   "promoter": "Gorg-O-Mish",
+   "price": null,
+   "afterhours": true,
+   "source": "residentadvisor"
+  },
+  {
    "id": "d697813d13510eba",
    "title": "TenorRiffic ft. Mike Allen & Steve Kaldestad",
    "artists": [],
@@ -853,7 +899,7 @@
    ],
    "url": "https://ra.co/events/2497894",
    "ticketUrl": "https://ra.co/events/2497894",
-   "image": "https://images.ra.co/ec0b55e68af553422e61f1f273d2cd272a304574.jpg",
+   "image": "https://images.ra.co/f3b439dd776d086acdb11be96021fe7983a05bdb.png",
    "promoter": "JOMA Studios",
    "price": null,
    "afterhours": false,
@@ -1560,6 +1606,32 @@
    "ticketUrl": "https://ra.co/events/2502921",
    "image": "https://images.ra.co/f100379357a60795e6458b49a780525029a428e1.png",
    "promoter": "Blueprint Events",
+   "price": null,
+   "afterhours": false,
+   "source": "residentadvisor"
+  },
+  {
+   "id": "eb826b579e6564d0",
+   "title": "VANTEK: Tommy Four Seven",
+   "artists": [
+    "Tommy Four Seven",
+    "Ellara",
+    "Fizch",
+    "kish"
+   ],
+   "venue": "TBA",
+   "address": "Vancouver",
+   "start": "2026-09-19T23:00:00-07:00",
+   "end": "2026-09-20T06:00:00-07:00",
+   "date": "2026-09-19",
+   "night": "2026-09-19",
+   "genres": [
+    "electronic"
+   ],
+   "url": "https://ra.co/events/2508132",
+   "ticketUrl": "https://ra.co/events/2508132",
+   "image": "https://images.ra.co/5cfd5ff9d126e166e64590964c0177c214bd39cf.jpg",
+   "promoter": "VANTEK",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
