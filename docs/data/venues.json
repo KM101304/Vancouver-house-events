@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-07T19:23:18.432023-07:00",
+ "updated": "2026-08-08T00:17:38.602918-07:00",
  "venues": [
   {
    "name": "TBA",
-   "count": 21,
+   "count": 19,
    "area": "Vancouver",
    "genres": [
     "electronic",
@@ -47,15 +47,6 @@
    ]
   },
   {
-   "name": "The Lido",
-   "count": 3,
-   "area": "Vancouver",
-   "genres": [
-    "electronic",
-    "house"
-   ]
-  },
-  {
    "name": "Commodore Ballroom",
    "count": 2,
    "area": "Vancouver",
@@ -78,6 +69,15 @@
    "area": "Vancouver",
    "genres": [
     "electronic"
+   ]
+  },
+  {
+   "name": "The Lido",
+   "count": 2,
+   "area": "Vancouver",
+   "genres": [
+    "electronic",
+    "house"
    ]
   },
   {
@@ -127,14 +127,6 @@
    "area": "Vancouver",
    "genres": [
     "house"
-   ]
-  },
-  {
-   "name": "El Comal",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
    ]
   },
   {
@@ -250,14 +242,6 @@
    ]
   },
   {
-   "name": "TBA - Pangea",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
    "name": "TBA - Secret Location",
    "count": 1,
    "area": "Vancouver",
@@ -267,14 +251,6 @@
   },
   {
    "name": "TBA - Shipyards Waterfront",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "TBA - Sidekick Brewing",
    "count": 1,
    "area": "Vancouver",
    "genres": [
@@ -324,14 +300,6 @@
   },
   {
    "name": "The Rec Room Granville",
-   "count": 1,
-   "area": "Vancouver",
-   "genres": [
-    "electronic"
-   ]
-  },
-  {
-   "name": "The Red Room",
    "count": 1,
    "area": "Vancouver",
    "genres": [

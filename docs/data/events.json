@@ -1,9 +1,9 @@
 {
  "meta": {
   "schemaVersion": 2,
-  "updated": "2026-08-07T19:23:18.432023-07:00",
-  "eventCount": 83,
-  "venueCount": 43,
+  "updated": "2026-08-08T00:17:38.602918-07:00",
+  "eventCount": 76,
+  "venueCount": 39,
   "windowDays": 120,
   "sources": [
    {
@@ -17,7 +17,7 @@
     "source": "residentadvisor",
     "label": "Resident Advisor",
     "status": "ok",
-    "count": 85,
+    "count": 77,
     "detail": ""
    },
    {
@@ -36,124 +36,13 @@
    }
   ],
   "genres": {
-   "electronic": 69,
+   "electronic": 62,
    "house": 13,
    "afro": 3,
    "techno": 1
   }
  },
  "events": [
-  {
-   "id": "eb127a21c6672b9e",
-   "title": "Trust Me 06: Teen Daze",
-   "artists": [
-    "Teen Daze"
-   ],
-   "venue": "TBA - Sidekick Brewing",
-   "address": "Vancouver",
-   "start": "2026-08-07T18:00:00-07:00",
-   "end": "2026-08-07T22:00:00-07:00",
-   "date": "2026-08-07",
-   "night": "2026-08-07",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2478915",
-   "ticketUrl": "https://ra.co/events/2478915",
-   "image": "https://images.ra.co/494afa98c4a363173727fb0492a63b391cdcf5ac.png",
-   "promoter": "Trust Me",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "a6484239cc42dd9d",
-   "title": "Club Fiction E3: Live from a Mexican Cocina",
-   "artists": [],
-   "venue": "El Comal",
-   "address": "Vancouver",
-   "start": "2026-08-07T20:00:00-07:00",
-   "end": "2026-08-08T02:00:00-07:00",
-   "date": "2026-08-07",
-   "night": "2026-08-07",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2494769",
-   "ticketUrl": "https://ra.co/events/2494769",
-   "image": "https://images.ra.co/a6e68948099b747a458b8dbc17e41ecde3dbfa78.png",
-   "promoter": "Club Fiction",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "a388aaedcc1ae159",
-   "title": "Groove Therapy",
-   "artists": [
-    "SUBDIDI"
-   ],
-   "venue": "TBA",
-   "address": "Vancouver",
-   "start": "2026-08-07T22:00:00-07:00",
-   "end": "2026-08-08T04:00:00-07:00",
-   "date": "2026-08-07",
-   "night": "2026-08-07",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2496285",
-   "ticketUrl": "https://ra.co/events/2496285",
-   "image": "https://images.ra.co/cc8d5e497e4028e1ac427b9c77b98d42bd409556.jpg",
-   "promoter": "Floor Freakout",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "2a3d409b0c490dc9",
-   "title": "LCD Soundsystem Afterparty",
-   "artists": [],
-   "venue": "The Lido",
-   "address": "Vancouver",
-   "start": "2026-08-07T22:00:00-07:00",
-   "end": "2026-08-08T02:00:00-07:00",
-   "date": "2026-08-07",
-   "night": "2026-08-07",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2505394",
-   "ticketUrl": "https://ra.co/events/2505394",
-   "image": "https://images.ra.co/5b8bd3dc99116c844487487794147ae063bf2411.jpg",
-   "promoter": "",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "e352efb890ff19ba",
-   "title": "UNTRACEABLE",
-   "artists": [
-    "Carmen (5)"
-   ],
-   "venue": "TBA - Pangea",
-   "address": "Vancouver",
-   "start": "2026-08-07T23:00:00-07:00",
-   "end": "2026-08-08T06:00:00-07:00",
-   "date": "2026-08-07",
-   "night": "2026-08-07",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2505416",
-   "ticketUrl": "https://ra.co/events/2505416",
-   "image": "https://images.ra.co/6e5b191cf3e4c2c84ba38c5d3df81ba26f9ad31b.jpg",
-   "promoter": "João Ferro",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
   {
    "id": "5e7bcf3a7c37096f",
    "title": "Gorg-O-Mish presents: Mimoni, Mkav & Ev O'Reilly",
@@ -176,10 +65,7 @@
    "promoter": "Gorg-O-Mish",
    "price": null,
    "afterhours": true,
-   "source": "residentadvisor",
-   "alsoOn": [
-    "residentadvisor"
-   ]
+   "source": "residentadvisor"
   },
   {
    "id": "78a98168eda986a6",
@@ -1099,27 +985,6 @@
    "source": "residentadvisor"
   },
   {
-   "id": "fa00b6e35120e3de",
-   "title": "▀▄▀▄THE MAZE ▄▀▄▀",
-   "artists": [],
-   "venue": "TBA",
-   "address": "Vancouver",
-   "start": "2026-08-29T22:00:00-07:00",
-   "end": "2026-08-30T06:00:00-07:00",
-   "date": "2026-08-29",
-   "night": "2026-08-29",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2496288",
-   "ticketUrl": "https://ra.co/events/2496288",
-   "image": "https://images.ra.co/cdd4c34f7780a057c9a07cbba56a5161f9efa8d1.png",
-   "promoter": "VANTEK",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
    "id": "e7f9da556529b8e3",
    "title": "A+F+S and Friends",
    "artists": [],
@@ -1321,27 +1186,6 @@
    "ticketUrl": "https://ra.co/events/2468377",
    "image": "https://images.ra.co/3b426f82e5f07f3e5c4565812cf34ed39b579166.jpg",
    "promoter": "Pacific Rhythm, Floor Freakout",
-   "price": null,
-   "afterhours": false,
-   "source": "residentadvisor"
-  },
-  {
-   "id": "337680a8461c65cb",
-   "title": "IVY LAB - A FAREWELL TOUR at SUBculture Saturdays",
-   "artists": [],
-   "venue": "The Red Room",
-   "address": "Vancouver",
-   "start": "2026-09-05T21:30:00-07:00",
-   "end": "2026-09-06T03:00:00-07:00",
-   "date": "2026-09-05",
-   "night": "2026-09-05",
-   "genres": [
-    "electronic"
-   ],
-   "url": "https://ra.co/events/2484389",
-   "ticketUrl": "https://ra.co/events/2484389",
-   "image": "https://images.ra.co/0f131a8e080803c51f7e7d11e15c9d66f5f8aa49.png",
-   "promoter": "Digital Motion BC",
    "price": null,
    "afterhours": false,
    "source": "residentadvisor"
